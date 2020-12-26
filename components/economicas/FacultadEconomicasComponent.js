@@ -16,6 +16,8 @@ export default function FacultadEconomicasComponent({navigation}) {
   const telefonoEconomicas = '3834434645';
   const emailEconomicas = 'infofceya@eco.unca.edu.ar';
   const wspEconomicas = '543834545986';
+  const textFacultad = 'La Facultad de Economicas sostiene la formación docente a través de las carreras de profesorado. Es una de las facultades con mayor cantidad de carreras de grado y de postgrado y la mayor matrícula de la UNCa. Es una de las facultades con mayor cantidad de carreras de grado y de postgrado y la mayor matrícula de la UNCa. Es una de las facultades con mayor cantidad de carreras de grado y de postgrado y la mayor matrícula de la UNCa.'
+  
   const toggleOverlay = () => {
     setVisible(!visible);
   };
@@ -46,9 +48,9 @@ export default function FacultadEconomicasComponent({navigation}) {
 <Button icon={<FontAwesomeIcon icon={faArrowLeft} size={normalize(16)} color="#ffffff" />} 
 buttonStyle={{width: '100%', height:undefined, marginRight:5}} onPress={() => {navegarAComponente('Escuela de Arqueologia')}}/> 
 
-
-<Text style={styles.textCartTitleStyle}>Facultad de Economicas</Text> 
-
+<View style={styles.alignVertical}>
+<Text style={styles.textCartTitleStyle}>Facultad de Económicas</Text> 
+</View>
 <Button icon={<FontAwesomeIcon icon={faArrowRight} size={normalize(16)} color="#ffffff" />} 
 buttonStyle={{width: '100%', height:undefined, marginLeft:5 }} onPress={() => {navegarAComponente('Facultad de Agrarias')}}/>
 </Card.Title>
@@ -62,12 +64,9 @@ buttonStyle={{width: '100%', height:undefined, marginLeft:5 }} onPress={() => {n
             style={styles.responsiveImage}>
               
   </Image>
-  <ScrollView style={{maxHeight:normalize(100)}}>
+  <ScrollView style={{height:'10%'}}>
   <Text style={styles.textCard}>
-  La Facultad de Ciencias Economicas sostiene la formación docente a través de las carreras de profesorado. 
-  Es una de las facultades con mayor cantidad de carreras de grado y de postgrado y la mayor matrícula de la UNCa.
-  Es una de las facultades con mayor cantidad de carreras de grado y de postgrado y la mayor matrícula de la UNCa.
-  Es una de las facultades con mayor cantidad de carreras de grado y de postgrado y la mayor matrícula de la UNCa.
+  {textFacultad}
     </Text>
     </ScrollView>
     <View style={styles.buttonContainer}>

@@ -15,6 +15,7 @@ export default function FacultadExactasComponent({navigation}) {
   const telefonoExactas = '3834420900';
   const emailExactas = 'multimedios@exactas.unca.edu.ar';
   const wspExactas = '543834545986';
+  const textFacultad = 'La Facultad de Exactas sostiene la formación docente a través de las carreras de profesorado. Es una de las facultades con mayor cantidad de carreras de grado y de postgrado y la mayor matrícula de la UNCa. Es una de las facultades con mayor cantidad de carreras de grado y de postgrado y la mayor matrícula de la UNCa. Es una de las facultades con mayor cantidad de carreras de grado y de postgrado y la mayor matrícula de la UNCa.'
   
   const toggleOverlay = () => {
     setVisible(!visible);
@@ -46,9 +47,9 @@ export default function FacultadExactasComponent({navigation}) {
 <Button icon={<FontAwesomeIcon icon={faArrowLeft} size={normalize(16)} color="#ffffff" />} 
 buttonStyle={{width: '100%', height:undefined, marginRight:5}} onPress={() => {navegarAComponente('Facultad de Salud')}}/> 
 
-
+<View style={styles.alignVertical}>
 <Text style={styles.textCartTitleStyle}>Facultad de Exactas</Text> 
-
+</View>
 <Button icon={<FontAwesomeIcon icon={faArrowRight} size={normalize(16)} color="#ffffff" />} 
 buttonStyle={{width: '100%', height:undefined, marginLeft:5 }} onPress={() => {navegarAComponente('Facultad de Tecnologia')}}/>
 </Card.Title>
@@ -62,12 +63,9 @@ buttonStyle={{width: '100%', height:undefined, marginLeft:5 }} onPress={() => {n
             style={styles.responsiveImage}>
               
   </Image>
-  <ScrollView style={{maxHeight:normalize(100)}}>
+  <ScrollView style={{height:'10%'}}>
   <Text style={styles.textCard}>
-  La Facultad de Ciencias Exactas sostiene la formación docente a través de las carreras de profesorado. 
-  Es una de las facultades con mayor cantidad de carreras de grado y de postgrado y la mayor matrícula de la UNCa.
-  Es una de las facultades con mayor cantidad de carreras de grado y de postgrado y la mayor matrícula de la UNCa.
-  Es una de las facultades con mayor cantidad de carreras de grado y de postgrado y la mayor matrícula de la UNCa.
+  {textFacultad}
     </Text>
     </ScrollView>
     <View style={styles.buttonContainer}>

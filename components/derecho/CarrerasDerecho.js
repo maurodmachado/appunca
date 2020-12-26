@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Linking, BackHandler } from 'react-native';
 import { Button } from 'react-native-elements'
 import { ScrollView } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { normalize } from '../utils/utils';
 export default function CarrerasDerecho({navigation}) {
 
   useEffect(() => {
@@ -28,7 +29,7 @@ export default function CarrerasDerecho({navigation}) {
           
           <Text style={styles.titleCarrera}>Carreras de grado</Text>
           <Button buttonStyle={styles.itemColor2} onPress={() => Linking.openURL('http://tecno.unca.edu.ar/tecnicatura-universitaria-industrial/')} 
-          title='Abogacía' />
+          title='Abogacía' titleStyle={styles.itemTitleWhiteStyle} />
           
           </View>
           </ScrollView>
@@ -56,9 +57,13 @@ titleCarrera:{
     textAlign:'center'
     
 },
-    itemTitleStyle: {
+itemTitleStyle: {
     color: "black",
-    fontSize: 16
+    fontSize: normalize(16)
+  },
+  itemTitleWhiteStyle: {
+    color: "white",
+    fontSize: normalize(16)
   },
   itemColor1: {
     marginTop:4,

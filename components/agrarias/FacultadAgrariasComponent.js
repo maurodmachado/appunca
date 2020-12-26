@@ -9,12 +9,13 @@ import { estiloFacultades } from "../../assets/styles/estiloFacultades";
 import { normalize } from "../utils/utils";
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-export default function FacultadDerechoComponent({navigation}) {
+export default function FacultadAgrariasComponent({navigation}) {
  
   const [visible, setVisible] = useState(false);
   const telefonoAgrarias = '3834430504';
   const emailAgrarias = 'dalumnos@agrarias.unca.edu.ar';
   const wspAgrarias = '543834430504';
+  const textFacultad = 'La Facultad de Ciencias Agrarias sostiene la formación docente a través de las carreras de profesorado. Es una de las facultades con mayor cantidad de carreras de grado y de postgrado y la mayor matrícula de la UNCa. Es una de las facultades con mayor cantidad de carreras de grado y de postgrado y la mayor matrícula de la UNCa. Es una de las facultades con mayor cantidad de carreras de grado y de postgrado y la mayor matrícula de la UNCa.'
   const toggleOverlay = () => {
     setVisible(!visible);
   };
@@ -45,9 +46,9 @@ export default function FacultadDerechoComponent({navigation}) {
 <Button icon={<FontAwesomeIcon icon={faArrowLeft} size={normalize(16)} color="#ffffff" />} 
 buttonStyle={{width: '100%', height:undefined, marginRight:5}} onPress={() => {navegarAComponente('Facultad de Economicas')}}/> 
 
-
+<View style={styles.alignVertical}>
 <Text style={styles.textCartTitleStyle}>Facultad de Agrarias</Text> 
-
+</View>
 <Button icon={<FontAwesomeIcon icon={faArrowRight} size={normalize(16)} color="#ffffff" />} 
 buttonStyle={{width: '100%', height:undefined, marginLeft:5 }} onPress={() => {navegarAComponente('Facultad de Derecho')}}/>
 </Card.Title>
@@ -61,12 +62,9 @@ buttonStyle={{width: '100%', height:undefined, marginLeft:5 }} onPress={() => {n
             style={styles.responsiveImage}>
               
   </Image>
-  <ScrollView style={{maxHeight:normalize(100)}}>
+  <ScrollView style={{height:'10%'}}>
   <Text style={styles.textCard}>
-  La Facultad de Ciencias Agrarias sostiene la formación docente a través de las carreras de profesorado. 
-  Es una de las facultades con mayor cantidad de carreras de grado y de postgrado y la mayor matrícula de la UNCa.
-  Es una de las facultades con mayor cantidad de carreras de grado y de postgrado y la mayor matrícula de la UNCa.
-  Es una de las facultades con mayor cantidad de carreras de grado y de postgrado y la mayor matrícula de la UNCa.
+  {textFacultad}
     </Text>
     </ScrollView>
     <View style={styles.buttonContainer}>

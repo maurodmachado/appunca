@@ -16,7 +16,7 @@ export default function SaludComponent() {
   
  
   <Card.Divider/>
-  <ScrollView style={{maxHeight:normalize(80)}}>
+  <ScrollView style={{height:'18%'}}>
       <Text style={styles.baseText}>
         Su objetivo principal es educar para la prevención, brindando a los jóvenes la oportunidad de aprender, adquirir y desarrollar los conocimientos, las competencias, los valores que lo facultan para su autocuidado.</Text>      
         </ScrollView> 

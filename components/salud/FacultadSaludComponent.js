@@ -16,7 +16,8 @@ export default function FacultadSaludComponent({navigation}) {
   const telefonoSalud = '3834313240';
   const emailSalud = 'alumnos@salud.unca.edu.ar';
   const wspSalud = '543834545986';
-
+  const textFacultad = 'La Facultad de Salud sostiene la formación docente a través de las carreras de profesorado. Es una de las facultades con mayor cantidad de carreras de grado y de postgrado y la mayor matrícula de la UNCa. Es una de las facultades con mayor cantidad de carreras de grado y de postgrado y la mayor matrícula de la UNCa. Es una de las facultades con mayor cantidad de carreras de grado y de postgrado y la mayor matrícula de la UNCa.'
+  
   const toggleOverlay = () => {
     setVisible(!visible);
   };
@@ -45,13 +46,13 @@ export default function FacultadSaludComponent({navigation}) {
   <View>
   <Card.Title> 
 <Button icon={<FontAwesomeIcon icon={faArrowLeft} size={normalize(16)} color="#ffffff" />} 
-buttonStyle={{left:0, width: 22, height:22, marginRight:5}} onPress={() => {navegarAComponente('Facultad de Derecho')}}/> 
+buttonStyle={{width: '100%', height:undefined, marginRight:5}} onPress={() => {navegarAComponente('Facultad de Derecho')}}/> 
 
-
+<View style={styles.alignVertical}>
 <Text style={styles.textCartTitleStyle}>Facultad de Salud</Text> 
-
+</View>
 <Button icon={<FontAwesomeIcon icon={faArrowRight} size={normalize(16)} color="#ffffff" />} 
-buttonStyle={{width: 22, height:22, marginLeft:5 }} onPress={() => {navegarAComponente('Facultad de Exactas')}}/>
+buttonStyle={{width: '100%', height:undefined, marginLeft:5 }} onPress={() => {navegarAComponente('Facultad de Exactas')}}/>
 </Card.Title>
 
 
@@ -63,13 +64,10 @@ buttonStyle={{width: 22, height:22, marginLeft:5 }} onPress={() => {navegarAComp
             style={styles.responsiveImage}>
               
   </Image>
-  <ScrollView style={{maxHeight:normalize(100)}}>
+  <ScrollView style={{height:'10%'}}>
   <Text style={styles.textCard}>
-  La Facultad de Ciencias de la Salud sostiene la formación docente a través de las carreras de profesorado. 
-  Es una de las facultades con mayor cantidad de carreras de grado y de postgrado y la mayor matrícula de la UNCa.
-  Es una de las facultades con mayor cantidad de carreras de grado y de postgrado y la mayor matrícula de la UNCa.
-  Es una de las facultades con mayor cantidad de carreras de grado y de postgrado y la mayor matrícula de la UNCa.
-    </Text>
+ {textFacultad}
+ </Text>
     </ScrollView>
     <View style={styles.buttonContainer}>
       <TouchableOpacity

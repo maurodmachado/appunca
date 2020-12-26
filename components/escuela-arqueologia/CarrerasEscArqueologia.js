@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Linking, BackHandler } from 'react-native';
 import { Button } from 'react-native-elements'
 import { ScrollView } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { normalize } from '../utils/utils';
 
 export default function CarrerasEscArqueologia({navigation}) {
   useEffect(() => {
@@ -40,28 +41,27 @@ export default function CarrerasEscArqueologia({navigation}) {
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-      },
-      scrollView: {
-      },
+  container: {
+    flex: 1,
+  },
+  scrollView: {
+  },
 containerButton: {
-    margin:20,
-    textAlignVertical: "center",
-    width: "90%", 
-    alignSelf:"center"
+margin:20,
+textAlignVertical: "center",
+width: "90%", 
+alignSelf:"center"
 },
 titleCarrera:{
-    color: "black",
-    fontSize: 18,
-    margin:5,
-    textAlign:'center'
-    
+color: "black",
+fontSize: normalize(18),
+margin:5,
+textAlign:'center'
+
+},itemTitleStyle: {
+color: "black",
+fontSize: normalize(16)
 },
-    itemTitleStyle: {
-    color: "black",
-    fontSize: 16
-  },
 itemLicenciatura: {
     marginTop:5,
     marginBottom:5,

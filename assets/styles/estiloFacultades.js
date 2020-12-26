@@ -85,13 +85,16 @@ export const estiloFacultades = StyleSheet.create({
       justifyContent: "center",
       alignItems: "center",
     },
+    alignVertical:{
+      textAlignVertical:'center'
+    },
     textCartTitleStyle: {
     fontSize:normalize(18),
     color: "black",
     fontWeight: "bold",
     textShadowColor: 'white',
     textShadowRadius:10,
-    textAlign:'center'
+    textAlign:'center',
     },
     textStyle: {
     fontSize:normalize(16),

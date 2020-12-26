@@ -25,7 +25,7 @@ export default function CarrerasComponent({navigation}) {
             <View style={styles.buttonImageShortIconStyle}><FontAwesomeIcon icon={faLaptop} size={normalize(24)} color={"black"}/></View>
          
           <View style={styles.buttonIconSeparatorStyle} />
-          <Text style={styles.buttonTextStyleBlack}>Facultad de Tecnologia y Ciencias Aplicadas</Text>
+          <Text style={styles.buttonTextStyleBlack}>Facultad de Tecnología y Ciencias Aplicadas</Text>
         </TouchableOpacity>
     </View>
 
@@ -64,7 +64,7 @@ export default function CarrerasComponent({navigation}) {
         <View style={styles.buttonImageShortIconStyle}><FontAwesomeIcon icon={faCalculator} size={normalize(24)} color={"black"}/></View>
      
       <View style={styles.buttonIconSeparatorStyle} />
-      <Text style={styles.buttonTextStyleBlack}>Facultad de Ciencias Economicas</Text>
+      <Text style={styles.buttonTextStyleBlack}>Facultad de Ciencias Económicas</Text>
     </TouchableOpacity>
 </View>
 

@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Linking, BackHandler } from 'react-native';
 import { Button } from 'react-native-elements'
 import { ScrollView } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { normalize } from '../utils/utils';
 export default function CarrerasAgrarias({navigation}) {
 
   useEffect(() => {
@@ -41,27 +42,31 @@ export default function CarrerasAgrarias({navigation}) {
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-      },
-      scrollView: {
-      },
+  container: {
+    flex: 1,
+  },
+  scrollView: {
+  },
 containerButton: {
-    margin:20,
-    textAlignVertical: "center",
-    width: "90%", 
-    alignSelf:"center"
+margin:20,
+textAlignVertical: "center",
+width: "90%", 
+alignSelf:"center"
 },
 titleCarrera:{
-    color: "black",
-    fontSize: 18,
-    marginBottom:5,
-    textAlign:'center'
-    
+color: "black",
+fontSize: 18,
+marginBottom:5,
+textAlign:'center'
+
 },
-    itemTitleStyle: {
-    color: "black",
-    fontSize: 16
+itemTitleStyle: {
+color: "black",
+fontSize: normalize(16)
+},
+itemTitleWhiteStyle: {
+  color: "white",
+  fontSize: normalize(16)
   },
   itemColor1: {
     marginTop:4,

@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Linking, BackHandler } from 'react-native';
 import { Button } from 'react-native-elements'
 import { ScrollView } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { normalize } from '../utils/utils';
 export default function CarrerasEconomicas({navigation}) {
   
  
@@ -25,11 +26,11 @@ export default function CarrerasEconomicas({navigation}) {
          <View style={styles.containerButton}>
               <Text style={styles.titleCarrera}>Oferta académica</Text>
           <Button buttonStyle={styles.itemColor2} onPress={() => Linking.openURL('http://eco.unca.edu.ar/content/carreras/index.php?categoria=grado&oferta=cpn2018')} 
-          title='Contador Público' />
+          title='Contador Público' titleStyle={styles.itemTitleWhiteStyle}/>
           <Button buttonStyle={styles.itemColor1} onPress={() => Linking.openURL('http://eco.unca.edu.ar/content/carreras/index.php?categoria=grado&oferta=ladm')}
           title='Licenciatura en Administración' titleStyle={styles.itemTitleStyle}/>
           <Button buttonStyle={styles.itemColor2} onPress={() => Linking.openURL('http://eco.unca.edu.ar/content/carreras/index.php?categoria=grado&oferta=lges')}
-          title='Licenciatura en Gestión de la Educación Superior'/>
+          title='Licenciatura en Gestión de la Educación Superior' titleStyle={styles.itemTitleWhiteStyle}/>
           <Button buttonStyle={styles.itemColor1} onPress={() => Linking.openURL('http://eco.unca.edu.ar/content/carreras/index.php?categoria=grado&oferta=lgp')}
           title='Licenciatura en Gestión Pública' titleStyle={styles.itemTitleStyle}/>         
           </View>
@@ -40,28 +41,32 @@ export default function CarrerasEconomicas({navigation}) {
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-      },
-      scrollView: {
-      },
+    ccontainer: {
+      flex: 1,
+    },
+    scrollView: {
+    },
 containerButton: {
-    margin:20,
-    textAlignVertical: "center",
-    width: "90%", 
-    alignSelf:"center"
+  margin:20,
+  textAlignVertical: "center",
+  width: "90%", 
+  alignSelf:"center"
 },
 titleCarrera:{
-    color: "black",
-    fontSize: 18,
-    marginBottom:5,
-    textAlign:'center'
-    
+  color: "black",
+  fontSize: normalize(18),
+  margin:5,
+  textAlign:'center'
+  
 },
-    itemTitleStyle: {
-    color: "black",
-    fontSize: 16
-  },
+  itemTitleStyle: {
+  color: "black",
+  fontSize: normalize(16)
+},
+itemTitleWhiteStyle: {
+color: "white",
+fontSize: normalize(16)
+},
   itemColor1: {
     marginTop:4,
     marginBottom:4,
