@@ -5,35 +5,44 @@ import CarrerasComponent from './components/CarrerasComponent';
 import PreguntasComponent from './components/PreguntasComponent';
 import BecasComponent from './components/BecasComponent';
 import DeporteComponent from './components/DeporteComponent';
-import ComedorComponent from './components/SaludComponent';
-import FacultadHumanidadesComponent from './components/humanidades/FacultadHumanidadesComponent';
-import CarrerasHumanidades  from './components/humanidades/CarrerasHumanidades';
+import SaludComponent from './components/SaludComponent';
+import MapaUniversidadComponent from './components/MapaUniversidadComponent';
+
 
 //React Navigation
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import CarrerasEscArqueologia from './components/escuela-arqueologia/CarrerasEscArqueologia';
-import EscuelaArqueologiaComponent from './components/escuela-arqueologia/EscuelaArqueologiaComponent';
-import CarrerasTecnologia from './components/tecnologia/CarrerasTecnologia';
-import FacultadTecnologiaComponent from './components/tecnologia/FacultadTecnologiaComponent';
-import FacultadEconomicasComponent from './components/economicas/FacultadEconomicasComponent';
-import CarrerasEconomicas from './components/economicas/CarrerasEconomicas';
-import FacultadAgrariasComponent from './components/agrarias/FacultadAgrariasComponent';
-import CarrerasAgrarias from './components/agrarias/CarrerasAgrarias';
-import FacultadDerechoComponent from './components/derecho/FacultadDerechoComponent';
-import CarrerasDerecho from './components/derecho/CarrerasDerecho';
-import FacultadSaludComponent from './components/salud/FacultadSaludComponent';
-import CarrerasSalud from './components/salud/CarrerasSalud';
-import FacultadExactasComponent from './components/exactas/FacultadExactasComponent';
-import CarrerasExactas from './components/exactas/CarrerasExactas';
+
+//Facultades
+import FacultadTecnologiaComponent from './components/facultades/tecnologia/FacultadTecnologiaComponent';
+import FacultadHumanidadesComponent from './components/facultades/humanidades/FacultadHumanidadesComponent';
+import EscuelaArqueologiaComponent from './components/facultades/escuela-arqueologia/EscuelaArqueologiaComponent';
+import FacultadEconomicasComponent from './components/facultades/economicas/FacultadEconomicasComponent';
+import FacultadAgrariasComponent from './components/facultades/agrarias/FacultadAgrariasComponent';
+import FacultadDerechoComponent from './components/facultades/derecho/FacultadDerechoComponent';
+import FacultadSaludComponent from './components/facultades/salud/FacultadSaludComponent';
+import FacultadExactasComponent from './components/facultades/exactas/FacultadExactasComponent';
+
+//Carreras
+import CarrerasTecnologia from './components/facultades/tecnologia/CarrerasTecnologia';
+import CarrerasHumanidades  from './components/facultades/humanidades/CarrerasHumanidades';
+import CarrerasEscArqueologia from './components/facultades/escuela-arqueologia/CarrerasEscArqueologia';
+import CarrerasEconomicas from './components/facultades/economicas/CarrerasEconomicas';
+import CarrerasAgrarias from './components/facultades/agrarias/CarrerasAgrarias';
+import CarrerasDerecho from './components/facultades/derecho/CarrerasDerecho';
+import CarrerasSalud from './components/facultades/salud/CarrerasSalud';
+import CarrerasExactas from './components/facultades/exactas/CarrerasExactas';
+
+//Becas
 import BecaAyudaEconomica from './components/becas/BecaAyudaEconomica';
 import BecaComedor from './components/becas/BecaComedor';
 import BecaTransporte from './components/becas/BecaTransporte';
 import BecaResidencia from './components/becas/BecaResidencia';
 import BecaCrisco from './components/becas/BecaCrisco';
-import SaludComponent from './components/SaludComponent';
-import MapaUniversidadComponent from './components/MapaUniversidadComponent';
 
+import SplashScreen from 'react-native-splash-screen'
+import { useEffect } from 'react';
+import { Platform, StatusBar } from 'react-native';
 
 const Stack = createStackNavigator(
   
@@ -42,8 +51,14 @@ const Stack = createStackNavigator(
 
 const App = () => {
   
+  
+  useEffect(() => {
+    SplashScreen.hide()
+    
+  }, [])
   return (
     <>
+    {Platform.OS === 'ios' && <StatusBar barStyle="dark-content" />}
     <NavigationContainer>
         <Stack.Navigator
         initialRouteName="Descubriendo la UNCa"
@@ -84,10 +99,8 @@ const App = () => {
           options={{headerShown: false}}
           />
 
-        
-
-          {/* Facultad de Tecnologia */}
-        <Stack.Screen 
+    {/* Facultad de Tecnologia */}
+    <Stack.Screen 
           name="Facultad de Tecnologia"
           component={FacultadTecnologiaComponent}
           options={{headerShown: false}}

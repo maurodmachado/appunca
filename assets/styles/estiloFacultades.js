@@ -57,7 +57,7 @@ export const estiloFacultades = StyleSheet.create({
       borderWidth: 1, 
       borderColor:'#0F0F0F',
       flex:1, 
-      margin: '5%',
+      margin: '2%',
       marginBottom:10
     },
     cardBodyContainer:{

@@ -3,7 +3,8 @@ import { View, Text, StyleSheet, Linking, BackHandler } from 'react-native';
 import { Button } from 'react-native-elements'
 import { ScrollView } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { normalize } from '../utils/utils';
+import { normalize } from '../../utils/utils';
+
 export default function CarrerasHumanidades({navigation}) {
     useEffect(() => {
         const backAction = () => {

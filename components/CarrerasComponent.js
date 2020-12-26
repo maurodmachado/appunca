@@ -29,8 +29,8 @@ export default function CarrerasComponent({navigation}) {
         </TouchableOpacity>
     </View>
 
-    {/* Facultad de Humanidades */}
-    <View style={styles.buttonContainer}>
+     {/* Facultad de Humanidades */}
+     <View style={styles.buttonContainer}>
       <TouchableOpacity
           style={styles.buttonShortStyleHumanidades}
           activeOpacity={0.5}
