@@ -65,14 +65,14 @@ titleCarrera:{
   itemColor1: {
     marginTop:4,
     marginBottom:4,
-    backgroundColor:'#00BCB4',
+    backgroundColor:'#a9294f',
     borderWidth:1,
     borderColor:'#0F0F0F'
   },
   itemColor2: {
     marginTop:4,
     marginBottom:4,
-    backgroundColor:'#00CCCC',
+    backgroundColor:'#e5707e',
     borderWidth:1,
     borderColor:'#0F0F0F'
     },

@@ -23,25 +23,25 @@ export default function CarrerasTecnologia({navigation}) {
          <View style={styles.containerButton}>
               <Text style={styles.titleCarrera}>Carreras de pregrado</Text>
           <Button buttonStyle={styles.itemColor2} onPress={() => Linking.openURL('http://tecno.unca.edu.ar/tecnicatura-universitaria-industrial/')} 
-          title='Tecnicatura Universitaria Industrial' titleStyle={styles.itemTitleStyle}/>
+          title='Tecnicatura Universitaria Industrial' />
           <Button buttonStyle={styles.itemColor1} onPress={() => Linking.openURL('http://tecno.unca.edu.ar/tecnicatura-universitaria-de-minas/')}
           title='Tecnicatura Universitaria de Minas' titleStyle={styles.itemTitleStyle}/>
           <Button buttonStyle={styles.itemColor2} onPress={() => Linking.openURL('http://tecno.unca.edu.ar/tecnico-universitario-en-gestion-de-riesgo-higiene-y-seguridad-en-el-trabajo/')}
-          title='Tecnicatura Universitaria en Gestión de Riesgo, Higiene y seguridad en el trabajo' titleStyle={styles.itemTitleStyle}/>
+          title='Tecnicatura Universitaria en Gestión de Riesgo, Higiene y seguridad en el trabajo' />
           
           <Text style={styles.titleCarrera}>Carreras de grado</Text>
           <Button buttonStyle={styles.itemColor1} onPress={() => Linking.openURL('http://tecno.unca.edu.ar/ingenieria-en-informatica/')} 
           title='Ingeniería en Informática' titleStyle={styles.itemTitleStyle}/>
           <Button buttonStyle={styles.itemColor2} onPress={() => Linking.openURL('http://tecno.unca.edu.ar/arquitectura/')}
-          title='Arquitectura' titleStyle={styles.itemTitleStyle}/>
+          title='Arquitectura'/>
           <Button buttonStyle={styles.itemColor1} onPress={() => Linking.openURL('http://tecno.unca.edu.ar/ingenieria-electronica/')}
           title='Ingeniería en Electrónica' titleStyle={styles.itemTitleStyle}/>
           <Button buttonStyle={styles.itemColor2} onPress={() => Linking.openURL('http://tecno.unca.edu.ar/ingenieria-en-agrimensura/')} 
-          title='Ingeniería en Agrimensura' titleStyle={styles.itemTitleStyle}/>
+          title='Ingeniería en Agrimensura' />
           <Button buttonStyle={styles.itemColor1} onPress={() => Linking.openURL('http://tecno.unca.edu.ar/ingenieria-de-minas/')} 
           title='Ingeniería en Minas' titleStyle={styles.itemTitleStyle}/>
           <Button buttonStyle={styles.itemColor2} onPress={() => Linking.openURL('http://tecno.unca.edu.ar/licenciatura-en-geologia/')} 
-          title='Licenciatura en Geología' titleStyle={styles.itemTitleStyle}/>
+          title='Licenciatura en Geología'/>
           
           </View>
           </ScrollView>
@@ -76,14 +76,14 @@ titleCarrera:{
   itemColor1: {
     marginTop:4,
     marginBottom:4,
-    backgroundColor:'#00BCB4',
+    backgroundColor:'#65d6ce',
     borderWidth:1,
     borderColor:'#0F0F0F'
   },
   itemColor2: {
     marginTop:4,
     marginBottom:4,
-    backgroundColor:'#00CCCC',
+    backgroundColor:'#00303f',
     borderWidth:1,
     borderColor:'#0F0F0F'
     },

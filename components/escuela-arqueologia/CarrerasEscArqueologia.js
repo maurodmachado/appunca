@@ -59,13 +59,13 @@ titleCarrera:{
     
 },
     itemTitleStyle: {
-    color: "white",
+    color: "black",
     fontSize: 16
   },
 itemLicenciatura: {
     marginTop:5,
     marginBottom:5,
-    backgroundColor:'#C44830',
+    backgroundColor:'#FFCC00',
     borderWidth:1,
     borderColor:'#0F0F0F'
   },

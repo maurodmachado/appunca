@@ -1,130 +1,148 @@
-import React, { useEffect } from "react";
-import { View, Text, Image, StyleSheet, Linking, TouchableOpacity, BackHandler, Alert } from "react-native";
+import React, {useEffect} from 'react';
+import {
+  View,
+  Text,
+  Image,
+  StyleSheet,
+  Linking,
+  TouchableOpacity,
+  BackHandler,
+  Alert,
+  Dimensions, 
+  Platform, 
+  PixelRatio 
+} from 'react-native';
 
 
-import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import {  faRoute} from '@fortawesome/free-solid-svg-icons';
-
+import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
+import {faRoute} from '@fortawesome/free-solid-svg-icons';
+import { normalize } from './utils/utils';
 
 export default function HomeComponent({navigation}) {
-
+  
   const iniciarRecorrido = () => {
-    navigation.navigate('Preguntas')
-  }
+    navigation.navigate('Preguntas');
+  };
 
- useEffect(() => {
-    const backAction = () => {
-      Alert.alert("Atención!", "Estas seguro que deseas cerrar la aplicación?", [
-        {
-          text: "Cancelar",
-          onPress: () => null,
-          style: "cancel"
-        },
-        { text: "Cerrar app", onPress: () => BackHandler.exitApp() }
-      ]);
-      return true;
-    };
-    
+  const backAction = () => {
+    Alert.alert('Atención!', 'Estas seguro que deseas cerrar la aplicación?', [
+      {
+        text: 'Cancelar',
+        onPress: () => null,
+        style: 'cancel',
+      },
+      {text: 'Cerrar app', onPress: () => BackHandler.exitApp()},
+    ]);
+    return true;
+  };
+
   const backHandler = BackHandler.addEventListener(
-    "hardwareBackPress",
-    backAction
+    'hardwareBackPress',
+    backAction,
   );
 
-  return () => backHandler.remove();
-}, []);
+  useEffect(() => {
+    BackHandler.addEventListener('hardwareBackPress', backAction);
+
+    return () =>
+      BackHandler.removeEventListener('hardwareBackPress', backAction);
+  }, []);
 
   return (
-    <> 
-
-<View style={styles.contenedor}>
-      <Text style={styles.titulo}> Conociendo la</Text>
-      <View style={styles.imagen}>
-      <Image
-          source={require('../assets/logo_main.png')}
-          style={{width: 341, height:111, resizeMode:"contain"}}
-        />
-      </View>
-      <View style={styles.containerButton}>
-      <TouchableOpacity
-          style={styles.buttonStyle}
-          activeOpacity={0.5}
-          onPress= {() => iniciarRecorrido() }>
-            <View style={styles.buttonImageIconStyle}><FontAwesomeIcon icon={faRoute} size={40} color="white"/></View>
-         
-          <View style={styles.buttonIconSeparatorStyle} />
-          <Text style={styles.buttonTextStyle}>Iniciar recorrido</Text>
-        </TouchableOpacity>
+    <>
+      <View style={styles.container}>
+        <Text style={styles.titleText}> Conociendo la</Text>
+        <View style={styles.imageView}>
+          <Image
+            source={require('../assets/logo_main.png')}
+            style={styles.image}
+          />
         </View>
-        
+        <View style={styles.containerButton}>
+          <TouchableOpacity
+            style={styles.buttonStyle}
+            activeOpacity={0.5}
+            onPress={() => iniciarRecorrido()}>
+            <View style={styles.buttonImageIconStyle}>
+              <FontAwesomeIcon icon={faRoute} size={40} color="white" />
+            </View>
 
-    <View>
-    <Text style={styles.footerText} onPress={() => Linking.openURL('http://www.unca.edu.ar/')}> www.unca.edu.ar</Text>
-    </View>
-    </View>
+            <View style={styles.buttonIconSeparatorStyle} />
+            <Text style={styles.buttonTextStyle}>Iniciar recorrido</Text>
+          </TouchableOpacity>
+        </View>
+
+        <Text
+          style={styles.footerText}
+          onPress={() => Linking.openURL('http://www.unca.edu.ar/')}>
+          {' '}
+          www.unca.edu.ar
+        </Text>
+        
+      </View>
     </>
   );
 }
 
 const styles = StyleSheet.create({
-    buttonIconSeparatorStyle: {
-      backgroundColor: '#1999d0',
-      width: 1,
-      height: 45,
+  buttonIconSeparatorStyle: {
+    backgroundColor: '#1999d0',
+    width: 1,
+    height: '80%',
   },
   buttonImageIconStyle: {
-    padding: 10,
-    margin: 5,
-    marginTop:10,
+    padding: '3%',
+    margin: '4%',
+    marginTop: '5%',
   },
   buttonStyle: {
-      flexDirection: 'row',
-      alignItems: 'center',
-      backgroundColor: '#093869',
-      borderWidth: 1,
-      borderColor: '#0F0F0F',
-      width:250,
-      height: 80,
-      borderRadius: 5,
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#093869',
+    borderWidth: 1,
+    borderColor: '#0F0F0F',
+    width: '80%',
+    borderRadius: 5,
   },
   buttonTextStyle: {
     color: '#FFFFFF',
-    marginLeft: 10,
-    fontSize: 20,
-    marginRight:10,
+    marginLeft: '10%',
+    fontSize: normalize(19)
   },
-  contenedor:{
-    backgroundColor:'#FFFFFF',
-    flex:1
+  container: {
+    backgroundColor: '#FFFFFF',
+    flex: 1,
   },
   containerButton: {
-    alignItems:'center',
-    marginTop: 50,
-    marginBottom: 100,
-    textAlignVertical: "center",
-    
-},
-footerText: {
-  textAlign:"center",
-  fontSize: 19,
-  color: "#093869"
-},
-  header: { 
-    flex: 1,   
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "transparent",
-     
-  },
-  imagen: {
-    paddingTop:10,
-    justifyContent: 'center',
+    flex:80,
+    height:'10%',
     alignItems: 'center',
   },
-  titulo: {
+  footerText: {
+    textAlign: 'center',
+    fontSize: normalize(19),
+    bottom: 0,
+    marginBottom: '10%',
+    color: '#093869',
+  },
+  header: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'transparent',
+  },
+  image: {
+    width: '92%',
+    height: '45%',
+    resizeMode: 'center',
+    marginLeft: '4%',
+    marginRight: '4%',
+  },
+  titleText: {
     color: '#0F0F0F',
-    marginTop:40,
-    fontSize: 24,
+    marginTop: '5%',
+    fontSize: normalize(23),
     fontWeight: 'bold',
-    textAlign:'center'
-  }
+    textAlign: 'center',
+  },
 });

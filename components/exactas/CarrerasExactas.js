@@ -23,13 +23,13 @@ export default function CarrerasExactas({navigation}) {
          <View style={styles.containerButton}>
          <Text style={styles.titleCarrera}>Profesorados</Text>
           <Button buttonStyle={styles.itemProfesorado} onPress={() => Linking.openURL('http://www.exactas.unca.edu.ar/academ/carreras/pb.html')} 
-          title='Profesorado en Biología' titleStyle={styles.itemTitleStyle}/>
+          title='Profesorado en Biología' />
           <Button buttonStyle={styles.itemProfesorado} onPress={() => Linking.openURL('http://www.exactas.unca.edu.ar/academ/carreras/pf.html')}
-          title='Profesorado en Física' titleStyle={styles.itemTitleStyle}/>
+          title='Profesorado en Física'/>
           <Button buttonStyle={styles.itemProfesorado} onPress={() => Linking.openURL('http://www.exactas.unca.edu.ar/academ/carreras/pm.html')}
-          title='Profesorado en Matemática' titleStyle={styles.itemTitleStyle}/>
+          title='Profesorado en Matemática'/>
           <Button buttonStyle={styles.itemProfesorado} onPress={() => Linking.openURL('http://www.exactas.unca.edu.ar/academ/carreras/pq.html')}
-          title='Profesorado en Química' titleStyle={styles.itemTitleStyle}/>
+          title='Profesorado en Química'/>
           
           <Text style={styles.titleCarrera}>Licenciaturas</Text>
           <Button buttonStyle={styles.itemLicenciatura} onPress={() => Linking.openURL('http://www.exactas.unca.edu.ar/academ/carreras/lca.html')} 
@@ -45,17 +45,17 @@ export default function CarrerasExactas({navigation}) {
           
           <Text style={styles.titleCarrera}>Tecnicaturas</Text>
           <Button buttonStyle={styles.itemTecnicaturas} onPress={() => Linking.openURL('http://www.exactas.unca.edu.ar/academ/carreras/tca.html')} 
-          title='Tecnicatura en Ciencias Ambientales' titleStyle={styles.itemTitleStyle}/>
+          title='Tecnicatura en Ciencias Ambientales'/>
           <Button buttonStyle={styles.itemTecnicaturas} onPress={() => Linking.openURL('http://www.exactas.unca.edu.ar/academ/carreras/ti-dw.html')}
-          title='Tecnicatura en Informática - Orientación Diseño Web' titleStyle={styles.itemTitleStyle}/>
+          title='Tecnicatura en Informática - Orientación Diseño Web'/>
           <Button buttonStyle={styles.itemTecnicaturas} onPress={() => Linking.openURL('http://www.exactas.unca.edu.ar/academ/carreras/ti-me.html')}
-          title='Tecnicatura en Informática - Orientación Mantenimiento de Equipos' titleStyle={styles.itemTitleStyle}/>
+          title='Tecnicatura en Informática - Orientación Mantenimiento de Equipos' />
           <Button buttonStyle={styles.itemTecnicaturas} onPress={() => Linking.openURL('http://www.exactas.unca.edu.ar/academ/carreras/ti-r.html')}
-          title='Tecnicatura en Informática - Orientación Redes' titleStyle={styles.itemTitleStyle}/>
+          title='Tecnicatura en Informática - Orientación Redes' />
           <Button buttonStyle={styles.itemTecnicaturas} onPress={() => Linking.openURL('http://www.exactas.unca.edu.ar/academ/carreras/ter.html')}
-          title='Tecnicatura Universitaria en Energías Renovables' titleStyle={styles.itemTitleStyle}/>
+          title='Tecnicatura Universitaria en Energías Renovables' />
           <Button buttonStyle={styles.itemTecnicaturas} onPress={() => Linking.openURL('http://www.exactas.unca.edu.ar/academ/carreras/tqu.html')}
-          title='Tecnicatura Química Universitaria' titleStyle={styles.itemTitleStyle}/>
+          title='Tecnicatura Química Universitaria' />
 
           <Text style={styles.titleCarrera}>Ciclos de Complementación Curricular</Text>
           <Button buttonStyle={styles.itemCCC} onPress={() => Linking.openURL('http://www.exactas.unca.edu.ar/academ/carreras/cpc.html')} 
@@ -99,28 +99,28 @@ titleCarrera:{
   itemProfesorado: {
     marginTop:4,
     marginBottom:4,
-    backgroundColor:'#00BCB4',
+    backgroundColor:'#283747',
     borderWidth:1,
     borderColor:'#0F0F0F'
   },
   itemLicenciatura: {
     marginTop:4,
     marginBottom:4,
-    backgroundColor:'#00CCCC',
+    backgroundColor:'#5DADE2',
     borderWidth:1,
     borderColor:'#0F0F0F'
   },
   itemTecnicaturas: {
     marginTop:4,
     marginBottom:4,
-    backgroundColor:'#00BCB4',
+    backgroundColor:'#1F618D',
     borderWidth:1,
     borderColor:'#0F0F0F'
   },
   itemCCC: {
   marginTop:4,
   marginBottom:4,
-  backgroundColor:'#00CCCC',
+  backgroundColor:'#3498DB',
   borderWidth:1,
   borderColor:'#0F0F0F'
   },

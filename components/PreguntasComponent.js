@@ -3,6 +3,7 @@ import { View, Text, TouchableOpacity } from "react-native";
 import { StyleSheet} from "react-native";
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faAward, faBriefcaseMedical, faGraduationCap, faRunning, faUniversity, faUtensils} from '@fortawesome/free-solid-svg-icons';
+import { normalize } from "./utils/utils";
 
 
 export default function PreguntasComponent({navigation}) {
@@ -68,36 +69,22 @@ export default function PreguntasComponent({navigation}) {
 
 const styles = StyleSheet.create({
   baseText: {
-  fontSize: 23,
+  fontSize: normalize(23),
   textAlign:"center"
 },
 buttonContainer: {
     justifyContent: "center",
-    padding: 10
+    padding: '2%'
 },
 buttonIconSeparatorStyle: {
     backgroundColor: '#1999d0',
     width: 1,
-    height: 45,
-},
-buttonImageShortIconStyle:{
-    padding: 5,
-  margin: 5,
-  marginTop:5,
+    height: '80%',
 },
 buttonImageIconStyle: {
-  padding: 10,
-  margin: 5,
-  marginTop:10,
-},
-buttonShortStyle:{
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: '#093869',
-    borderWidth: 0.5,
-    borderColor: '#fff',
-    height: 40,
-    borderRadius: 5,
+  padding: '2%',
+  margin: '2%',
+  marginTop:'2%',
 },
 buttonStyle: {
     flexDirection: 'row',
@@ -105,46 +92,29 @@ buttonStyle: {
     backgroundColor: '#093869',
     borderWidth: 1, 
     borderColor: '#0F0F0F',
-    height: 80,
+    height: '15%',
     borderRadius: 5,
-    paddingRight:10,
-    margin: 4,
+    paddingRight: '2%',
+    margin:'2%',
 },
 buttonTextStyle: {
   color: '#FFFFFF',
-  marginBottom: 4,
-  marginLeft: 10,
-  fontSize: 17,
-  marginRight:20,
+  marginBottom: '2%',
+  marginLeft: '3%',
+  fontSize: normalize(17),
+  marginRight:'5%',
 },
 container: {
-    margin:20,
+    margin: '2%',
     textAlignVertical: "center",
     width: "90%", 
     alignSelf:"center"
 },
-containerHome: {
-    margin:180,
-    textAlignVertical: "center",
-    width: "90%", 
-    alignSelf:"center"
-},
-footerText: {
-    textAlign:"center",
-    fontSize: 19,
-    color: "#093869"
-  },
-header: {    
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#ffffff",
-    
-  },
 titleText: {
-  fontSize: 21,
+  fontSize: normalize(21),
   fontWeight: "bold",
   textAlign:"center",
-  marginBottom:10,
+  marginBottom:'2%',
+  marginTop:'2%',
 },
 });

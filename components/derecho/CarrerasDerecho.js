@@ -28,7 +28,7 @@ export default function CarrerasDerecho({navigation}) {
           
           <Text style={styles.titleCarrera}>Carreras de grado</Text>
           <Button buttonStyle={styles.itemColor2} onPress={() => Linking.openURL('http://tecno.unca.edu.ar/tecnicatura-universitaria-industrial/')} 
-          title='Abogacía' titleStyle={styles.itemTitleStyle}/>
+          title='Abogacía' />
           
           </View>
           </ScrollView>
@@ -63,14 +63,14 @@ titleCarrera:{
   itemColor1: {
     marginTop:4,
     marginBottom:4,
-    backgroundColor:'#00BCB4',
+    backgroundColor:'#6699CC',
     borderWidth:1,
     borderColor:'#0F0F0F'
   },
   itemColor2: {
     marginTop:4,
     marginBottom:4,
-    backgroundColor:'#00CCCC',
+    backgroundColor:'#336699',
     borderWidth:1,
     borderColor:'#0F0F0F'
     },

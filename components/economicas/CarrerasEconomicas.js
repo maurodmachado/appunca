@@ -25,12 +25,12 @@ export default function CarrerasEconomicas({navigation}) {
          <View style={styles.containerButton}>
               <Text style={styles.titleCarrera}>Oferta académica</Text>
           <Button buttonStyle={styles.itemColor2} onPress={() => Linking.openURL('http://eco.unca.edu.ar/content/carreras/index.php?categoria=grado&oferta=cpn2018')} 
-          title='Contador Público' titleStyle={styles.itemTitleStyle}/>
+          title='Contador Público' />
           <Button buttonStyle={styles.itemColor1} onPress={() => Linking.openURL('http://eco.unca.edu.ar/content/carreras/index.php?categoria=grado&oferta=ladm')}
           title='Licenciatura en Administración' titleStyle={styles.itemTitleStyle}/>
           <Button buttonStyle={styles.itemColor2} onPress={() => Linking.openURL('http://eco.unca.edu.ar/content/carreras/index.php?categoria=grado&oferta=lges')}
-          title='Licenciatura en Gestión de la Educación Superior' titleStyle={styles.itemTitleStyle}/>
-          <Button buttonStyle={styles.itemColor2} onPress={() => Linking.openURL('http://eco.unca.edu.ar/content/carreras/index.php?categoria=grado&oferta=lgp')}
+          title='Licenciatura en Gestión de la Educación Superior'/>
+          <Button buttonStyle={styles.itemColor1} onPress={() => Linking.openURL('http://eco.unca.edu.ar/content/carreras/index.php?categoria=grado&oferta=lgp')}
           title='Licenciatura en Gestión Pública' titleStyle={styles.itemTitleStyle}/>         
           </View>
           </ScrollView>
@@ -65,14 +65,14 @@ titleCarrera:{
   itemColor1: {
     marginTop:4,
     marginBottom:4,
-    backgroundColor:'#00BCB4',
+    backgroundColor:'#79a3b1',
     borderWidth:1,
     borderColor:'#0F0F0F'
   },
   itemColor2: {
     marginTop:4,
     marginBottom:4,
-    backgroundColor:'#00CCCC',
+    backgroundColor:'#393e46',
     borderWidth:1,
     borderColor:'#0F0F0F'
     },

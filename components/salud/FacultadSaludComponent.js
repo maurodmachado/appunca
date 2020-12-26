@@ -1,19 +1,25 @@
-import { faAlignJustify, faArrowLeft, faArrowRight, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faAlignJustify, faArrowLeft, faArrowRight, faCalculator, faChevronRight, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { Text, StyleSheet, View, Linking, BackHandler } from "react-native";
+import { Text, StyleSheet, View, Linking, BackHandler, Image, TouchableOpacity } from "react-native";
 import { Card, Button, Overlay } from 'react-native-elements'
+import { ScrollView } from "react-native-gesture-handler";
+import { estiloFacultades } from "../../assets/styles/estiloFacultades";
+import { normalize } from "../utils/utils";
+import Icon from 'react-native-vector-icons/FontAwesome';
+
 
 export default function FacultadSaludComponent({navigation}) {
  
   const [visible, setVisible] = useState(false);
-  
+  const telefonoSalud = '3834313240';
+  const emailSalud = 'alumnos@salud.unca.edu.ar';
+  const wspSalud = '543834545986';
+
   const toggleOverlay = () => {
     setVisible(!visible);
   };
-
-  
 
   const navegarAComponente = (route) => {
     navigation.navigate(route)
@@ -32,88 +38,99 @@ export default function FacultadSaludComponent({navigation}) {
   return () => backHandler.remove();
 }, []);
 
-
   return (
     <> 
-   <Card containerStyle={{borderWidth: 1, borderColor:'#0f0f0f'}}>
-  <Card.Title style={{fontSize:20, color: '#0F0F0F'}}> <Button icon={<FontAwesomeIcon icon={faArrowLeft} size={14} color="#ffffff" />} buttonStyle={{left:0, position:'relative', width: 20, height:20,  textAlignVertical:'center'}} onPress={() => {navegarAComponente('Facultad de Derecho')}}/> Facultad de Salud <Button icon={<FontAwesomeIcon icon={faArrowRight} size={14} color="#ffffff" />} buttonStyle={{position:'relative', width: 20, height:20,  textAlignVertical:'center'}} onPress={() => {navegarAComponente('Facultad de Exactas')}}/></Card.Title>
+    <View style={styles.container}>
+   <Card containerStyle={styles.cardContainer}>
+  <View>
+  <Card.Title> 
+<Button icon={<FontAwesomeIcon icon={faArrowLeft} size={normalize(16)} color="#ffffff" />} 
+buttonStyle={{left:0, width: 22, height:22, marginRight:5}} onPress={() => {navegarAComponente('Facultad de Derecho')}}/> 
+
+
+<Text style={styles.textCartTitleStyle}>Facultad de Salud</Text> 
+
+<Button icon={<FontAwesomeIcon icon={faArrowRight} size={normalize(16)} color="#ffffff" />} 
+buttonStyle={{width: 22, height:22, marginLeft:5 }} onPress={() => {navegarAComponente('Facultad de Exactas')}}/>
+</Card.Title>
+
+
+  </View>
   <Card.Divider style={{backgroundColor: '#0F0F0F'}}/>
-  <Card.Image source={{
+  <Image source={{
             uri: 'http://www.huma.unca.edu.ar/images/rotador_2020/Ingreso_2021.jpg',
-          
-          }}>
-    
-    
-  </Card.Image>
+            }}
+            style={styles.responsiveImage}>
+              
+  </Image>
+  <ScrollView style={{maxHeight:normalize(100)}}>
   <Text style={styles.textCard}>
-    La Facultad de Ciencias de la Salud sostiene la formación docente a través de las carreras de profesorado. Es una de las facultades con mayor cantidad de carreras de grado y de postgrado y la mayor matrícula de la UNCa.
+  La Facultad de Ciencias de la Salud sostiene la formación docente a través de las carreras de profesorado. 
+  Es una de las facultades con mayor cantidad de carreras de grado y de postgrado y la mayor matrícula de la UNCa.
+  Es una de las facultades con mayor cantidad de carreras de grado y de postgrado y la mayor matrícula de la UNCa.
+  Es una de las facultades con mayor cantidad de carreras de grado y de postgrado y la mayor matrícula de la UNCa.
     </Text>
-    
-      
-      <Button
-      buttonStyle={{borderRadius: 10, margin:5, borderWidth: 1, borderColor: '#093869', backgroundColor: '#FFFFFF'}}
-      icon={<FontAwesomeIcon icon={faPhone} size={20} color="#093869" style={{position:'absolute', left:10}}/>}
-      titleStyle={{color:'#093869'}}
-      title='Contacto'
-      onPress={toggleOverlay}
-      />
-      <Overlay isVisible={visible} onBackdropPress={toggleOverlay}>
+    </ScrollView>
+    <View style={styles.buttonContainer}>
+      <TouchableOpacity
+          style={styles.buttonShortStyle}
+          activeOpacity={0.5}
+          onPress= {() => navegarAComponente('CarrerasSalud') }>
+            <View style={styles.buttonImageShortIconStyle}><FontAwesomeIcon icon={faChevronRight} size={normalize(20)} color={"black"} style={{position:'relative'}}/></View>
+            <View style={styles.buttonTextStyle}>
+          <Text style={styles.textStyle}>Ver carreras disponibles</Text>
+          </View>
+        </TouchableOpacity>
+    </View>
+    <View style={styles.buttonContainer}>
+      <TouchableOpacity
+          style={styles.buttonShortOutlineStyle}
+          activeOpacity={0.5}          
+          onPress={toggleOverlay}>
+            <View style={styles.buttonImageShortIconStyle}><FontAwesomeIcon icon={faPhone} size={normalize(20)} color={"#1999d0"} style={{position:'relative'}}/></View>
+            <Overlay isVisible={visible} onBackdropPress={toggleOverlay}>
       <View style={styles.centeredView}>
           <Text style={{fontSize:20, fontWeight: 'bold'}}>Facultad de Ciencias de la Salud</Text>
+         
           <Text style={styles.textCardTitle}>Dirección</Text>
-          <Text style={styles.textCard}>Ayacucho 774, San Fernando del Valle de</Text><Text style={styles.textCard}>Catamarca, Catamarca, CP: 4700</Text>
+          <Text style={styles.textCard}>Ayacucho 774, San Fernando del Valle de</Text>
+          <Text style={styles.textCard}>Catamarca, Catamarca, CP: 4700</Text>
           <Text style={styles.textCardTitle}>Contacto</Text>
-          <Text style={styles.textCard}>Mesa de Entradas: facsal@salud.unca.edu.ar</Text>
-          <Text style={styles.textCard}>Departamento Alumnos: alumnos@salud.unca.edu.ar </Text>
-          <Text style={styles.textCard}>Secretaria Académica: academica@salud.unca.edu.ar</Text>
+          <View style={styles.buttonWhitIcon}>
+          <Icon.Button name="envelope" backgroundColor="#1999d0" onPress={()=> Linking.openURL(`mailto: ${emailSalud}`)}>Email</Icon.Button>
+          </View>
+          <View style={styles.buttonWhitIcon}>
+          <Icon.Button name="phone" backgroundColor="#1999d0" onPress={()=> Linking.openURL(`tel: ${telefonoSalud}`)}>Telefono</Icon.Button>     
+          </View>
+          <View style={styles.buttonWhitIcon}>
+          <Icon.Button name="whatsapp" backgroundColor="#00bb2d" onPress={() => Linking.openURL(`https://api.whatsapp.com/send?phone=${wspSalud}`)}> Whatsapp</Icon.Button>
+          </View>
           </View>
       </Overlay>
-      <Button  
-      type="outline"    
-      buttonStyle={{borderRadius: 10, margin:5, borderWidth: 1, borderColor: '#093869', backgroundColor: '#FFFFFF'}}
-      title='Inscripciones'
-      titleStyle={{color:'#093869'}}
-      icon={<FontAwesomeIcon icon={faAlignJustify} size={20} color="#093869" style={{position:'absolute', left:10}}/>}
-      onPress={() => Linking.openURL('http://www.salud.unca.edu.ar/index.php?option=com_content&view=article&id=1594&catid=12')}
-       
-      />
-      
-    <Button
-      
-      
-      buttonStyle={{borderRadius: 10, margin:5, borderColor:'#0F0F0F', borderWidth:1}}
-      title='Ver carreras disponibles'
-      onPress={() => navegarAComponente('CarrerasSalud') }
-      />  
-
- 
-</Card>
+            <View style={styles.buttonTextStyle}>
+          <Text style={styles.textOutlineStyle}>Contacto</Text>
+          </View>
+        </TouchableOpacity>
+    </View>
+    <View style={styles.buttonContainer}>
+      <TouchableOpacity
+          style={styles.buttonShortOutlineStyle}
+          activeOpacity={0.5}
+          onPress={() => Linking.openURL('http://preinscripcion.unca.edu.ar/')}>
+            <View style={styles.buttonImageShortIconStyle}><FontAwesomeIcon icon={faAlignJustify} size={normalize(20)} color={"#1999d0"}/>
+         
+            </View>
+            <View style={styles.buttonTextStyle}>
+            <Text style={styles.textOutlineStyle}>Inscripción</Text>
+            </View>
+         
+        </TouchableOpacity>
+    </View>
    
+</Card>
+</View>
     </>
   );
 }
 
-const styles = StyleSheet.create({
-  textCardTitle:{
-    marginTop: 5,
-    marginBottom: 5,
-    fontSize:16,
-    fontWeight: 'bold'
-  },
-  textCard:{
-    marginTop: 5,
-    marginBottom: 5,
-    fontSize:16,
-    
-  },
-  centeredView: {
-    
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  textStyle: {
-    color: "white",
-    fontWeight: "bold",
-    textAlign: "center"
-  }
-});
+const styles = estiloFacultades;

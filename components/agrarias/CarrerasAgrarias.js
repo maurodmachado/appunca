@@ -25,13 +25,13 @@ export default function CarrerasAgrarias({navigation}) {
               <Text style={styles.titleCarrera}>Carreras de pregrado</Text>
           <Button buttonStyle={styles.itemColor2} onPress={() => Linking.openURL('http://agrarias.unca.edu.ar/tecnicatura-universitaria-en-parques-y-jardines/')} 
           title='Tecnicatura universitaria en Parques y Jardines' titleStyle={styles.itemTitleStyle}/>
-          <Button buttonStyle={styles.itemColor1} onPress={() => Linking.openURL('http://agrarias.unca.edu.ar/tecnicatura-universitaria-en-procesamiento-agroalimentario/')}
+          <Button buttonStyle={styles.itemColor2} onPress={() => Linking.openURL('http://agrarias.unca.edu.ar/tecnicatura-universitaria-en-procesamiento-agroalimentario/')}
           title='Tecnicatura Universitaria en Procesamiento Agroalimentario' titleStyle={styles.itemTitleStyle}/>
           
           <Text style={styles.titleCarrera}>Carreras de grado</Text>
           <Button buttonStyle={styles.itemColor1} onPress={() => Linking.openURL('http://agrarias.unca.edu.ar/ingenieria-agronomica/')} 
           title='Ingeniería Agronómica' titleStyle={styles.itemTitleStyle}/>
-          <Button buttonStyle={styles.itemColor2} onPress={() => Linking.openURL('http://agrarias.unca.edu.ar/ingenieria-de-paisajes/')}
+          <Button buttonStyle={styles.itemColor1} onPress={() => Linking.openURL('http://agrarias.unca.edu.ar/ingenieria-de-paisajes/')}
           title='Ingeniería de Paisajes' titleStyle={styles.itemTitleStyle}/>
           </View>
           </ScrollView>
@@ -73,7 +73,7 @@ titleCarrera:{
   itemColor2: {
     marginTop:4,
     marginBottom:4,
-    backgroundColor:'#66a038',
+    backgroundColor:'#8db596',
     borderWidth:1,
     borderColor:'#0F0F0F'
     },

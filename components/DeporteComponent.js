@@ -1,7 +1,7 @@
 import * as React from "react";
-import { View, Text, StyleSheet, Linking} from "react-native";
+import { TouchableOpacity, View, Text, StyleSheet, Linking} from "react-native";
 import { Card, Divider } from "react-native-elements";
-import { TouchableOpacity } from "react-native-gesture-handler";
+import { normalize } from "./utils/utils";
 
 
 export default function DeporteComponent() {
@@ -9,7 +9,7 @@ export default function DeporteComponent() {
   return (
     <> 
     
-    <View style={styles.contenedor}>
+    <View style={styles.container}>
     
     <Card>
   <Card.Title><Text style={styles.titleText}>Secretaría de Bienestar Universitario y Asuntos estudiantiles</Text></Card.Title>
@@ -46,42 +46,23 @@ export default function DeporteComponent() {
 }
 const styles = StyleSheet.create({
   baseText: {
-    fontSize: 16,
+    fontSize: normalize(16),
     textAlign:"center",
     marginBottom:10,
   },
   baseTextList: {
-    fontSize: 16,
+    fontSize: normalize(16),
     textAlign:"center",
     backgroundColor:'#2ECC71',
     margin:2
     
   },
   baseTextTitle: {
-    marginTop:10,
-    marginBottom:10,
-    fontSize: 16,
+    marginTop:'2%',
+    marginBottom:'2%',
+    fontSize: normalize(16),
     fontWeight:'bold',
     textAlign:"center"
-  },
-  buttonContainer: {
-      justifyContent: "center",
-      padding: 5
-  },
-  buttonIconSeparatorStyle: {
-      backgroundColor: '#1999d0',
-      width: 1,
-      height: 45,
-  },
-  buttonImageShortIconStyle:{
-      padding: 5,
-    margin: 5,
-    marginTop:5,
-  },
-  buttonImageIconStyle: {
-    padding: 10,
-    margin: 5,
-    marginTop:10,
   },
   buttonShortStyle:{
     flexDirection: "row", 
@@ -89,61 +70,25 @@ const styles = StyleSheet.create({
     backgroundColor: '#1999d0',
     borderWidth: 1, 
     borderColor: '#0F0F0F',
-      height: 60,
-      borderRadius: 5,
-      margin: 4,
-  },
-  buttonStyle: {
-      flexDirection: 'row',
-      alignItems: 'center',
-      backgroundColor: '#093869',
-      borderWidth: 1, 
-      borderColor: '#0F0F0F',
-      height: 60,
-      borderRadius: 5,
-      margin: 4,
-  },
-  buttonTextStyle: {
-    color: '#FFFFFF',
-    marginBottom: 4,
-    marginLeft: 10,
-    fontSize: 17,
-    marginRight:20,
+    height: '10%',
+    borderRadius: 5,
+    margin: '2%',
   },
   buttonTextStyleCenter: {
     color: '#FFFFFF',
     textAlignVertical:'center',
     marginBottom: 4,
     marginLeft: 10,
-    fontSize: 17,
+    fontSize: normalize(17),
     marginRight:20,
   },
   container: {
-      margin:20,
-      textAlignVertical: "center",
-      width: "90%", 
-      alignSelf:"center"
+    backgroundColor: '#FFFFFF',
+    flex: 1,
+    alignItems: 'center'
   },
-  containerHome: {
-      margin:180,
-      textAlignVertical: "center",
-      width: "90%", 
-      alignSelf:"center"
-  },
-  footerText: {
-      textAlign:"center",
-      fontSize: 19,
-      color: "#093869"
-    },
-  header: {    
-      flex: 1,
-      justifyContent: "center",
-      alignItems: "center",
-      backgroundColor: "#ffffff",
-      
-    },
   titleText: {
-    fontSize: 21,
+    fontSize: normalize(21),
     fontWeight: "bold",
     textAlign:"center",
     marginBottom:10,

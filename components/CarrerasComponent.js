@@ -1,7 +1,8 @@
-import { faAtom, faBalanceScale, faGlobeAmericas, faHeartbeat, faLaptop, faSearch, faTractor } from "@fortawesome/free-solid-svg-icons";
+import { faAtom, faBalanceScale, faCalculator, faGlobeAmericas, faHeartbeat, faLaptop, faSearch, faTractor } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import * as React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { normalize } from "./utils/utils";
 
 export default function CarrerasComponent({navigation}) {
 
@@ -12,18 +13,19 @@ export default function CarrerasComponent({navigation}) {
   return (
     <> 
     <View style={styles.container}>
-    <Text style={styles.titleText}>¿Qué facultad querés recorrer?</Text></View>
-    
+    <View style={{flex:80}}>
+    <Text style={styles.titleText}>¿Qué facultad querés recorrer?</Text>
+    </View>
     {/* Facultad de Tecnologia */}
     <View style={styles.buttonContainer}>
       <TouchableOpacity
           style={styles.buttonShortStyleTecnologia}
           activeOpacity={0.5}
           onPress= {() => navegarAComponent('Facultad de Tecnologia') }>
-            <View style={styles.buttonImageShortIconStyle}><FontAwesomeIcon icon={faLaptop} size={20} color={"black"}/></View>
+            <View style={styles.buttonImageShortIconStyle}><FontAwesomeIcon icon={faLaptop} size={normalize(24)} color={"black"}/></View>
          
           <View style={styles.buttonIconSeparatorStyle} />
-          <Text style={styles.buttonTextStyleBlack}>Fac. de Tecnologia y Cs. Aplicadas</Text>
+          <Text style={styles.buttonTextStyleBlack}>Facultad de Tecnologia y Ciencias Aplicadas</Text>
         </TouchableOpacity>
     </View>
 
@@ -33,7 +35,7 @@ export default function CarrerasComponent({navigation}) {
           style={styles.buttonShortStyleHumanidades}
           activeOpacity={0.5}
           onPress= {() => navegarAComponent('Facultad de Humanidades') }>
-            <View style={styles.buttonImageShortIconStyle}><FontAwesomeIcon icon={faGlobeAmericas} size={20} color={"black"}/></View>
+            <View style={styles.buttonImageShortIconStyle}><FontAwesomeIcon icon={faGlobeAmericas} size={normalize(24)} color={"black"}/></View>
          
           <View style={styles.buttonIconSeparatorStyle} />
           <Text style={styles.buttonTextStyleBlack}>Facultad de Humanidades</Text>
@@ -46,7 +48,7 @@ export default function CarrerasComponent({navigation}) {
           style={styles.buttonShortStyleArqueologia}
           activeOpacity={0.5}
           onPress= {() => navegarAComponent('Escuela de Arqueologia') }>
-            <View style={styles.buttonImageShortIconStyle}><FontAwesomeIcon icon={faSearch} size={20} color={"black"}/></View>
+            <View style={styles.buttonImageShortIconStyle}><FontAwesomeIcon icon={faSearch} size={normalize(24)} color={"black"}/></View>
          
           <View style={styles.buttonIconSeparatorStyle} />
           <Text style={styles.buttonTextStyleBlack}>Escuela de arqueología</Text>
@@ -59,7 +61,7 @@ export default function CarrerasComponent({navigation}) {
       style={styles.buttonShortStyleEconomicas}
       activeOpacity={0.5}
       onPress= {() => navegarAComponent('Facultad de Economicas') }>
-        <View style={styles.buttonImageShortIconStyle}><FontAwesomeIcon icon={faHeartbeat} size={20} color={"black"}/></View>
+        <View style={styles.buttonImageShortIconStyle}><FontAwesomeIcon icon={faCalculator} size={normalize(24)} color={"black"}/></View>
      
       <View style={styles.buttonIconSeparatorStyle} />
       <Text style={styles.buttonTextStyleBlack}>Facultad de Ciencias Economicas</Text>
@@ -72,7 +74,7 @@ export default function CarrerasComponent({navigation}) {
           style={styles.buttonShortStyleAgrarias}
           activeOpacity={0.5}
           onPress= {() => navegarAComponent('Facultad de Agrarias') }>
-            <View style={styles.buttonImageShortIconStyle}><FontAwesomeIcon icon={faTractor} size={20} color={"black"}/></View>
+            <View style={styles.buttonImageShortIconStyle}><FontAwesomeIcon icon={faTractor} size={normalize(24)} color={"black"}/></View>
          
           <View style={styles.buttonIconSeparatorStyle} />
           <Text style={styles.buttonTextStyleBlack}>Facultad de Ciencias Agrarias</Text>
@@ -85,10 +87,10 @@ export default function CarrerasComponent({navigation}) {
       style={styles.buttonShortStyleDerecho}
       activeOpacity={0.5}
       onPress= {() => navegarAComponent('Facultad de Derecho') }>
-        <View style={styles.buttonImageShortIconStyle}><FontAwesomeIcon icon={faBalanceScale} size={20} color={"black"}/></View>
+        <View style={styles.buttonImageShortIconStyle}><FontAwesomeIcon icon={faBalanceScale} size={normalize(24)} color={"black"}/></View>
      
       <View style={styles.buttonIconSeparatorStyle} />
-      <View ><Text style={styles.buttonTextStyleBlack}>Facultad de Derecho</Text></View>
+      <Text style={styles.buttonTextStyleBlack}>Facultad de Derecho </Text>
     </TouchableOpacity>
 </View>
 
@@ -98,7 +100,7 @@ export default function CarrerasComponent({navigation}) {
       style={styles.buttonShortStyleSalud}
       activeOpacity={0.5}
       onPress= {() => navegarAComponent('Facultad de Salud') }>
-        <View style={styles.buttonImageShortIconStyle}><FontAwesomeIcon icon={faHeartbeat} size={20} color={"black"}/></View>
+        <View style={styles.buttonImageShortIconStyle}><FontAwesomeIcon icon={faHeartbeat} size={normalize(22)} color={"black"}/></View>
      
       <View style={styles.buttonIconSeparatorStyle} />
       <Text style={styles.buttonTextStyleBlack}>Facultad de Ciencias de la Salud</Text>
@@ -111,182 +113,148 @@ export default function CarrerasComponent({navigation}) {
           style={styles.buttonShortStyleExactas}
           activeOpacity={0.5}
           onPress= {() => navegarAComponent('Facultad de Exactas') }>
-            <View style={styles.buttonImageShortIconStyle}><FontAwesomeIcon icon={faAtom} size={20} color={"black"}/></View>
+            <View style={styles.buttonImageShortIconStyle}><FontAwesomeIcon icon={faAtom}size={normalize(22)} color={"black"}/></View>
          
           <View style={styles.buttonIconSeparatorStyle} />
           <Text style={styles.buttonTextStyleBlack}>Facultad de Ciencias Exactas</Text>
         </TouchableOpacity>
 
     </View>
-
+    </View>
 
     </>
   );
 }
 const styles = StyleSheet.create({
-  centerButton:{
-    flexDirection: 'row',
-    alignItems: 'center',
-  },
-  baseText: {
-  fontSize: 23,
-  textAlign:"center"
-},
 buttonContainer: {
+  flex:80,
+    flexDirection:'row',
     justifyContent:'center',
-    alignContent:'center',
     alignItems:'center',
-    padding: 10
+    marginLeft:'5%',
+    marginRight:'5%',
+    marginBottom:'2%'
 },
 buttonIconSeparatorStyle: {
-    backgroundColor: '#0F0F0F',
-    width: 2,
-    height: 40,
+  backgroundColor: '#0F0F0F',
+  width: 1,
+  height: '80%'
 },
-buttonImageShortIconStyle:{
-    padding: 5,
-  margin: 5,
-  marginTop:5,
+buttonImageShortIconStyle: {
+  margin: '4%',
 },
-buttonImageIconStyle: {
-  padding: 10,
-  margin: 5,
-  marginTop:10,
-},
-buttonShortStyle:{
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: '#093869',
-    borderWidth: 2,
-    borderColor: '#0F0F0F',
-    height: 40,
-    borderRadius: 5,
-},
-buttonShortStyleHumanidades:{
-  flexDirection: 'row',
-  alignItems: 'center',
-  backgroundColor:'#c44830',
+buttonStyle: {
+  
+  backgroundColor: '#093869',
   borderWidth: 2,
   borderColor: '#0F0F0F',
-  height: 40,
+  borderRadius: 5,
+  
+},
+buttonTextStyleBlack: {
+  flex:1,
+  color: '#0F0F0F',
+  marginLeft: '2%',
+  marginRight: '2%',
+  fontSize: normalize(16),
+  textAlign:'center',
+},
+buttonShortStyleHumanidades:{
+  flexDirection: 'row', 
+  flex: 1,
+  alignItems: 'center',
+  backgroundColor: '#C44830',
+  borderWidth: 2,
+  borderColor: '#0F0F0F',
+  width: '80%',
+  height:'90%',
   borderRadius: 5,
 },
 buttonShortStyleSalud:{
-  flexDirection: 'row',
+  flexDirection: 'row', 
+  flex: 1,
   alignItems: 'center',
-  backgroundColor:'#990000',
+  backgroundColor:'#b90000',
   borderWidth: 2,
   borderColor: '#0F0F0F',
-  height: 40,
+  width: '80%',
+  height:'90%',
   borderRadius: 5,
 },
 buttonShortStyleDerecho:{
-  flexDirection: 'row',
+  flexDirection: 'row', 
+  flex: 1,
   alignItems: 'center',
   backgroundColor:'#DD7F28',
   borderWidth: 2,
   borderColor: '#0F0F0F',
-  height: 40,
+  width: '80%',
+  height:'90%',
   borderRadius: 5,
 },
 buttonShortStyleTecnologia:{
-  flexDirection: 'row',
+  flexDirection: 'row', 
+  flex: 1,
   alignItems: 'center',
   backgroundColor:'#00CCCC',
   borderWidth: 2,
   borderColor: '#0F0F0F',
-  height: 40,
+  width: '80%',
+  height:'90%',
   borderRadius: 5,
 },
 buttonShortStyleArqueologia:{
-  flexDirection: 'row',
+  flexDirection: 'row', 
+  flex: 1,
   alignItems: 'center',
   backgroundColor:'#FFFF33',
   borderWidth: 2,
   borderColor: '#0F0F0F',
-  height: 40,
+  width: '80%',
+  height:'90%',
   borderRadius: 5,
 },
 buttonShortStyleExactas:{
-  flexDirection: 'row',
+  flexDirection: 'row', 
+  flex: 1,
   alignItems: 'center',
   backgroundColor:'#2b99ff',
   borderWidth: 2,
   borderColor: '#0F0F0F',
-  height: 40,
+  width: '80%',
+  height:'90%',
   borderRadius: 5,
 },
 buttonShortStyleAgrarias:{
-  flexDirection: 'row',
+  flexDirection: 'row', 
+  flex: 1,
   alignItems: 'center',
   backgroundColor:'#8AB33D',
   borderWidth: 2,
   borderColor: '#0F0F0F',
-  height: 40,
+  width: '80%',
+  height:'90%',
   borderRadius: 5,
 },
 buttonShortStyleEconomicas:{
-  flexDirection: 'row',
+  flexDirection: 'row', 
+  flex: 1,
   alignItems: 'center',
-  backgroundColor:'#914f8c',
+  backgroundColor:'#9e4f8c',
   borderWidth: 2,
   borderColor: '#0F0F0F',
-  height: 40,
+  width: '80%',
+  height:'90%',
   borderRadius: 5,
 },
-buttonStyle: {
-    flexDirection: 'row',
-    alignItems: 'center',
-    backgroundColor: '#093869',
-    borderWidth: 2,
-  borderColor: '#0F0F0F',
-    height: 80,
-    borderRadius: 5,
-    margin: 4,
-},
-buttonTextStyleBlack: {
-  color: '#0F0F0F',
-  marginBottom: 4,
-  marginLeft: 10,
-  fontSize: 17,
-  textAlign:'center',
-  marginRight:20,
-},
-buttonTextStyleWhite: {
-  color: '#FFFFFF',
-  marginBottom: 4,
-  marginLeft: 10,
-  fontSize: 17,
-  textAlign:'center',
-  marginRight:20,
-},
 container: {
-    margin:20,
-    textAlignVertical: "center",
-    width: "90%", 
-    alignSelf:"center"
+  backgroundColor: '#FFFFFF',
+  flex: 1,
 },
-containerHome: {
-    margin:180,
-    textAlignVertical: "center",
-    width: "90%", 
-    alignSelf:"center"
-},
-footerText: {
-    textAlign:"center",
-    fontSize: 19,
-    color: "#093869"
-  },
-header: {    
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#ffffff",
-    
-  },
 titleText: {
-  fontSize: 21,
+  fontSize: normalize(20),
   fontWeight: "bold",
   textAlign:"center",
+  paddingTop:15
 },
 });
