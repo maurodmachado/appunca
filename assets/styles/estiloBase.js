@@ -40,7 +40,7 @@ export const estiloBase = StyleSheet.create({
   },
   buttonContainer: {
       justifyContent: "center",
-      padding: '2%'
+      padding: '2%',
   },
   buttonIconSeparatorStyle: {
       backgroundColor: '#1999d0',
@@ -58,33 +58,21 @@ export const estiloBase = StyleSheet.create({
       backgroundColor: '#093869',
       borderWidth: 1, 
       borderColor: '#0F0F0F',
-      height: '10%',
       borderRadius: 5,
-      paddingRight: '2%',
       margin:'2%',
-  },
-  buttonTextStyleCenter: {
-    color: '#FFFFFF',
-    textAlignVertical:'center',
-    marginBottom: '2%',
-    marginLeft: '3%',
-    fontSize: normalize(17),
-    fontFamily: 'appFont',
-    marginRight:'5%',
   },
   buttonTextStyle: {
     color: '#FFFFFF',
-    marginBottom: '2%',
-    marginLeft: '3%',
+    textAlignVertical:'center',
     fontSize: normalize(17),
     fontFamily: 'appFont',
-    marginRight:'5%',
+    flex:1,
+    textAlign:'center'
   },
   container: {
     backgroundColor: '#FFFFFF',
     flex: 1,
     alignItems: 'center',
-    margin:'2%'
   },
   titleText: {
     marginTop: 5,

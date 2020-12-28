@@ -1,5 +1,5 @@
 import * as React from "react";
-import { View, Text, TouchableOpacity, StyleSheet, Linking} from "react-native";
+import { View, Text, TouchableOpacity, Linking, ScrollView} from "react-native";
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faBus, faDollarSign, faGlobeAmericas, faHome, faUtensils,} from '@fortawesome/free-solid-svg-icons';
 import { Card } from "react-native-elements";
@@ -15,7 +15,7 @@ export default function BecasComponent({navigation}) {
   return (
     <> 
     
-    <View style={styles.contenedor}>
+    <ScrollView style={styles.contenedor}>
     
 
     <Card><Text style={styles.titleText}>Becas disponibles</Text>
@@ -56,7 +56,7 @@ export default function BecasComponent({navigation}) {
           >
             <View style={styles.buttonImageIconStyle}><FontAwesomeIcon icon={faHome} size={30} color={"white"}/></View>
             <View style={styles.buttonIconSeparatorStyle} />
-          <Text style={styles.buttonTextStyle}>Becas de Residencia Univer.</Text>
+          <Text style={styles.buttonTextStyle}>Becas de Residencia Universitaria</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.buttonStyle}
@@ -72,13 +72,14 @@ export default function BecasComponent({navigation}) {
           activeOpacity={0.5}
           onPress={() => Linking.openURL('http://www.unca.edu.ar/pagina-1-becas-de-ayuda-econmica.html')}
           >
-          <Text style={styles.buttonTextStyleCenter}> Y muchas más...</Text>
+          <Text style={styles.buttonTextStyle}> Y muchas más...</Text>
+          
           </TouchableOpacity>
-  
+  <Card.Divider style={{backgroundColor:'#FFFFFF'}}/>
 </Card>
       
       
-        </View>
+        </ScrollView>
 
     </>
   );

@@ -55,7 +55,7 @@ const telefonoDeporte = '3834430657'
           activeOpacity={0.5}
           onPress={() => Linking.openURL('http://www.unca.edu.ar/pagina-1200-deportes-universitarios-71.html?pagina_=0')}
           >
-          <Text style={styles.buttonTextStyleCenter}>Más información</Text>
+          <Text style={styles.buttonTextStyle}>Más información</Text>
           </TouchableOpacity>
       
 </Card>

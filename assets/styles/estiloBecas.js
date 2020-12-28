@@ -46,15 +46,6 @@ export const estiloBecas = StyleSheet.create({
     borderRadius: 5,
     margin: '2%',
   },
-  buttonTextStyleCenter: {
-    color: '#FFFFFF',
-    textAlignVertical:'center',
-    marginBottom: 4,
-    marginLeft: 10,
-    fontSize: normalize(17),
-    fontFamily: 'appFont',
-    marginRight:20,
-  },
   container: {
     backgroundColor: '#FFFFFF',
     flex: 1,
