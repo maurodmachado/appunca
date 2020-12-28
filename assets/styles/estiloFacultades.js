@@ -34,10 +34,9 @@ export const estiloFacultades = StyleSheet.create({
     bottom:0
   },
     buttonContainer: {
-      flex: 0,
     justifyContent: 'flex-end',
     alignItems:'flex-end',
-        margin:'2%',
+        margin:'1%',
     },
     buttonImageShortIconStyle: {
       margin: '3%',
@@ -50,14 +49,14 @@ export const estiloFacultades = StyleSheet.create({
       // Without height undefined it won't work
       height: undefined,
       // figure out your image aspect ratio
-      aspectRatio: 135 / 90,
-      marginBottom:'2%'
+      aspectRatio: 135 / 80,
+      marginBottom:'1%'
     },
     cardContainer:{
       borderWidth: 1, 
       borderColor:'#0F0F0F',
       flex:1, 
-      margin: '2%',
+      margin: '1%',
       marginBottom:10
     },
     cardBodyContainer:{

@@ -83,7 +83,8 @@ export const estiloBase = StyleSheet.create({
   container: {
     backgroundColor: '#FFFFFF',
     flex: 1,
-    alignItems: 'center'
+    alignItems: 'center',
+    margin:'2%'
   },
   titleText: {
     marginTop: 5,

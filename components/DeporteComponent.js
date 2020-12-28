@@ -1,9 +1,11 @@
 import * as React from "react";
-import { TouchableOpacity, View, Text, StyleSheet, Linking} from "react-native";
+import { TouchableOpacity, View, Text, Linking, ScrollView} from "react-native";
 import { Card, Divider } from "react-native-elements";
 import { estiloBase } from "../assets/styles/estiloBase";
 import { estiloFacultades } from "../assets/styles/estiloFacultades";
-import Icon from 'react-native-vector-icons/FontAwesome';
+import { normalize } from "./utils/utils";
+import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
+import { faPhone } from "@fortawesome/free-solid-svg-icons";
 
 
 export default function DeporteComponent() {
@@ -12,20 +14,30 @@ const telefonoDeporte = '3834430657'
   return (
     <> 
     
-    <View style={styles.container}>
+    <ScrollView >
     
     <Card>
       <Text style={styles.titleText}>Secretaría de Bienestar Universitario y Asuntos estudiantiles</Text>
   <Card.Divider/>
-  <View style={{...styleButton.buttonWhitIcon, alignSelf:'center'}}>
-                <Icon.Button
-                  name="phone"
-                  backgroundColor="#1999d0"
-                  onPress={() => Linking.openURL(`tel: ${telefonoDeporte}`)}
-                  style={{borderWidth:1, borderColor:'black'}}>
-                  Telefono
-                </Icon.Button>
+
+              <View style={{...styleButton.buttonContainer, width:180, alignSelf:'center'}}>
+            <TouchableOpacity
+              style={{...styleButton.buttonShortStyle}}
+              activeOpacity={0.5}
+              onPress={() => Linking.openURL(`tel: ${telefonoDeporte}`)}>
+              <View style={styleButton.buttonImageShortIconStyle}>
+                <FontAwesomeIcon
+                  icon={faPhone}
+                  size={normalize(20)}
+                  color={'white'}
+                  style={{position: 'relative'}}
+                />
               </View>
+              <View style={styleButton.buttonTextStyle}>
+                <Text style={styleButton.textStyle}>Telefono</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
   <Divider/>
       <Text style={styles.baseTextTitle}>Actividades</Text>
       <Text style={{...styles.baseTextList, backgroundColor: colorBackgroundItems}}>Gimnasio pesas - Gimnasia localizada</Text>     
@@ -49,7 +61,7 @@ const telefonoDeporte = '3834430657'
 </Card>
       
       
-        </View>
+        </ScrollView>
 
     </>
   );

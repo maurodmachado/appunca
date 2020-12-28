@@ -1,5 +1,5 @@
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-import {faAlignJustify, faPhone} from '@fortawesome/free-solid-svg-icons';
+import {faAlignJustify, faEnvelope, faPhone} from '@fortawesome/free-solid-svg-icons';
 import React, {useState} from 'react';
 import {TouchableOpacity, View, Text, Linking} from 'react-native';
 import {Overlay} from 'react-native-elements';
@@ -43,38 +43,63 @@ export default function ContactoFacultad({facultad}) {
                 Catamarca, Catamarca, CP: 4700
               </Text>
               <Text style={styles.textCardTitle}>Contacto</Text>
-              <View style={styles.buttonWhitIcon}>
-                <Icon.Button
-                  name="envelope"
-                  backgroundColor="#1999d0"
-                  style={{borderWidth:1, borderColor:'black'}}
-                  onPress={() => Linking.openURL(`mailto: ${email}`)}>
-                  Email
-                </Icon.Button>
+              <View style={{...styles.buttonContainer, width:180, alignSelf:'center'}}>
+            <TouchableOpacity
+              style={{...styles.buttonShortStyle}}
+              activeOpacity={0.5}
+              onPress={() => Linking.openURL(`mailto: ${email}`)}>
+              <View style={styles.buttonImageShortIconStyle}>
+                <FontAwesomeIcon
+                  icon={faEnvelope}
+                  size={normalize(20)}
+                  color={'white'}
+                  style={{position: 'relative'}}
+                />
               </View>
-              <View style={styles.buttonWhitIcon}>
-                <Icon.Button
-                  name="phone"
-                  backgroundColor="#1999d0"
-                  style={{borderWidth:1, borderColor:'black'}}
-                  onPress={() => Linking.openURL(`tel: ${telefono}`)}
-                  >
-                  Telefono
-                </Icon.Button>
+              <View style={styles.buttonTextStyle}>
+                <Text style={styles.textStyle}>Email</Text>
               </View>
-              <View style={styles.buttonWhitIcon}>
-                <Icon.Button
-                  name="whatsapp"
-                  backgroundColor="#00bb2d"
-                  style={{borderWidth:1, borderColor:'black'}}
-                  onPress={() =>
-                    Linking.openURL(
-                      `https://api.whatsapp.com/send?phone=${wsp}`,
-                    )
-                  }>
-                  Whatsapp
-                </Icon.Button>
+            </TouchableOpacity>
+          </View>
+
+          <View style={{...styles.buttonContainer, width:180, alignSelf:'center'}}>
+            <TouchableOpacity
+              style={{...styles.buttonShortStyle}}
+              activeOpacity={0.5}
+              onPress={() => Linking.openURL(`tel: ${telefono}`)}>
+              <View style={styles.buttonImageShortIconStyle}>
+                <FontAwesomeIcon
+                  icon={faPhone}
+                  size={normalize(20)}
+                  color={'white'}
+                  style={{position: 'relative'}}
+                />
               </View>
+              <View style={styles.buttonTextStyle}>
+                <Text style={styles.textStyle}>Telefono</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+
+          <View style={{...styles.buttonContainer, width:180, alignSelf:'center'}}>
+            <TouchableOpacity
+              style={{...styles.buttonShortStyle, backgroundColor:'#00bb2d'}}
+              activeOpacity={0.5}
+              onPress={() =>
+                Linking.openURL(
+                  `https://api.whatsapp.com/send?phone=${wsp}`,
+                )
+              }>
+              <View style={{margin: '3%'}}>
+              <Icon name="whatsapp" size={normalize(20)} color={'white'}/>
+               
+              </View>
+              <View style={styles.buttonTextStyle}>
+                <Text style={styles.textStyle}>Whatsapp</Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+
             </View>
           </Overlay>
           <View style={styles.buttonTextStyle}>
