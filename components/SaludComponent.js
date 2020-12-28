@@ -17,7 +17,7 @@ export default function SaludComponent() {
  
   <Card.Divider/>
   <Image
-            source={require('../assets/salud.jpg')}
+            source={require('../assets/saludInfo.jpg')}
             style={styles.responsiveImage}></Image>
   <ScrollView style={{height:'13%'}}>
       <Text style={styles.baseText}>
