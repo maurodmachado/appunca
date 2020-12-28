@@ -10,7 +10,7 @@ export const estiloFacultades = StyleSheet.create({
     alignItems: "center", 
   },
   buttonWhitIcon:{
-    padding:5
+    padding:5,
     
   },
   buttonShortStyle: {
@@ -50,7 +50,7 @@ export const estiloFacultades = StyleSheet.create({
       // Without height undefined it won't work
       height: undefined,
       // figure out your image aspect ratio
-      aspectRatio: 135 / 70,
+      aspectRatio: 135 / 90,
       marginBottom:'2%'
     },
     cardContainer:{
@@ -72,13 +72,14 @@ export const estiloFacultades = StyleSheet.create({
     textCardTitle:{
       marginTop: 5,
       marginBottom: 5,
-      fontSize:normalize(16),
-      fontWeight: 'bold'
+      fontSize:normalize(14),
+      fontFamily: 'titleFont',
     },
     textCard:{
       marginTop: 5,
       marginBottom: 5,
-      fontSize:normalize(13),
+      fontSize:normalize(15),
+      fontFamily: 'appFont',
     },
     centeredView: {
       
@@ -90,14 +91,15 @@ export const estiloFacultades = StyleSheet.create({
     },
     textCartTitleStyle: {
     fontSize:normalize(18),
+    fontFamily: 'titleFont',
     color: "black",
-    fontWeight: "bold",
     textShadowColor: 'white',
     textShadowRadius:10,
     textAlign:'center',
     },
     textStyle: {
     fontSize:normalize(16),
+    fontFamily: 'appFont',
     color: "white",
     textShadowColor: 'black',
     textShadowRadius:10,
@@ -105,6 +107,7 @@ export const estiloFacultades = StyleSheet.create({
     },
     textOutlineStyle: {
     fontSize:normalize(16),
+    fontFamily: 'appFont',
     color: "#0f0f0f",
     textAlign:'center'
     },

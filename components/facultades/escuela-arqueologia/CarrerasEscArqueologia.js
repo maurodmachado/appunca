@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Linking, BackHandler } from 'react-native';
 import { Button } from 'react-native-elements'
 import { ScrollView } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { normalize } from '../../utils/utils';
+import { estiloCarreras } from '../../../assets/styles/estiloCarreras';
 
 export default function CarrerasEscArqueologia({navigation}) {
   useEffect(() => {
@@ -21,16 +21,16 @@ export default function CarrerasEscArqueologia({navigation}) {
 
     return (
         <>
-        <SafeAreaView style={styles.container}> 
-      <ScrollView style={styles.scrollView}>
-         <View style={styles.containerButton}>
-              <Text style={styles.titleCarrera}>Licenciaturas</Text>
+        <SafeAreaView> 
+      <ScrollView>
+         <View style={styleCarreras.containerButton}>
+              <Text style={styleCarreras.titleCarrera}>Licenciaturas</Text>
           <Button buttonStyle={styles.itemLicenciatura} onPress={() => Linking.openURL('http://arqueologia.unca.edu.ar/?p=contenidos&id=12&t=Licenciatura+en+Arqueología')} 
-          title='Licenciatura en Arqueología' titleStyle={styles.itemTitleStyle}/>
+          title='Licenciatura en Arqueología' titleStyle={styleCarreras.itemTitleBlackStyle}/>
           <Button buttonStyle={styles.itemLicenciatura} onPress={() => Linking.openURL('http://arqueologia.unca.edu.ar/?p=contenidos&id=15&t=Licenciatura+en+Antropología+Social+y+Cultural')}
-          title='Licenciatura en Antropología Social y Cultural' titleStyle={styles.itemTitleStyle}/>
+          title='Licenciatura en Antropología Social y Cultural' titleStyle={styleCarreras.itemTitleBlackStyle}/>
           <Button buttonStyle={styles.itemLicenciatura} onPress={() => Linking.openURL('http://arqueologia.unca.edu.ar/?p=contenidos&id=16&t=Licenciatura+en+Patrimonio+Cultural')}
-          title='Licenciatura en Patrimonio Cultural' titleStyle={styles.itemTitleStyle}/>
+          title='Licenciatura en Patrimonio Cultural' titleStyle={styleCarreras.itemTitleBlackStyle}/>
                    
           
           </View>
@@ -39,29 +39,10 @@ export default function CarrerasEscArqueologia({navigation}) {
         </>
     )
 }
+const styleCarreras = estiloCarreras;
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-  scrollView: {
-  },
-containerButton: {
-margin:20,
-textAlignVertical: "center",
-width: "90%", 
-alignSelf:"center"
-},
-titleCarrera:{
-color: "black",
-fontSize: normalize(18),
-margin:5,
-textAlign:'center'
-
-},itemTitleStyle: {
-color: "black",
-fontSize: normalize(16)
-},
+  
 itemLicenciatura: {
     marginTop:5,
     marginBottom:5,

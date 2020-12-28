@@ -1,32 +1,42 @@
 import * as React from "react";
 import { TouchableOpacity, View, Text, StyleSheet, Linking} from "react-native";
 import { Card, Divider } from "react-native-elements";
-import { normalize } from "./utils/utils";
+import { estiloBase } from "../assets/styles/estiloBase";
+import { estiloFacultades } from "../assets/styles/estiloFacultades";
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 
 export default function DeporteComponent() {
-
+const colorBackgroundItems = '#2ECC71'
+const telefonoDeporte = '3834430657'
   return (
     <> 
     
     <View style={styles.container}>
     
     <Card>
-  <Card.Title><Text style={styles.titleText}>Secretaría de Bienestar Universitario y Asuntos estudiantiles</Text></Card.Title>
+      <Text style={styles.titleText}>Secretaría de Bienestar Universitario y Asuntos estudiantiles</Text>
   <Card.Divider/>
-  
-  <Text style={styles.baseText}>Teléfono: (54) 0383-4430657</Text>
+  <View style={{...styleButton.buttonWhitIcon, alignSelf:'center'}}>
+                <Icon.Button
+                  name="phone"
+                  backgroundColor="#1999d0"
+                  onPress={() => Linking.openURL(`tel: ${telefonoDeporte}`)}
+                  style={{borderWidth:1, borderColor:'black'}}>
+                  Telefono
+                </Icon.Button>
+              </View>
   <Divider/>
       <Text style={styles.baseTextTitle}>Actividades</Text>
-      <Text style={styles.baseTextList}>Gimnasio pesas - Gimnasia localizada</Text>     
-      <Text style={styles.baseTextList}>Danzas clásicas - Ritmos</Text>
-      <Text style={styles.baseTextList}>Aero box - Acrobacia en telas</Text>
-      <Text style={styles.baseTextList}>Arquería - Defensa personal</Text>
-      <Text style={styles.baseTextList}>Futbol - Liga universitaria</Text>
-      <Text style={styles.baseTextList}>Vóley - Liga universitaria</Text>
-      <Text style={styles.baseTextList}>Hockey - Liga universitaria- Federado</Text>
-      <Text style={styles.baseTextList}>Fútsal - Liga universitaria</Text>
-      <Text style={styles.baseTextList}>Básquet - Liga universitaria</Text> 
+      <Text style={{...styles.baseTextList, backgroundColor: colorBackgroundItems}}>Gimnasio pesas - Gimnasia localizada</Text>     
+      <Text style={{...styles.baseTextList, backgroundColor: colorBackgroundItems}}>Danzas clásicas - Ritmos</Text>
+      <Text style={{...styles.baseTextList, backgroundColor: colorBackgroundItems}}>Aero box - Acrobacia en telas</Text>
+      <Text style={{...styles.baseTextList, backgroundColor: colorBackgroundItems}}>Arquería - Defensa personal</Text>
+      <Text style={{...styles.baseTextList, backgroundColor: colorBackgroundItems}}>Futbol - Liga universitaria</Text>
+      <Text style={{...styles.baseTextList, backgroundColor: colorBackgroundItems}}>Vóley - Liga universitaria</Text>
+      <Text style={{...styles.baseTextList, backgroundColor: colorBackgroundItems}}>Hockey - Liga universitaria- Federado</Text>
+      <Text style={{...styles.baseTextList, backgroundColor: colorBackgroundItems}}>Fútsal - Liga universitaria</Text>
+      <Text style={{...styles.baseTextList, backgroundColor: colorBackgroundItems}}>Básquet - Liga universitaria</Text> 
       <Divider/>
       <TouchableOpacity
           style={styles.buttonShortStyle}
@@ -44,53 +54,5 @@ export default function DeporteComponent() {
     </>
   );
 }
-const styles = StyleSheet.create({
-  baseText: {
-    fontSize: normalize(16),
-    textAlign:"center",
-    marginBottom:10,
-  },
-  baseTextList: {
-    fontSize: normalize(16),
-    textAlign:"center",
-    backgroundColor:'#2ECC71',
-    margin:2
-    
-  },
-  baseTextTitle: {
-    marginTop:'2%',
-    marginBottom:'2%',
-    fontSize: normalize(16),
-    fontWeight:'bold',
-    textAlign:"center"
-  },
-  buttonShortStyle:{
-    flexDirection: "row", 
-    justifyContent: "center",
-    backgroundColor: '#1999d0',
-    borderWidth: 1, 
-    borderColor: '#0F0F0F',
-    height: '10%',
-    borderRadius: 5,
-    margin: '2%',
-  },
-  buttonTextStyleCenter: {
-    color: '#FFFFFF',
-    textAlignVertical:'center',
-    marginBottom: 4,
-    marginLeft: 10,
-    fontSize: normalize(17),
-    marginRight:20,
-  },
-  container: {
-    backgroundColor: '#FFFFFF',
-    flex: 1,
-    alignItems: 'center'
-  },
-  titleText: {
-    fontSize: normalize(21),
-    fontWeight: "bold",
-    textAlign:"center",
-    marginBottom:10,
-  }
-});
+const styles = estiloBase
+const styleButton = estiloFacultades

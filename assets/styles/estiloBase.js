@@ -1,15 +1,22 @@
 
 import { StyleSheet} from "react-native";
 import { normalize } from "../../components/utils/utils";
-StyleSheet.create({
+
+
+export const estiloBase = StyleSheet.create({
   baseText: {
-    fontSize: normalize(14),
-    textAlign:"center",
-    marginBottom:'1%',
+    marginTop: 5,
+    marginBottom: 5,
+    fontSize:normalize(15),
+    fontFamily: 'appFont',
+    textAlign:"center"
   },
   baseTextList: {
     fontSize: normalize(15),
+    fontFamily: 'appFont',
     textAlign:"center",
+    borderColor:'black',
+    borderWidth:1,
     backgroundColor:'#1999d0',
     margin:'1%',
     
@@ -18,53 +25,7 @@ StyleSheet.create({
     marginTop:'1%',
     marginBottom:'1%',
     fontSize: normalize(16),
-    fontWeight:'bold',
-    textAlign:"center"
-  },
-  buttonInfoStyle:{
-    flexDirection: "row", 
-    justifyContent: "center",
-    backgroundColor: 'red',
-    borderWidth: 1, 
-    borderColor: '#0F0F0F',
-    height: '5%',
-    borderRadius: 15,
-    margin: '2%',
-  },
-  buttonShortStyle:{
-    flexDirection: "row", 
-    justifyContent: "center",
-    backgroundColor: '#1999d0',
-    borderWidth: 1, 
-    borderColor: '#0F0F0F',
-    height: '10%',
-    borderRadius: 5,
-    margin: '2%',
-  },
-  buttonTextStyleCenter: {
-    color: '#FFFFFF',
-    textAlignVertical:'center',
-    marginBottom: 4,
-    marginLeft: 10,
-    fontSize: normalize(17),
-    marginRight:20,
-  },
-  container: {
-    backgroundColor: '#FFFFFF',
-    flex: 1,
-    alignItems: 'center'
-  },
-  titleText: {
-    fontSize: normalize(19),
-    fontWeight: "bold",
-    textAlign:"center",
-    marginBottom:10,
-}
-});
-
-export const estiloPregFrec = StyleSheet.create({
-  baseText: {
-    fontSize: normalize(23),
+    fontFamily: 'appFont',
     textAlign:"center"
   },
   buttonShortStyle:{
@@ -75,7 +36,6 @@ export const estiloPregFrec = StyleSheet.create({
     borderColor: '#0F0F0F',
     height: '10%',
     borderRadius: 5,
-    paddingRight: '2%',
     margin:'2%',
   },
   buttonContainer: {
@@ -109,6 +69,7 @@ export const estiloPregFrec = StyleSheet.create({
     marginBottom: '2%',
     marginLeft: '3%',
     fontSize: normalize(17),
+    fontFamily: 'appFont',
     marginRight:'5%',
   },
   buttonTextStyle: {
@@ -116,19 +77,27 @@ export const estiloPregFrec = StyleSheet.create({
     marginBottom: '2%',
     marginLeft: '3%',
     fontSize: normalize(17),
+    fontFamily: 'appFont',
     marginRight:'5%',
   },
   container: {
-      margin: '2%',
-      textAlignVertical: "center",
-      width: "90%", 
-      alignSelf:"center"
+    backgroundColor: '#FFFFFF',
+    flex: 1,
+    alignItems: 'center'
   },
   titleText: {
-    fontSize: normalize(21),
-    fontWeight: "bold",
-    textAlign:"center",
-    marginBottom:'2%',
-    marginTop:'2%',
+    marginTop: 5,
+    marginBottom: 5,
+    fontSize:normalize(18),
+    fontFamily: 'titleFont',
+    textAlign:'center',
+  },
+  responsiveImage: {
+    width: '100%',
+    // Without height undefined it won't work
+    height: undefined,
+    // figure out your image aspect ratio
+    aspectRatio: 135 / 40,
+    marginBottom:'2%'
   },
   });

@@ -10,8 +10,7 @@ export default function MapaUniversidadComponent() {
     
     <View style={styles.container}>
     
-    <Card>
-  <Card.Title><Text style={styles.titleText}>Mapa de la Universidad</Text></Card.Title>
+    <Card><Text style={styles.titleText}>Mapa de la Universidad</Text>
  
   <Card.Divider/>
   <Image
@@ -35,12 +34,11 @@ const styles = StyleSheet.create({
   },
   container: {
       textAlignVertical: "center",
-      width: "95%", 
       alignSelf:"center"
   },
   titleText: {
     fontSize: normalize(21),
-    fontWeight: "bold",
+    fontFamily: 'titleFont',
     textAlign:"center",
     marginBottom:'2%',
   }

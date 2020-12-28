@@ -3,8 +3,7 @@ import { View, Text, TouchableOpacity, StyleSheet, Linking} from "react-native";
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faBus, faDollarSign, faGlobeAmericas, faHome, faUtensils,} from '@fortawesome/free-solid-svg-icons';
 import { Card } from "react-native-elements";
-import { normalize } from "./utils/utils";
-import { estiloPregFrec } from "../assets/styles/estiloPregFrec";
+import { estiloBase } from "../assets/styles/estiloBase";
 
 
 export default function BecasComponent({navigation}) {
@@ -19,9 +18,8 @@ export default function BecasComponent({navigation}) {
     <View style={styles.contenedor}>
     
 
-    <Card>
-  <Card.Title><Text style={styles.titleText}>Becas disponibles</Text></Card.Title>
-  <Card.Title><Text style={styles.baseText}>Tenemos para ofrecerte:</Text></Card.Title>
+    <Card><Text style={styles.titleText}>Becas disponibles</Text>
+  <Text style={styles.titleText}>Tenemos para ofrecerte:</Text>
   <Card.Divider/>
       
          <TouchableOpacity
@@ -86,4 +84,4 @@ export default function BecasComponent({navigation}) {
   );
 }
   
-const styles = estiloPregFrec
+const styles = estiloBase

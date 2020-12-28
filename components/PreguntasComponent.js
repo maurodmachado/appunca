@@ -48,7 +48,7 @@ export default function PreguntasComponent({navigation}) {
             <View style={styles.buttonImageIconStyle}><FontAwesomeIcon icon={faBriefcaseMedical} size={40} color={"white"}/></View>
          
           <View style={styles.buttonIconSeparatorStyle} />
-          <Text style={styles.buttonTextStyle}>¿Qué servicios de salud ofrece          la Universidad?</Text>
+          <Text style={styles.buttonTextStyle}>¿Qué servicios de salud ofrece la Universidad?</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.buttonStyle}
@@ -70,11 +70,11 @@ export default function PreguntasComponent({navigation}) {
 const styles = StyleSheet.create({
   baseText: {
   fontSize: normalize(23),
+  fontFamily: 'GoogleSans-Regular',
   textAlign:"center"
 },
 buttonContainer: {
     justifyContent: "center",
-    padding: '2%'
 },
 buttonIconSeparatorStyle: {
     backgroundColor: '#1999d0',
@@ -92,17 +92,17 @@ buttonStyle: {
     backgroundColor: '#093869',
     borderWidth: 1, 
     borderColor: '#0F0F0F',
-    height: '15%',
+    height: '14%',
     borderRadius: 5,
-    paddingRight: '2%',
     margin:'2%',
 },
 buttonTextStyle: {
   color: '#FFFFFF',
-  marginBottom: '2%',
   marginLeft: '3%',
   fontSize: normalize(17),
-  marginRight:'5%',
+  fontFamily: 'appFont',
+  flex:1,
+  textAlign:'center'
 },
 container: {
     margin: '2%',
@@ -112,9 +112,9 @@ container: {
 },
 titleText: {
   fontSize: normalize(21),
-  fontWeight: "bold",
+  fontFamily: 'titleFont',
   textAlign:"center",
-  marginBottom:'2%',
+  marginBottom:'4%',  
   marginTop:'2%',
 },
 });

@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef} from 'react';
 import {
   View,
   Text,
@@ -8,9 +8,7 @@ import {
   TouchableOpacity,
   BackHandler,
   Alert,
-  Dimensions, 
-  Platform, 
-  PixelRatio 
+  Animated
 } from 'react-native';
 
 
@@ -19,7 +17,29 @@ import {faRoute} from '@fortawesome/free-solid-svg-icons';
 import { normalize } from './utils/utils';
 
 export default function HomeComponent({navigation}) {
+  const springValue  = useRef(new Animated.Value(1.1)).current 
+  const fadeAnim  = useRef(new Animated.Value(0)).current 
+  useEffect(() => {
+    Animated.spring(
+      springValue ,
+      {
+        toValue: 1,
+        friction: 1,
+        useNativeDriver: true
+      }
+    ).start();
+    
+  }, [springValue])
   
+  useEffect(() => {
+    Animated.timing(
+      fadeAnim,
+      {toValue: 1,
+        duration: 1000,
+        useNativeDriver: true
+      }).start();
+    
+  }, [fadeAnim])
   const iniciarRecorrido = () => {
     navigation.navigate('Preguntas');
   };
@@ -52,13 +72,15 @@ export default function HomeComponent({navigation}) {
     <>
       <View style={styles.container}>
         <Text style={styles.titleText}> Conociendo la</Text>
-        <View style={styles.imageView}>
+        <Animated.View style={{...styles.imageView, opacity: fadeAnim }}
+        >
           <Image
             source={require('../assets/logo_main.png')}
             style={styles.image}
           />
-        </View>
-        <View style={styles.containerButton}>
+        </Animated.View>
+        <Animated.View style={{...styles.containerButton, transform: [{scale: springValue}] }}
+        >
           <TouchableOpacity
             style={styles.buttonStyle}
             activeOpacity={0.5}
@@ -70,7 +92,7 @@ export default function HomeComponent({navigation}) {
             <View style={styles.buttonIconSeparatorStyle} />
             <Text style={styles.buttonTextStyle}>Iniciar recorrido</Text>
           </TouchableOpacity>
-        </View>
+        </Animated.View>
 
         <Text
           style={styles.footerText}
@@ -107,7 +129,8 @@ const styles = StyleSheet.create({
   buttonTextStyle: {
     color: '#FFFFFF',
     marginLeft: '10%',
-    fontSize: normalize(19)
+    fontSize: normalize(19),
+    fontFamily: 'appFont',
   },
   container: {
     backgroundColor: '#FFFFFF',
@@ -121,6 +144,7 @@ const styles = StyleSheet.create({
   footerText: {
     textAlign: 'center',
     fontSize: normalize(19),
+    fontFamily: 'appFont',
     bottom: 0,
     marginBottom: '10%',
     color: '#093869',
@@ -142,7 +166,7 @@ const styles = StyleSheet.create({
     color: '#0F0F0F',
     marginTop: '5%',
     fontSize: normalize(23),
-    fontWeight: 'bold',
     textAlign: 'center',
+    fontFamily: 'titleFont',
   },
 });

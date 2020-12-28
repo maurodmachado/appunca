@@ -5,11 +5,13 @@ import { normalize } from "../../components/utils/utils";
 export const estiloBecas = StyleSheet.create({
   baseText: {
     fontSize: normalize(14),
+    fontFamily: 'appFont',
     textAlign:"center",
     marginBottom:'1%',
   },
   baseTextList: {
     fontSize: normalize(15),
+    fontFamily: 'appFont',
     textAlign:"center",
     backgroundColor:'#1999d0',
     margin:'1%',
@@ -19,7 +21,7 @@ export const estiloBecas = StyleSheet.create({
     marginTop:'1%',
     marginBottom:'1%',
     fontSize: normalize(16),
-    fontWeight:'bold',
+    fontFamily: 'appFont',
     textAlign:"center"
   },
   buttonInfoStyle:{
@@ -48,6 +50,7 @@ export const estiloBecas = StyleSheet.create({
     marginBottom: 4,
     marginLeft: 10,
     fontSize: normalize(17),
+    fontFamily: 'appFont',
     marginRight:20,
   },
   container: {
@@ -57,7 +60,7 @@ export const estiloBecas = StyleSheet.create({
   },
   titleText: {
     fontSize: normalize(19),
-    fontWeight: "bold",
+    fontFamily: 'titleFont',
     textAlign:"center",
     marginBottom:10,
 }
