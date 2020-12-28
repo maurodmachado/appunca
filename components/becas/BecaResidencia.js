@@ -12,7 +12,7 @@ export default function BecaResidencia() {
     <View style={styles.contenedor}>
     
     <Card>
-  <Card.Title><Text style={styles.titleText}>Becas de Residencia Universitaria</Text></Card.Title>
+      <Text style={styles.titleText}>Becas de Residencia Universitaria</Text>
   <Card.Divider/>
       <Text style={styles.baseText}>La UNCa ofrece alojamiento a sus alumnos que soliciten esta beca</Text>      
       <Divider/>

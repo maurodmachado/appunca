@@ -12,7 +12,7 @@ export default function BecaComedor() {
     <View style={styles.contenedor}>
     
     <Card>
-  <Card.Title><Text style={styles.titleText}>Becas de Comedor</Text></Card.Title>
+      <Text style={styles.titleText}>Becas de Comedor</Text>
   <Card.Divider/>
       <Text style={styles.baseText}>La Universidad Nacional de Catamarca ofrece Becas de Comedor Universitario a número de sus alumnos.</Text> 
       <Text style={styles.baseText}>Ademas, subsidia a los estudiantes que no tienen la beca completa, con el 50% del valor total del menú</Text>

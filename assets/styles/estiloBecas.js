@@ -15,6 +15,8 @@ export const estiloBecas = StyleSheet.create({
     textAlign:"center",
     backgroundColor:'#1999d0',
     margin:'1%',
+    borderWidth: 1, 
+    borderColor: '#0F0F0F',
     
   },
   baseTextTitle: {

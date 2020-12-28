@@ -12,7 +12,7 @@ export default function BecaTransporte() {
     <View style={styles.contenedor}>
     
     <Card>
-  <Card.Title><Text style={styles.titleText}>Becas de Transporte</Text></Card.Title>
+      <Text style={styles.titleText}>Becas de Transporte</Text>
   <Card.Divider/>
       <Text style={styles.baseText}>La Universidad Nacional de Catamarca otorga a sus alumnos universitarios y preuniversitarios,  que por su situación socio - económica vean amenazado el inicio o permanencia en el sistema educativo, para lo cual la UNCa otorga las Becas de Transporte para cubrir el traslado diario de del alumno desde su lugar de residencia hasta la Universidad o la Escuela y su regreso</Text>      
       <Divider/>

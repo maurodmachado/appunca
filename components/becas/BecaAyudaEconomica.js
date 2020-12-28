@@ -14,7 +14,7 @@ export default function BecaAyudaEconomica() {
     
 
     <Card>
-  <Card.Title><Text style={styles.titleText}>Becas de Ayuda Económica</Text></Card.Title>
+      <Text style={styles.titleText}>Becas de Ayuda Económica</Text>
   <Card.Divider/>
       <Text style={styles.baseText}>La Universidad Nacional de Catamarca otorga Becas de Ayuda Económica a los alumnos que cursen de 2º Año en adelante, que posean un buen rendimiento académico, y cuya situación socio-económica obstaculiza la continuación de los estudios universitarios.
       </Text>
