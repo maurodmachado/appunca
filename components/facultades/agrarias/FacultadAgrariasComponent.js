@@ -6,7 +6,7 @@ import {
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import React, {useEffect} from 'react';
 import {Text, View, BackHandler, Image, TouchableOpacity} from 'react-native';
-import {Card, Button} from 'react-native-elements';
+import {Card, Button, Divider} from 'react-native-elements';
 import {ScrollView} from 'react-native-gesture-handler';
 import {estiloFacultades} from '../../../assets/styles/estiloFacultades';
 import {normalize} from '../../utils/utils';
@@ -47,7 +47,7 @@ export default function FacultadAgrariasComponent({navigation}) {
                     color="#ffffff"
                   />
                 }
-                buttonStyle={{width: '100%', height: undefined, marginRight: 5}}
+                buttonStyle={styles.buttonAnterior}
                 onPress={() => {
                   navegarAComponente('Facultad de Economicas');
                 }}
@@ -64,14 +64,13 @@ export default function FacultadAgrariasComponent({navigation}) {
                     color="#ffffff"
                   />
                 }
-                buttonStyle={{width: '100%', height: undefined, marginLeft: 5}}
+                buttonStyle={styles.buttonSiguiente}
                 onPress={() => {
                   navegarAComponente('Facultad de Derecho');
                 }}
               />
             </Card.Title>
           </View>
-          <Card.Divider style={{backgroundColor: '#0F0F0F'}} />
           <Image
             source={require('../../../assets/agrarias.png')}
             style={styles.responsiveImage}></Image>

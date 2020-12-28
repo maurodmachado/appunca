@@ -43,7 +43,7 @@ export default function EscuelaArqueologiaComponent({navigation}) {
                     color="#ffffff"
                   />
                 }
-                buttonStyle={{width: '100%', height: undefined, marginRight: 5}}
+                buttonStyle={styles.buttonAnterior}
                 onPress={() => {
                   navegarAComponente('Facultad de Humanidades');
                 }}
@@ -60,7 +60,7 @@ export default function EscuelaArqueologiaComponent({navigation}) {
                     color="#ffffff"
                   />
                 }
-                buttonStyle={{width: '100%', height: undefined, marginLeft: 5}}
+                buttonStyle={styles.buttonSiguiente}
                 onPress={() => {
                   navegarAComponente('Facultad de Economicas');
                 }}

@@ -4,7 +4,16 @@ import { normalize } from "../../components/utils/utils";
 
 
 export const estiloFacultades = StyleSheet.create({
-
+  buttonAnterior:{
+    marginRight: 2,
+    borderColor:'black',
+    borderWidth:1,
+  },
+  buttonSiguiente:{
+    marginLeft: 2,
+    borderColor:'black',
+    borderWidth:1,
+  },
   centeredView: {
     justifyContent: "center",
     alignItems: "center", 
@@ -49,8 +58,7 @@ export const estiloFacultades = StyleSheet.create({
       // Without height undefined it won't work
       height: undefined,
       // figure out your image aspect ratio
-      aspectRatio: 135 / 80,
-      marginBottom:'1%'
+      aspectRatio: 135 / 75,
     },
     cardContainer:{
       borderWidth: 1, 
@@ -77,8 +85,9 @@ export const estiloFacultades = StyleSheet.create({
     textCard:{
       marginTop: 5,
       marginBottom: 5,
-      fontSize:normalize(15),
+      fontSize:normalize(16),
       fontFamily: 'appFont',
+      textAlign:'center'
     },
     centeredView: {
       

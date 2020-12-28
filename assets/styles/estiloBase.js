@@ -35,8 +35,11 @@ export const estiloBase = StyleSheet.create({
     borderWidth: 1, 
     borderColor: '#0F0F0F',
     height: '10%',
-    borderRadius: 5,
-    margin:'2%',
+    borderRadius: 10,
+    marginLeft:'25%',
+    marginRight:'25%',
+    margin:'1%',
+    marginBottom:'5%'
   },
   buttonContainer: {
       justifyContent: "center",
@@ -83,10 +86,12 @@ export const estiloBase = StyleSheet.create({
   },
   responsiveImage: {
     width: '100%',
+    borderWidth:1,
+    borderColor:'black',
     // Without height undefined it won't work
     height: undefined,
     // figure out your image aspect ratio
-    aspectRatio: 135 / 40,
+    aspectRatio: 135 / 60,
     marginBottom:'2%'
   },
   });

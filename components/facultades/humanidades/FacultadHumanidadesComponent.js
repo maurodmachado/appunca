@@ -43,7 +43,7 @@ export default function FacultadHumanidadesComponent({navigation}) {
                     color="#ffffff"
                   />
                 } 
-                buttonStyle={{marginRight: 1}}
+                buttonStyle={styles.buttonAnterior}
                 onPress={() => {
                   navegarAComponente('Facultad de Tecnologia');
                 }}
@@ -59,7 +59,7 @@ export default function FacultadHumanidadesComponent({navigation}) {
                     color="#ffffff"
                   />
                 }
-                buttonStyle={{marginLeft: 1}}
+                buttonStyle={styles.buttonSiguiente}
                 onPress={() => {
                   navegarAComponente('Escuela de Arqueologia');
                 }}

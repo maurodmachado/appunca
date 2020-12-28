@@ -47,7 +47,7 @@ export default function FacultadEconomicasComponent({navigation}) {
                     color="#ffffff"
                   />
                 }
-                buttonStyle={{width: '100%', height: undefined, marginRight: 5}}
+                buttonStyle={styles.buttonAnterior}
                 onPress={() => {
                   navegarAComponente('Escuela de Arqueologia');
                 }}
@@ -64,7 +64,7 @@ export default function FacultadEconomicasComponent({navigation}) {
                     color="#ffffff"
                   />
                 }
-                buttonStyle={{width: '100%', height: undefined, marginLeft: 5}}
+                buttonStyle={styles.buttonSiguiente}
                 onPress={() => {
                   navegarAComponente('Facultad de Agrarias');
                 }}

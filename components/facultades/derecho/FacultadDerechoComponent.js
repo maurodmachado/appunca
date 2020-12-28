@@ -47,9 +47,9 @@ export default function FacultadDerechoComponent({navigation}) {
                     color="#ffffff"
                   />
                 }
-                buttonStyle={{width: '100%', height: undefined, marginRight: 5}}
+                buttonStyle={styles.buttonAnterior}
                 onPress={() => {
-                  navegarAComponente('Escuela de Agrarias');
+                  navegarAComponente('Facultad de Agrarias');
                 }}
               />
 
@@ -64,14 +64,13 @@ export default function FacultadDerechoComponent({navigation}) {
                     color="#ffffff"
                   />
                 }
-                buttonStyle={{width: '100%', height: undefined, marginLeft: 5}}
+                buttonStyle={styles.buttonSiguiente}
                 onPress={() => {
                   navegarAComponente('Facultad de Salud');
                 }}
               />
             </Card.Title>
           </View>
-          <Card.Divider style={{backgroundColor: '#0F0F0F'}} />
           <Image
             source={require('../../../assets/derecho.png')}
             style={styles.responsiveImage}></Image>

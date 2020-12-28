@@ -25,13 +25,13 @@ export default function SaludComponent() {
       <Divider/>
       
       <Text style={styles.baseTextTitle}>Servicios</Text>
-      <Text style={styles.baseTextList}>Atención en consultorios de Clínica médica, Ginecología, Obstetricia, Psicología, Nutrición y Enfermería</Text>     
-      <Text style={styles.baseTextList}>Exámenes Psicofísicos</Text>
-      <Text style={styles.baseTextList}>Programas de Prevención de Enfermedades y Promoción de la Salud</Text>
-      <Text style={styles.baseTextList}>Complementación de medicamentos necesarios para tratamientos</Text>
-      <Text style={styles.baseTextList}>Programa de Sexualidad Responsable y Prevención de ETS</Text>
-      <Text style={styles.baseTextList}>Programa Nacional de Inmunizaciones</Text>
-      <Text style={styles.baseTextList}>Asesoría Nutricional</Text>   
+      <Text style={{...styles.baseTextList, backgroundColor:'#E70707', color:'#FFFFFF'}}>Atención en consultorios de Clínica médica, Ginecología, Obstetricia, Psicología, Nutrición y Enfermería</Text>     
+      <Text style={{...styles.baseTextList, backgroundColor:'#FF8282', color:'#0f0f0f'}}>Exámenes Psicofísicos</Text>
+      <Text style={{...styles.baseTextList, backgroundColor:'#E70707', color:'#FFFFFF'}}>Programas de Prevención de Enfermedades y Promoción de la Salud</Text>
+      <Text style={{...styles.baseTextList, backgroundColor:'#FF8282', color:'#0f0f0f'}}>Complementación de medicamentos necesarios para tratamientos</Text>
+      <Text style={{...styles.baseTextList, backgroundColor:'#E70707', color:'#FFFFFF'}}>Programa de Sexualidad Responsable y Prevención de ETS</Text>
+      <Text style={{...styles.baseTextList, backgroundColor:'#FF8282', color:'#0f0f0f'}}>Programa Nacional de Inmunizaciones</Text>
+      <Text style={{...styles.baseTextList, backgroundColor:'#E70707', color:'#FFFFFF'}}>Asesoría Nutricional</Text>   
       
 </Card>
         </ScrollView>

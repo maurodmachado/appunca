@@ -43,7 +43,7 @@ export default function FacultadExactasComponent({navigation}) {
                     color="#ffffff"
                   />
                 }
-                buttonStyle={{width: '100%', height: undefined, marginRight: 5}}
+                buttonStyle={styles.buttonAnterior}
                 onPress={() => {
                   navegarAComponente('Facultad de Salud');
                 }}
@@ -52,6 +52,7 @@ export default function FacultadExactasComponent({navigation}) {
               <View style={styles.alignVertical}>
                 <Text style={styles.textCartTitleStyle}>{nombre}</Text>
               </View>
+              
               <Button
                 icon={
                   <FontAwesomeIcon
@@ -60,7 +61,7 @@ export default function FacultadExactasComponent({navigation}) {
                     color="#ffffff"
                   />
                 }
-                buttonStyle={{width: '100%', height: undefined, marginLeft: 5}}
+                buttonStyle={styles.buttonSiguiente}
                 onPress={() => {
                   navegarAComponente('Facultad de Tecnologia');
                 }}

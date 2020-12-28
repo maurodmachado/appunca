@@ -91,7 +91,7 @@ export default function CarrerasComponent({navigation}) {
 
             <View style={styles.buttonIconSeparatorStyle} />
             <Text style={styles.buttonTextStyleBlack}>
-              Escuela de arqueología
+              Escuela de Arqueología
             </Text>
           </TouchableOpacity>
         </View>
@@ -199,7 +199,7 @@ export default function CarrerasComponent({navigation}) {
 
             <View style={styles.buttonIconSeparatorStyle} />
             <Text style={styles.buttonTextStyleBlack}>
-              Facultad de Ciencias Exactas
+              Facultad de Ciencias Exactas y Naturales
             </Text>
           </TouchableOpacity>
         </View>
