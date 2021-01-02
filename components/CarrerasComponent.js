@@ -237,7 +237,7 @@ const styles = StyleSheet.create({
     marginLeft: '2%',
     marginRight: '2%',
     fontSize: normalize(17),
-    fontFamily: 'appFont',
+    // fontFamily: 'appFont',
     textAlign: 'center',
   },
   buttonTextStyleWhite: {
@@ -246,7 +246,7 @@ const styles = StyleSheet.create({
     marginLeft: '2%',
     marginRight: '2%',
     fontSize: normalize(17),
-    fontFamily: 'appFont',
+    // fontFamily: 'appFont',
     textAlign: 'center',
     textShadowColor: 'black',
     textShadowRadius:5,
@@ -268,7 +268,7 @@ const styles = StyleSheet.create({
   },
   titleText: {
     fontSize: normalize(18),
-    fontFamily: 'titleFont',
+    // fontFamily: 'titleFont',    
     textAlign: 'center',
     paddingTop: 15,
   },

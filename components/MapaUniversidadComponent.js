@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
   },
   titleText: {
     fontSize: normalize(21),
-    fontFamily: 'titleFont',
+    // fontFamily: 'titleFont',    
     textAlign:"center",
     marginBottom:'2%',
   }

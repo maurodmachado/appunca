@@ -21,12 +21,10 @@ export const estiloCarreras = StyleSheet.create({
     itemTitleBlackStyle: {
     color: "black",
     fontSize: normalize(16),
-    fontFamily: 'appFont'
     },
     itemTitleWhiteStyle: {
       color: "white",
       fontSize: normalize(16),
-      fontFamily: 'appFont'
       }
       
 });

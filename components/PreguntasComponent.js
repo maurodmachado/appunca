@@ -70,7 +70,6 @@ export default function PreguntasComponent({navigation}) {
 const styles = StyleSheet.create({
   baseText: {
   fontSize: normalize(23),
-  fontFamily: 'GoogleSans-Regular',
   textAlign:"center"
 },
 buttonContainer: {
@@ -100,7 +99,7 @@ buttonTextStyle: {
   color: '#FFFFFF',
   marginLeft: '3%',
   fontSize: normalize(17),
-  fontFamily: 'appFont',
+  // fontFamily: 'appFont',  
   flex:1,
   textAlign:'center'
 },
@@ -112,7 +111,7 @@ container: {
 },
 titleText: {
   fontSize: normalize(21),
-  fontFamily: 'titleFont',
+  // fontFamily: 'titleFont',  
   textAlign:"center",
   marginBottom:'4%',  
   marginTop:'2%',

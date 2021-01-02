@@ -80,13 +80,13 @@ export const estiloFacultades = StyleSheet.create({
       marginTop: 5,
       marginBottom: 5,
       fontSize:normalize(14),
-      fontFamily: 'titleFont',
+      // fontFamily: 'titleFont',
     },
     textCard:{
       marginTop: 5,
       marginBottom: 5,
       fontSize:normalize(16),
-      fontFamily: 'appFont',
+      // fontFamily: 'appFont',      
       textAlign:'center'
     },
     centeredView: {
@@ -99,7 +99,7 @@ export const estiloFacultades = StyleSheet.create({
     },
     textCartTitleStyle: {
     fontSize:normalize(18),
-    fontFamily: 'titleFont',
+    // fontFamily: 'titleFont',    
     color: "black",
     textShadowColor: 'white',
     textShadowRadius:10,
@@ -107,7 +107,7 @@ export const estiloFacultades = StyleSheet.create({
     },
     textStyle: {
     fontSize:normalize(16),
-    fontFamily: 'appFont',
+    // fontFamily: 'appFont',    
     color: "white",
     textShadowColor: 'black',
     textShadowRadius:10,
@@ -115,7 +115,7 @@ export const estiloFacultades = StyleSheet.create({
     },
     textOutlineStyle: {
     fontSize:normalize(16),
-    fontFamily: 'appFont',
+    // fontFamily: 'appFont',    
     color: "#0f0f0f",
     textAlign:'center'
     },
