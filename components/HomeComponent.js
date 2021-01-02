@@ -15,6 +15,7 @@ import {
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faRoute} from '@fortawesome/free-solid-svg-icons';
 import { normalize } from './utils/utils';
+import { Platform } from 'react-native';
 
 export default function HomeComponent({navigation}) {
   const springValue  = useRef(new Animated.Value(1.1)).current 
@@ -71,6 +72,7 @@ export default function HomeComponent({navigation}) {
   return (
     <>
       <View style={styles.container}>
+        {Platform.OS === 'ios' && <View style={{marginTop: '10%'}}></View>}
         <Text style={styles.titleText}> Conociendo la</Text>
         <Animated.View style={{...styles.imageView, opacity: fadeAnim }}
         >

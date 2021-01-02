@@ -12,6 +12,7 @@ import {estiloFacultades} from '../../../assets/styles/estiloFacultades';
 import {normalize} from '../../utils/utils';
 import {facultades} from '../InformacionFacultades';
 import ContactoFacultad from '../contacto/ContactoFacultad';
+import { Platform } from 'react-native';
 
 export default function FacultadAgrariasComponent({navigation}) {
   const {nombre, textFacultad} = facultades.facultadAgrarias;
@@ -36,9 +37,10 @@ export default function FacultadAgrariasComponent({navigation}) {
   return (
     <>
       <View style={styles.container}>
+      {Platform.OS === 'ios' && <View style={{marginTop: '5%'}}></View>}
         <Card containerStyle={styles.cardContainer}>
-          <View>
-            <Card.Title>
+          <View style={{alignItems:'center', justifyContent:'center', marginBottom:'2%'}}>
+            <View style={{flexDirection:'row', alignItems:'center', justifyContent:'center'}}>
               <Button
                 icon={
                   <FontAwesomeIcon
@@ -53,7 +55,7 @@ export default function FacultadAgrariasComponent({navigation}) {
                 }}
               />
 
-              <View style={styles.alignVertical}>
+              <View style={{...styles.alignVertical, minWidth: '75%'}}>
                 <Text style={styles.textCartTitleStyle}>{nombre}</Text>
               </View>
               <Button
@@ -69,8 +71,9 @@ export default function FacultadAgrariasComponent({navigation}) {
                   navegarAComponente('Facultad de Derecho');
                 }}
               />
-            </Card.Title>
+            </View>
           </View>
+          <Card.Divider style={{backgroundColor: '#0F0F0F', marginBottom:'2%'}} />
           <Image
             source={require('../../../assets/agrarias.png')}
             style={styles.responsiveImage}></Image>

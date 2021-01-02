@@ -16,8 +16,7 @@ export default function BecasComponent({navigation}) {
     <> 
     
     <ScrollView style={styles.contenedor}>
-    
-
+    {Platform.OS === 'ios' && <View style={{marginTop: '5%'}}></View>}
     <Card><Text style={styles.titleText}>Becas disponibles</Text>
   <Text style={styles.titleText}>Tenemos para ofrecerte:</Text>
   <Card.Divider/>

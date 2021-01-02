@@ -8,6 +8,7 @@ import {estiloFacultades} from '../../../assets/styles/estiloFacultades';
 import {normalize} from '../../utils/utils';
 import {facultades} from '../InformacionFacultades';
 import ContactoFacultad from '../contacto/ContactoFacultad';
+import { Platform } from 'react-native';
 
 export default function FacultadExactasComponent({navigation}) {
   const {nombre, textFacultad} = facultades.facultadExactas;
@@ -32,9 +33,10 @@ export default function FacultadExactasComponent({navigation}) {
   return (
     <>
       <View style={styles.container}>
+      {Platform.OS === 'ios' && <View style={{marginTop: '5%'}}></View>}
         <Card containerStyle={styles.cardContainer}>
-          <View>
-            <Card.Title>
+          <View style={{alignItems:'center', justifyContent:'center', marginBottom:'2%'}}>
+            <View style={{flexDirection:'row', alignItems:'center', justifyContent:'center'}}>
               <Button
                 icon={
                   <FontAwesomeIcon
@@ -49,7 +51,7 @@ export default function FacultadExactasComponent({navigation}) {
                 }}
               />
 
-              <View style={styles.alignVertical}>
+             <View style={{...styles.alignVertical, minWidth: '75%'}}>
                 <Text style={styles.textCartTitleStyle}>{nombre}</Text>
               </View>
               
@@ -66,9 +68,9 @@ export default function FacultadExactasComponent({navigation}) {
                   navegarAComponente('Facultad de Tecnologia');
                 }}
               />
-            </Card.Title>
+            </View>
           </View>
-          <Card.Divider style={{backgroundColor: '#0F0F0F'}} />
+          <Card.Divider style={{backgroundColor: '#0F0F0F', marginBottom:'2%'}} />
           <Image
             source={require('../../../assets/exactas.png')}
             style={styles.responsiveImage}></Image>

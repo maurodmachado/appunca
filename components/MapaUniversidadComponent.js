@@ -1,6 +1,7 @@
 import * as React from "react";
 import { View, Text, StyleSheet, Linking, Image} from "react-native";
 import { Card, normalize } from "react-native-elements";
+import { ScrollView } from "react-native-gesture-handler";
 
 
 export default function MapaUniversidadComponent() {
@@ -8,8 +9,8 @@ export default function MapaUniversidadComponent() {
   return (
     <> 
     
-    <View style={styles.container}>
-    
+    <ScrollView>
+    {Platform.OS === 'ios' && <View style={{marginTop: '5%'}}></View>}
     <Card><Text style={styles.titleText}>Mapa de la Universidad</Text>
  
   <Card.Divider/>
@@ -18,7 +19,7 @@ export default function MapaUniversidadComponent() {
           style={styles.responsiveImage}
         />
 </Card>
-        </View>
+        </ScrollView>
 
     </>
   );

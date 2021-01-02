@@ -10,8 +10,8 @@ export default function SaludComponent() {
   return (
     <> 
     
-    <ScrollView style={styles.contenedor}>
-    
+    <ScrollView>
+    {Platform.OS === 'ios' && <View style={{marginTop: '5%'}}></View>}
     <Card><Text style={styles.titleText}>Salud Universitaria <Badge badgeStyle={{height:'auto'}} textStyle={{fontSize:normalize(12)}} status='error' value="+ Información" onPress={() => Linking.openURL('http://www.unca.edu.ar/pagina-1600-servicio-de-salud-universitaria-71.html?pagina_=0')}/></Text>
   
  

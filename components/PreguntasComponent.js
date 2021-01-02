@@ -13,6 +13,7 @@ export default function PreguntasComponent({navigation}) {
     
     
     <View style={styles.container}>
+    {Platform.OS === 'ios' && <View style={{marginTop: '10%'}}></View>}
     <Text style={styles.titleText}>Preguntas Frecuentes</Text>
     <TouchableOpacity
           style={styles.buttonStyle}

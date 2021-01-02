@@ -54,6 +54,8 @@ export const estiloFacultades = StyleSheet.create({
       justifyContent: 'flex-start'
     },
     responsiveImage: {
+      borderWidth:1,
+      borderColor:'#0F0F0F',
       width: '100%',
       // Without height undefined it won't work
       height: undefined,

@@ -21,6 +21,7 @@ export default function CarrerasComponent({navigation}) {
   return (
     <>
       <View style={styles.container}>
+      {Platform.OS === 'ios' && <View style={{marginTop: '10%'}}></View>}
         <View style={{flex: 80}}>
           <Text style={styles.titleText}>¿Qué facultad querés recorrer?</Text>
         </View>

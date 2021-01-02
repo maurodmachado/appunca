@@ -17,7 +17,7 @@ const wspDeporte = '3834545986'
     <> 
     
     <ScrollView >
-    
+    {Platform.OS === 'ios' && <View style={{marginTop: '5%'}}></View>}
     <Card >
     <Text style={styles.titleText}>Secretaría de Bienestar Universitario y Asuntos estudiantiles</Text>
     <Image
