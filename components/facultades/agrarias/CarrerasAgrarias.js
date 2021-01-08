@@ -4,6 +4,7 @@ import {Button} from 'react-native-elements';
 import {ScrollView} from 'react-native-gesture-handler';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {estiloCarreras} from '../../../assets/styles/estiloCarreras';
+import { carreras } from '../InformacionApp';
 
 export default function CarrerasAgrarias({navigation}) {
   useEffect(() => {
@@ -18,6 +19,11 @@ export default function CarrerasAgrarias({navigation}) {
 
     return () => backHandler.remove();
   }, []);
+
+  const navegarAComponente = (route, carrera) => {
+    navigation.navigate(route, {carrera});
+  };
+
   return (
     <>
       <SafeAreaView>
@@ -26,21 +32,17 @@ export default function CarrerasAgrarias({navigation}) {
             <Text style={styleCarreras.titleCarrera}>Carreras de pregrado</Text>
             <Button
               buttonStyle={styles.itemColor1}
-              onPress={() =>
-                Linking.openURL(
-                  'http://agrarias.unca.edu.ar/tecnicatura-universitaria-en-parques-y-jardines/',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.agrarias.pregrado.tecParqJard});
+              }}
               title="Tecnicatura universitaria en Parques y Jardines"
               titleStyle={styleCarreras.itemTitleBlackStyle}
             />
             <Button
               buttonStyle={styles.itemColor1}
-              onPress={() =>
-                Linking.openURL(
-                  'http://agrarias.unca.edu.ar/tecnicatura-universitaria-en-procesamiento-agroalimentario/',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.agrarias.pregrado.tecProcAgro});
+              }}
               title="Tecnicatura Universitaria en Procesamiento Agroalimentario"
               titleStyle={styleCarreras.itemTitleBlackStyle}
             />
@@ -48,21 +50,17 @@ export default function CarrerasAgrarias({navigation}) {
             <Text style={styleCarreras.titleCarrera}>Carreras de grado</Text>
             <Button
               buttonStyle={styles.itemColor2}
-              onPress={() =>
-                Linking.openURL(
-                  'http://agrarias.unca.edu.ar/ingenieria-agronomica/',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.agrarias.grado.ingAgronomica});
+              }}
               title="Ingeniería Agronómica"
               titleStyle={styleCarreras.itemTitleBlackStyle}
             />
             <Button
               buttonStyle={styles.itemColor2}
-              onPress={() =>
-                Linking.openURL(
-                  'http://agrarias.unca.edu.ar/ingenieria-de-paisajes/',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.agrarias.grado.ingPaisajes});
+              }}
               title="Ingeniería de Paisajes"
               titleStyle={styleCarreras.itemTitleBlackStyle}
             />

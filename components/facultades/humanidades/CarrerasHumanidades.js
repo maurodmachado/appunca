@@ -4,7 +4,7 @@ import {Button} from 'react-native-elements';
 import {ScrollView} from 'react-native-gesture-handler';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import { estiloCarreras } from '../../../assets/styles/estiloCarreras';
-import {normalize} from '../../utils/utils';
+import { carreras } from '../InformacionApp';
 
 export default function CarrerasHumanidades({navigation}) {
   useEffect(() => {
@@ -19,6 +19,11 @@ export default function CarrerasHumanidades({navigation}) {
 
     return () => backHandler.remove();
   }, []);
+
+  const navegarAComponente = (route, carrera) => {
+    navigation.navigate(route, {carrera});
+  };
+  
   return (
     <>
       <SafeAreaView>
@@ -27,71 +32,57 @@ export default function CarrerasHumanidades({navigation}) {
             <Text style={styleCarreras.titleCarrera}>Profesorados</Text>
             <Button
               buttonStyle={styles.itemProfesorado}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.huma.unca.edu.ar/oferta-academica/grado/profesorado-en-ciencias-de-la-educacion',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.facultadHumanidades.profesorados.cienciasEducacion});
+              }}
               title="Profesorado en Ciencias de la Educación"
               titleStyle={styleCarreras.itemTitleWhiteStyle}
             />
             <Button
               buttonStyle={styles.itemProfesorado}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.huma.unca.edu.ar/oferta-academica/grado/profesorado-en-filosofia',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.facultadHumanidades.profesorados.filosofia});
+              }}
               title="Profesorado en Filosofía"
               titleStyle={styleCarreras.itemTitleWhiteStyle}
             />
             <Button
               buttonStyle={styles.itemProfesorado}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.huma.unca.edu.ar/oferta-academica/grado/profesorado-en-frances',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.facultadHumanidades.profesorados.frances});
+              }}
               title="Profesorado en Francés"
               titleStyle={styleCarreras.itemTitleWhiteStyle}
             />
             <Button
               buttonStyle={styles.itemProfesorado}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.huma.unca.edu.ar/oferta-academica/grado/profesorado-en-geografia',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.facultadHumanidades.profesorados.geografia});
+              }}
               title="Profesorado en Geografía"
               titleStyle={styleCarreras.itemTitleWhiteStyle}
             />
             <Button
               buttonStyle={styles.itemProfesorado}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.huma.unca.edu.ar/oferta-academica/grado/profesorado-en-historia',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.facultadHumanidades.profesorados.historia});
+              }}
               title="Profesorado en Historia"
               titleStyle={styleCarreras.itemTitleWhiteStyle}
             />
             <Button
               buttonStyle={styles.itemProfesorado}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.huma.unca.edu.ar/oferta-academica/grado/profesorado-en-ingles',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.facultadHumanidades.profesorados.ingles});
+              }}
               title="Profesorado en Inglés"
               titleStyle={styleCarreras.itemTitleWhiteStyle}
             />
             <Button
               buttonStyle={styles.itemProfesorado}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.huma.unca.edu.ar/oferta-academica/grado/profesorado-en-letras',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.facultadHumanidades.profesorados.letras});
+              }}
               title="Profesorado en Letras"
               titleStyle={styleCarreras.itemTitleWhiteStyle}
             />
@@ -99,71 +90,57 @@ export default function CarrerasHumanidades({navigation}) {
             <Text style={styleCarreras.titleCarrera}>Licenciaturas</Text>
             <Button
               buttonStyle={styles.itemLicenciatura}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.huma.unca.edu.ar/oferta-academica/grado/licenciatura-en-ciencias-de-la-educacion',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.facultadHumanidades.licenciaturas.cienciasEducacion});
+              }}
               title="Licenciatura en Ciencias de la Educación"
               titleStyle={styleCarreras.itemTitleBlackStyle}
             />
             <Button
               buttonStyle={styles.itemLicenciatura}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.huma.unca.edu.ar/oferta-academica/grado/licencicatura-en-frances',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.facultadHumanidades.licenciaturas.frances});
+              }}
               title="Licenciatura en Francés"
               titleStyle={styleCarreras.itemTitleBlackStyle}
             />
             <Button
               buttonStyle={styles.itemLicenciatura}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.huma.unca.edu.ar/oferta-academica/grado/licenciatura-en-geografia',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.facultadHumanidades.licenciaturas.geografia});
+              }}
               title="Licenciatura en Geografía"
               titleStyle={styleCarreras.itemTitleBlackStyle}
             />
             <Button
               buttonStyle={styles.itemLicenciatura}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.huma.unca.edu.ar/oferta-academica/grado/licenciatura-en-historia',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.facultadHumanidades.licenciaturas.historia});
+              }}
               title="Licenciatura en Historia"
               titleStyle={styleCarreras.itemTitleBlackStyle}
             />
             <Button
               buttonStyle={styles.itemLicenciatura}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.huma.unca.edu.ar/oferta-academica/grado/licenciatura-en-ingles',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.facultadHumanidades.licenciaturas.ingles});
+              }}
               title="Licenciatura en Inglés"
               titleStyle={styleCarreras.itemTitleBlackStyle}
             />
             <Button
               buttonStyle={styles.itemLicenciatura}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.huma.unca.edu.ar/oferta-academica/grado/licenciatura-en-letras',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.facultadHumanidades.licenciaturas.letras});
+              }}
               title="Licenciatura en Letras"
               titleStyle={styleCarreras.itemTitleBlackStyle}
             />
             <Button
               buttonStyle={styles.itemLicenciatura}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.huma.unca.edu.ar/oferta-academica/grado/licenciatura-en-trabajo-social',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.facultadHumanidades.licenciaturas.trabajoSocial});
+              }}
               title="Licenciatura en Trabajo Social"
               titleStyle={styleCarreras.itemTitleBlackStyle}
             />
@@ -171,21 +148,17 @@ export default function CarrerasHumanidades({navigation}) {
             <Text style={styleCarreras.titleCarrera}>Traductorados</Text>
             <Button
               buttonStyle={styles.itemTraductorados}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.huma.unca.edu.ar/oferta-academica/grado/traductorado-en-frances',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.facultadHumanidades.traductorados.frances});
+              }}
               title="Traductorado Público Nacional en Francés"
               titleStyle={styleCarreras.itemTitleWhiteStyle}
             />
             <Button
               buttonStyle={styles.itemTraductorados}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.huma.unca.edu.ar/oferta-academica/grado/traductorado-en-frances',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.facultadHumanidades.traductorados.ingles});
+              }}
               title="Traductorado Público Nacional en Inglés"
               titleStyle={styleCarreras.itemTitleWhiteStyle}
             />
@@ -195,11 +168,9 @@ export default function CarrerasHumanidades({navigation}) {
             </Text>
             <Button
               buttonStyle={styles.itemCCC}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.huma.unca.edu.ar/oferta-academica/grado/licenciatura-en-psicopedagogia-ciclo-de-complementacion-curricular',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.facultadHumanidades.ciclosComplementacion.psicopedagogia});
+              }}
               title="Licenciatura en Psicopedagogía"
               titleStyle={styleCarreras.itemTitleBlackStyle}
             />
@@ -207,11 +178,9 @@ export default function CarrerasHumanidades({navigation}) {
             <Text style={styleCarreras.titleCarrera}>Carreras a distancia</Text>
             <Button
               buttonStyle={styles.itemCarreraDistancia}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.huma.unca.edu.ar/oferta-academica/distancia/licenciatura-en-gestion-educativa-ciclo-de-complementacion-curricular',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.facultadHumanidades.carrerasDistancia.gestionEducativa});
+              }}
               title="Licenciatura en Gestión Educativa"
               titleStyle={styleCarreras.itemTitleWhiteStyle}
             />
@@ -241,7 +210,7 @@ const styles = StyleSheet.create({
   },
   itemTraductorados: {
     marginTop: 5,
-    marginBottom: 5,
+    marginBottom: 5, 
     backgroundColor: '#944e6c',
     borderWidth: 1,
     borderColor: '#0F0F0F',

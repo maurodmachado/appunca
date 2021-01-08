@@ -43,6 +43,7 @@ import BecaCrisco from './components/becas/BecaCrisco';
 import SplashScreen from 'react-native-splash-screen'
 import { useEffect } from 'react';
 import { Platform, StatusBar } from 'react-native';
+import CarreraDetail from './components/carreras/CarreraDetail';
 
 const Stack = createStackNavigator(
   
@@ -63,6 +64,13 @@ const App = () => {
         <Stack.Navigator
         initialRouteName="Descubriendo la UNCa"
         >
+
+          <Stack.Screen 
+          name="CarreraDetail"
+          component={CarreraDetail}
+          options={{headerShown: false}}
+          />
+
           <Stack.Screen 
           name="Descubriendo la UNCa"
           component={HomeComponent}

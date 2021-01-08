@@ -16,8 +16,11 @@ import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faRoute} from '@fortawesome/free-solid-svg-icons';
 import { normalize } from './utils/utils';
 import { Platform } from 'react-native';
+import { imagenes } from './facultades/InformacionApp';
 
 export default function HomeComponent({navigation}) {
+
+
   const springValue  = useRef(new Animated.Value(1.1)).current 
   const fadeAnim  = useRef(new Animated.Value(0)).current 
   useEffect(() => {
@@ -77,7 +80,7 @@ export default function HomeComponent({navigation}) {
         <Animated.View style={{...styles.imageView, opacity: fadeAnim }}
         >
           <Image
-            source={require('../assets/logo_main.png')}
+            source={{uri: imagenes.imagenHome}}
             style={styles.image}
           />
         </Animated.View>
@@ -132,7 +135,7 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     marginLeft: '10%',
     fontSize: normalize(19),
-    // fontFamily: 'appFont',    
+    fontFamily: 'appFont',    
   },
   container: {
     backgroundColor: '#FFFFFF',
@@ -146,7 +149,7 @@ const styles = StyleSheet.create({
   footerText: {
     textAlign: 'center',
     fontSize: normalize(19),
-    // fontFamily: 'appFont',    
+    fontFamily: 'appFont',    
     bottom: 0,
     marginBottom: '10%',
     color: '#093869',
@@ -169,6 +172,6 @@ const styles = StyleSheet.create({
     marginTop: '5%',
     fontSize: normalize(23),
     textAlign: 'center',
-    // fontFamily: 'titleFont',    
+    fontFamily: 'titleFont',    
   },
 });

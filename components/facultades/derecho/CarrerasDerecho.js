@@ -4,6 +4,7 @@ import {Button} from 'react-native-elements';
 import {ScrollView} from 'react-native-gesture-handler';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import { estiloCarreras } from '../../../assets/styles/estiloCarreras';
+import { carreras } from '../InformacionApp';
 
 export default function CarrerasDerecho({navigation}) {
   useEffect(() => {
@@ -18,6 +19,11 @@ export default function CarrerasDerecho({navigation}) {
 
     return () => backHandler.remove();
   }, []);
+
+  const navegarAComponente = (route, carrera) => {
+    navigation.navigate(route, {carrera});
+  };
+
   return (
     <>
       <SafeAreaView>
@@ -26,11 +32,9 @@ export default function CarrerasDerecho({navigation}) {
             <Text style={styleCarreras.titleCarrera}>Carreras de pregrado</Text>
             <Button
               buttonStyle={styles.itemColor1}
-              onPress={() =>
-                Linking.openURL(
-                  'http://derecho.unca.edu.ar/carreras/criminalistica/informacion-general/',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.derecho.abogacia});
+              }}
               title="Perito en Ciencias Criminalísticas"
               titleStyle={styleCarreras.itemTitleBlackStyle}
             />
@@ -38,11 +42,9 @@ export default function CarrerasDerecho({navigation}) {
             <Text style={styleCarreras.titleCarrera}>Carreras de grado</Text>
             <Button
               buttonStyle={styles.itemColor2}
-              onPress={() =>
-                Linking.openURL(
-                  'http://derecho.unca.edu.ar/carreras/abogacia/informacion-general/',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.derecho.criminalistica});
+              }}
               title="Abogacía"
               titleStyle={styleCarreras.itemTitleWhiteStyle}
             />

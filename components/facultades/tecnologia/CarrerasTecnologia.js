@@ -4,8 +4,10 @@ import {Button} from 'react-native-elements';
 import {ScrollView} from 'react-native-gesture-handler';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {estiloCarreras} from '../../../assets/styles/estiloCarreras';
+import { carreras } from '../InformacionApp';
 
 export default function CarrerasTecnologia({navigation}) {
+  
   useEffect(() => {
     const backAction = () => {
       navigation.navigate('Facultad de Tecnologia');
@@ -18,6 +20,11 @@ export default function CarrerasTecnologia({navigation}) {
 
     return () => backHandler.remove();
   }, []);
+
+  const navegarAComponente = (route, carrera) => {
+    navigation.navigate(route, {carrera});
+  };
+
   return (
     <>
       <SafeAreaView>
@@ -26,31 +33,25 @@ export default function CarrerasTecnologia({navigation}) {
             <Text style={styleCarreras.titleCarrera}>Carreras de pregrado</Text>
             <Button
               buttonStyle={styles.itemColor2}
-              onPress={() =>
-                Linking.openURL(
-                  'http://tecno.unca.edu.ar/tecnicatura-universitaria-industrial/',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.facultadTecnologia.pregrado.tecIndustrial});
+              }}
               title="Tecnicatura Universitaria Industrial"
               titleStyle={styleCarreras.itemTitleWhiteStyle}
             />
             <Button
               buttonStyle={styles.itemColor1}
-              onPress={() =>
-                Linking.openURL(
-                  'http://tecno.unca.edu.ar/tecnicatura-universitaria-de-minas/',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.facultadTecnologia.pregrado.tecMinas});
+              }}
               title="Tecnicatura Universitaria de Minas"
               titleStyle={styleCarreras.itemTitleBlackStyle}
             />
             <Button
               buttonStyle={styles.itemColor2}
-              onPress={() =>
-                Linking.openURL(
-                  'http://tecno.unca.edu.ar/tecnico-universitario-en-gestion-de-riesgo-higiene-y-seguridad-en-el-trabajo/',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.facultadTecnologia.pregrado.tecHigieneSeguridad});
+              }}
               title="Tecnicatura Universitaria en Gestión de Riesgo, Higiene y seguridad en el trabajo"
               titleStyle={styleCarreras.itemTitleWhiteStyle}
             />
@@ -58,57 +59,49 @@ export default function CarrerasTecnologia({navigation}) {
             <Text style={styleCarreras.titleCarrera}>Carreras de grado</Text>
             <Button
               buttonStyle={styles.itemColor1}
-              onPress={() =>
-                Linking.openURL(
-                  'http://tecno.unca.edu.ar/ingenieria-en-informatica/',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.facultadTecnologia.grado.ingInformatica});
+              }}
               title="Ingeniería en Informática"
               titleStyle={styleCarreras.itemTitleBlackStyle}
             />
             <Button
               buttonStyle={styles.itemColor2}
-              onPress={() =>
-                Linking.openURL('http://tecno.unca.edu.ar/arquitectura/')
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.facultadTecnologia.grado.arquitectura});
+              }}
               title="Arquitectura"
               titleStyle={styleCarreras.itemTitleWhiteStyle}
             />
             <Button
               buttonStyle={styles.itemColor1}
-              onPress={() =>
-                Linking.openURL(
-                  'http://tecno.unca.edu.ar/ingenieria-electronica/',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.facultadTecnologia.grado.ingElectronica});
+              }}
               title="Ingeniería en Electrónica"
               titleStyle={styleCarreras.itemTitleBlackStyle}
             />
             <Button
               buttonStyle={styles.itemColor2}
-              onPress={() =>
-                Linking.openURL(
-                  'http://tecno.unca.edu.ar/ingenieria-en-agrimensura/',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.facultadTecnologia.grado.ingAgrimensura});
+              }}
               title="Ingeniería en Agrimensura"
               titleStyle={styleCarreras.itemTitleWhiteStyle}
             />
             <Button
               buttonStyle={styles.itemColor1}
-              onPress={() =>
-                Linking.openURL('http://tecno.unca.edu.ar/ingenieria-de-minas/')
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.facultadTecnologia.grado.ingMinas});
+              }}
               title="Ingeniería en Minas"
               titleStyle={styleCarreras.itemTitleBlackStyle}
             />
             <Button
               buttonStyle={styles.itemColor2}
-              onPress={() =>
-                Linking.openURL(
-                  'http://tecno.unca.edu.ar/licenciatura-en-geologia/',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.facultadTecnologia.grado.licGeologia});
+              }}
               title="Licenciatura en Geología"
               titleStyle={styleCarreras.itemTitleWhiteStyle}
             />

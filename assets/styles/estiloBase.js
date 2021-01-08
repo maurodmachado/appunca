@@ -8,12 +8,12 @@ export const estiloBase = StyleSheet.create({
     marginTop: 5,
     marginBottom: 5,
     fontSize:normalize(15),
-    // fontFamily: 'appFont',
+    fontFamily: 'appFont',
     textAlign:"center"
   },
   baseTextList: {
     fontSize: normalize(15),
-    // fontFamily: 'appFont',
+    fontFamily: 'appFont',
     textAlign:"center",
     borderColor:'black',
     borderWidth:1,
@@ -24,8 +24,8 @@ export const estiloBase = StyleSheet.create({
   baseTextTitle: {
     marginTop:'1%',
     marginBottom:'1%',
-    fontSize: normalize(16),
-    // fontFamily: 'appFont',
+    fontSize: normalize(14),
+    fontFamily: 'titleFont',
     textAlign:"center"
   },
   buttonShortStyle:{
@@ -68,7 +68,7 @@ export const estiloBase = StyleSheet.create({
     color: '#FFFFFF',
     textAlignVertical:'center',
     fontSize: normalize(17),
-    // fontFamily: 'appFont',
+    fontFamily: 'appFont',
     flex:1,
     textAlign:'center'
   },
@@ -81,7 +81,7 @@ export const estiloBase = StyleSheet.create({
     marginTop: 5,
     marginBottom: 5,
     fontSize:normalize(18),
-    // fontFamily: 'titleFont',
+    fontFamily: 'titleFont',
     textAlign:'center',
   },
   responsiveImage: {

@@ -10,12 +10,12 @@ import {Card, Button} from 'react-native-elements';
 import {ScrollView} from 'react-native-gesture-handler';
 import {estiloFacultades} from '../../../assets/styles/estiloFacultades';
 import {normalize} from '../../utils/utils';
-import {facultades} from '../InformacionFacultades';
+import {facultades} from '../InformacionApp';
 import ContactoFacultad from '../contacto/ContactoFacultad';
 import { Platform } from 'react-native';
 
 export default function FacultadEconomicasComponent({navigation}) {
-  const {nombre, textFacultad} = facultades.facultadEconomicas;
+  const {nombre, textFacultad, imagenFacultad} = facultades.facultadEconomicas;
 
   const navegarAComponente = (route) => {
     navigation.navigate(route);
@@ -75,7 +75,7 @@ export default function FacultadEconomicasComponent({navigation}) {
           </View>
           <Card.Divider style={{backgroundColor: '#0F0F0F', marginBottom:'2%'}} />
           <Image
-            source={require('../../../assets/economicas.png')}
+            source={{uri: imagenFacultad}}
             style={styles.responsiveImage}></Image>
           <ScrollView style={{height: '10%'}}>
             <Text style={styles.textCard}>{textFacultad}</Text>

@@ -7,9 +7,11 @@ import { normalize } from "./utils/utils";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import Icon from 'react-native-vector-icons/FontAwesome';
+import { imagenes } from "./facultades/InformacionApp";
 
 
 export default function DeporteComponent() {
+
 const colorBackgroundItems = '#2ECC71';
 const telefonoDeporte = '3834430657';
 const wspDeporte = '3834545986'
@@ -21,7 +23,7 @@ const wspDeporte = '3834545986'
     <Card >
     <Text style={styles.titleText}>Secretaría de Bienestar Universitario y Asuntos estudiantiles</Text>
     <Image
-            source={require('../assets/deportes.jpg')}
+            source={{uri: imagenes.imagenDeporte}}
             style={styles.responsiveImage}></Image>
       
 

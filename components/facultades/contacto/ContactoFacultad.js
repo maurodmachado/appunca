@@ -41,10 +41,7 @@ export default function ContactoFacultad({facultad}) {
 
               <Text style={styles.textCardTitle}>Dirección</Text>
               <Text style={styles.textCard}>
-                {direccion}, San Fernando del Valle de
-              </Text>
-              <Text style={styles.textCard}>
-                Catamarca, Catamarca, CP: 4700
+                {direccion}, San Fernando del Valle de Catamarca, Catamarca, CP: 4700
               </Text>
               <Text style={styles.textCardTitle}>Contacto</Text>
               <View style={{...styles.buttonContainer, width:180, alignSelf:'center'}}>

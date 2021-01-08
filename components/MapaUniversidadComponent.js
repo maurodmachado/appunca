@@ -2,9 +2,11 @@ import * as React from "react";
 import { View, Text, StyleSheet, Linking, Image} from "react-native";
 import { Card, normalize } from "react-native-elements";
 import { ScrollView } from "react-native-gesture-handler";
+import { imagenes } from "./facultades/InformacionApp";
 
 
 export default function MapaUniversidadComponent() {
+
 
   return (
     <> 
@@ -15,7 +17,7 @@ export default function MapaUniversidadComponent() {
  
   <Card.Divider/>
   <Image
-          source={require('../assets/mapaunca.jpg')}
+          source={{uri: imagenes.imagenMapaUnca}}
           style={styles.responsiveImage}
         />
 </Card>
@@ -39,7 +41,7 @@ const styles = StyleSheet.create({
   },
   titleText: {
     fontSize: normalize(21),
-    // fontFamily: 'titleFont',    
+    fontFamily: 'titleFont',    
     textAlign:"center",
     marginBottom:'2%',
   }

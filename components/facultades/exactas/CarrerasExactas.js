@@ -4,6 +4,7 @@ import {Button} from 'react-native-elements';
 import {ScrollView} from 'react-native-gesture-handler';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import { estiloCarreras } from '../../../assets/styles/estiloCarreras';
+import { carreras } from '../InformacionApp';
 
 export default function CarrerasExactas({navigation}) {
   useEffect(() => {
@@ -18,6 +19,11 @@ export default function CarrerasExactas({navigation}) {
 
     return () => backHandler.remove();
   }, []);
+
+  const navegarAComponente = (route, carrera) => {
+    navigation.navigate(route, {carrera});
+  };
+
   return (
     <>
       <SafeAreaView>
@@ -26,41 +32,33 @@ export default function CarrerasExactas({navigation}) {
             <Text style={styleCarreras.titleCarrera}>Profesorados</Text>
             <Button
               buttonStyle={styles.itemProfesorado}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.exactas.unca.edu.ar/academ/carreras/pb.html',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.exactas.profesorados.biologia});
+              }}
               title="Profesorado en Biología"
               titleStyle={styleCarreras.itemTitleWhiteStyle}
             />
             <Button
               buttonStyle={styles.itemProfesorado}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.exactas.unca.edu.ar/academ/carreras/pf.html',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.exactas.profesorados.fisica});
+              }}
               title="Profesorado en Física"
               titleStyle={styleCarreras.itemTitleWhiteStyle}
             />
             <Button
               buttonStyle={styles.itemProfesorado}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.exactas.unca.edu.ar/academ/carreras/pm.html',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.exactas.profesorados.matematica});
+              }}
               title="Profesorado en Matemática"
               titleStyle={styleCarreras.itemTitleWhiteStyle}
             />
             <Button
               buttonStyle={styles.itemProfesorado}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.exactas.unca.edu.ar/academ/carreras/pq.html',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.exactas.profesorados.quimica});
+              }}
               title="Profesorado en Química"
               titleStyle={styleCarreras.itemTitleWhiteStyle}
             />
@@ -68,51 +66,41 @@ export default function CarrerasExactas({navigation}) {
             <Text style={styleCarreras.titleCarrera}>Licenciaturas</Text>
             <Button
               buttonStyle={styles.itemLicenciatura}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.exactas.unca.edu.ar/academ/carreras/lca.html',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.exactas.licenciaturas.cienciasAmbientales});
+              }}
               title="Licenciatura en Ciencias Ambientales"
               titleStyle={styleCarreras.itemTitleBlackStyle}
             />
             <Button
               buttonStyle={styles.itemLicenciatura}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.exactas.unca.edu.ar/academ/carreras/lb.html',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.exactas.licenciaturas.cienciasBiologicas});
+              }}
               title="Licenciatura en Ciencias Biológicas"
               titleStyle={styleCarreras.itemTitleBlackStyle}
             />
             <Button
               buttonStyle={styles.itemLicenciatura}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.exactas.unca.edu.ar/academ/carreras/lf.html',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.exactas.licenciaturas.fisica});
+              }}
               title="Licenciatura en Física"
               titleStyle={styleCarreras.itemTitleBlackStyle}
             />
             <Button
               buttonStyle={styles.itemLicenciatura}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.exactas.unca.edu.ar/academ/carreras/lm.html',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.exactas.licenciaturas.matematica});
+              }}
               title="Licenciatura en Matemática"
               titleStyle={styleCarreras.itemTitleBlackStyle}
             />
             <Button
               buttonStyle={styles.itemLicenciatura}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.exactas.unca.edu.ar/academ/carreras/lq.html',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.exactas.licenciaturas.quimica});
+              }}
               title="Licenciatura en Química"
               titleStyle={styleCarreras.itemTitleBlackStyle}
             />
@@ -120,61 +108,49 @@ export default function CarrerasExactas({navigation}) {
             <Text style={styleCarreras.titleCarrera}>Tecnicaturas</Text>
             <Button
               buttonStyle={styles.itemTecnicaturas}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.exactas.unca.edu.ar/academ/carreras/tca.html',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.exactas.tecnicaturas.cienciasAmbientales});
+              }}
               title="Tecnicatura en Ciencias Ambientales"
               titleStyle={styleCarreras.itemTitleWhiteStyle}
             />
             <Button
               buttonStyle={styles.itemTecnicaturas}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.exactas.unca.edu.ar/academ/carreras/ti-dw.html',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.exactas.tecnicaturas.informaticaWeb});
+              }}
               title="Tecnicatura en Informática - Orientación Diseño Web"
               titleStyle={styleCarreras.itemTitleWhiteStyle}
             />
             <Button
               buttonStyle={styles.itemTecnicaturas}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.exactas.unca.edu.ar/academ/carreras/ti-me.html',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.exactas.tecnicaturas.informaticaMatenimiento});
+              }}
               title="Tecnicatura en Informática - Orientación Mantenimiento de Equipos"
               titleStyle={styleCarreras.itemTitleWhiteStyle}
             />
             <Button
               buttonStyle={styles.itemTecnicaturas}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.exactas.unca.edu.ar/academ/carreras/ti-r.html',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.exactas.tecnicaturas.informaticaRedes});
+              }}
               title="Tecnicatura en Informática - Orientación Redes"
               titleStyle={styleCarreras.itemTitleWhiteStyle}
             />
             <Button
               buttonStyle={styles.itemTecnicaturas}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.exactas.unca.edu.ar/academ/carreras/ter.html',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.exactas.tecnicaturas.energiasRenovables});
+              }}
               title="Tecnicatura Universitaria en Energías Renovables"
               titleStyle={styleCarreras.itemTitleWhiteStyle}
             />
             <Button
               buttonStyle={styles.itemTecnicaturas}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.exactas.unca.edu.ar/academ/carreras/tqu.html',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.exactas.tecnicaturas.quimico});
+              }}
               title="Tecnicatura Química Universitaria"
               titleStyle={styleCarreras.itemTitleWhiteStyle}
             />
@@ -184,41 +160,33 @@ export default function CarrerasExactas({navigation}) {
             </Text>
             <Button
               buttonStyle={styles.itemCCC}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.exactas.unca.edu.ar/academ/carreras/cpc.html',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.exactas.ciclosComplementacion.profesoradoComputacion});
+              }}
               title="Ciclo Profesorado en Computación"
               titleStyle={styleCarreras.itemTitleBlackStyle}
             />
             <Button
               buttonStyle={styles.itemCCC}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.exactas.unca.edu.ar/academ/carreras/clece.html',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.exactas.ciclosComplementacion.licCienciasExp});
+              }}
               title="Ciclo de Licenciatura en Enseñanza de las Ciencias Experimentales"
               titleStyle={styleCarreras.itemTitleBlackStyle}
             />
             <Button
               buttonStyle={styles.itemCCC}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.exactas.unca.edu.ar/academ/carreras/clem.html',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.exactas.ciclosComplementacion.licMatematica});
+              }}
               title="Ciclo de Licenciatura en Enseñanza de la Matemática"
               titleStyle={styleCarreras.itemTitleBlackStyle}
             />
             <Button
               buttonStyle={styles.itemCCC}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.exactas.unca.edu.ar/academ/carreras/leccl.html',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.exactas.ciclosComplementacion.licComputacion});
+              }}
               title="Ciclo de Licenciatura en Enseñanza de la Computación"
               titleStyle={styleCarreras.itemTitleBlackStyle}
             />

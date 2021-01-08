@@ -8,6 +8,8 @@ Sugerencias:
 - Agregar video o gif explicativo de la preinscripcion en http://preinscripcion.unca.edu.ar ya que todas inscripciones seran dirigidas a esta pagina.   
 
 
+- PLANES DE ESTUDIO EN FOTOCOPIA????!! SOLICITAR DIGITALIZADO SI O SI
+
 
 <Button
       type="outline"    

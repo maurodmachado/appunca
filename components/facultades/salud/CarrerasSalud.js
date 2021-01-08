@@ -4,6 +4,7 @@ import {Button} from 'react-native-elements';
 import {ScrollView} from 'react-native-gesture-handler';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {estiloCarreras} from '../../../assets/styles/estiloCarreras';
+import { carreras } from '../InformacionApp';
 
 export default function CarrerasSalud({navigation}) {
   useEffect(() => {
@@ -18,59 +19,54 @@ export default function CarrerasSalud({navigation}) {
 
     return () => backHandler.remove();
   }, []);
+
+  const navegarAComponente = (route, carrera) => {
+    navigation.navigate(route, {carrera});
+  };
+
   return (
     <>
       <SafeAreaView>
         <ScrollView>
           <View style={styleCarreras.containerButton}>
-            <Text style={styleCarreras.titleCarrera}>Carreras de pregrado</Text>
+            <Text style={styleCarreras.titleCarrera}>Oferta académica</Text>
             <Button
               buttonStyle={styles.itemColor2}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.salud.unca.edu.ar/index.php?option=com_content&view=article&id=16&Itemid=228',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.salud.enfermeria});
+              }}
               title="Licenciatura en Enfermería"
               titleStyle={styleCarreras.itemTitleBlackStyle}
             />
             <Button
               buttonStyle={styles.itemColor1}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.salud.unca.edu.ar/index.php?option=com_content&view=article&id=15&Itemid=230',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.salud.nutricion});
+              }}
               title="Licenciatura en Nutrición"
               titleStyle={styleCarreras.itemTitleWhiteStyle}
             />
             <Button
               buttonStyle={styles.itemColor2}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.salud.unca.edu.ar/index.php?option=com_content&view=article&id=14&Itemid=229',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.salud.bromatologia});
+              }}
               title="Licenciatura en Bromatología"
               titleStyle={styleCarreras.itemTitleBlackStyle}
             />
             <Button
               buttonStyle={styles.itemColor1}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.salud.unca.edu.ar/index.php?option=com_content&view=article&id=17&Itemid=231',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.salud.eduFisica});
+              }}
               title="Ciclo Licenciatura en Educación Física"
               titleStyle={styleCarreras.itemTitleWhiteStyle}
             />
             <Button
               buttonStyle={styles.itemColor2}
-              onPress={() =>
-                Linking.openURL(
-                  'http://www.salud.unca.edu.ar/index.php?option=com_content&view=article&id=13&Itemid=233',
-                )
-              }
+              onPress={() => {
+                navegarAComponente('CarreraDetail', {...carreras.salud.tecHemoterapia});
+              }}
               title="Técnico en Hemoterapia"
               titleStyle={styleCarreras.itemTitleBlackStyle}
             />
