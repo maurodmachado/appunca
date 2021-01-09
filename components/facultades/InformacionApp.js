@@ -563,7 +563,7 @@ export const carreras = {
           duracion: '4 años',
           cargaHoraria: '',
           descripcionProf: 'El Profesor en Química es un graduado cuya formación académica y profesional le permite desempeñarse como docente en los distintos niveles del sistema educativo, acceder a cargos de Técnico Docente capacitado para diseñar, ejecutar y evaluar proyectos educativos, técnicos y científicos integrando la Química a otras disciplinas como Física, Geología en el área de las Ciencias Naturales.',
-          linkPlan: 'http://www.exactas.unca.edu.ar/academ/carreras/pq.html',
+          linkPlan: '',
           link: 'http://www.exactas.unca.edu.ar/academ/carreras/pq.html',
           imgCarrera: 'https://i.imgur.com/t3Dskqf.jpg'
         }    
@@ -704,7 +704,7 @@ export const carreras = {
           duracion: '2 años',
           cargaHoraria: '',
           descripcionProf: 'El egresado de la Licenciatura en Enseñanza de la Computación - Ciclo de Licenciatura: Planificar, conducir y evaluar los procesos de enseñanza y aprendizaje en el área de la computación. Realizar estudios e investigaciones educativas en el ámbito de su competencia. Asesorar en lo concerniente al proceso de enseñanza y aprendizaje de la computación.',
-          linkPlan: '',
+          linkPlan: 'http://www.exactas.unca.edu.ar/academ/carreras/leccl.html',
           link: 'http://www.exactas.unca.edu.ar/academ/carreras/leccl.html',
           imgCarrera: 'https://i.imgur.com/t3Dskqf.jpg'
         }

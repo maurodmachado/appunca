@@ -33,7 +33,7 @@ export default function CarrerasDerecho({navigation}) {
             <Button
               buttonStyle={styles.itemColor1}
               onPress={() => {
-                navegarAComponente('CarreraDetail', {...carreras.derecho.abogacia});
+                navegarAComponente('CarreraDetail', {...carreras.derecho.criminalistica});
               }}
               title="Perito en Ciencias Criminalísticas"
               titleStyle={styleCarreras.itemTitleBlackStyle}
@@ -43,7 +43,7 @@ export default function CarrerasDerecho({navigation}) {
             <Button
               buttonStyle={styles.itemColor2}
               onPress={() => {
-                navegarAComponente('CarreraDetail', {...carreras.derecho.criminalistica});
+                navegarAComponente('CarreraDetail', {...carreras.derecho.abogacia});
               }}
               title="Abogacía"
               titleStyle={styleCarreras.itemTitleWhiteStyle}

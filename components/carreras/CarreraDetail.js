@@ -30,7 +30,7 @@ export default function CarreraDetail({ route, navigation}) {
     <Card >
     <Text style={styles.titleText}>{nombre}</Text>
   <Divider/>
-  {linkPlan !== '' ? <View style={{width:'100%', alignSelf:'center', margin:'5%', flexDirection:'row'}}>
+  {linkPlan.substr(linkPlan.length - 4) === '.pdf' ? <View style={{width:'100%', alignSelf:'center', margin:'5%', flexDirection:'row'}}>
       <Text style={styles.baseTextTitle}>Plan de estudios</Text>
       <Text style={styles.buttonTextStyle}></Text>
       <Button
@@ -48,7 +48,7 @@ export default function CarreraDetail({ route, navigation}) {
       <Button
           style={styles.buttonShortStyle}
           activeOpacity={0.5}
-           onPress={() => Linking.openURL(`${link}`)}
+           onPress={() => Linking.openURL(`${linkPlan}`)}
            title="Ver plan en la web"
           >
           <Text style={styles.buttonTextStyle}>Ver plan</Text>
