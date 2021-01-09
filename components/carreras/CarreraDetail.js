@@ -34,7 +34,6 @@ export default function CarreraDetail({ route, navigation}) {
       <Text style={styles.baseTextTitle}>Plan de estudios</Text>
       <Text style={styles.buttonTextStyle}></Text>
       <Button
-          style={styles.buttonStyle}
           activeOpacity={0.5}
            onPress={() => Linking.openURL(`${linkPlan}`)}
            title="Descargar"
@@ -44,7 +43,6 @@ export default function CarreraDetail({ route, navigation}) {
       <Text style={styles.baseTextTitle}>Plan de estudios</Text>
       <Text style={styles.buttonTextStyle}></Text>
       <Button
-          style={styles.buttonStyle}
           activeOpacity={0.5}
            onPress={() => Linking.openURL(`${linkPlan}`)}
            title="Ver Plan"
