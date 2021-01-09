@@ -14,7 +14,7 @@ export default function DeporteComponent() {
 
 const colorBackgroundItems = '#2ECC71';
 const telefonoDeporte = '3834430657';
-const wspDeporte = '3834545986'
+const wspDeporte = '543834545986'
   return (
     <> 
     
