@@ -68,6 +68,8 @@ export const estiloBase = StyleSheet.create({
     color: '#FFFFFF',
     textAlignVertical:'center',
     fontSize: normalize(17),
+    justifyContent:'center',
+    alignSelf:'center',
     fontFamily: 'GoogleSans-Regular',
     flex:1,
     textAlign:'center'

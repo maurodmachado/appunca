@@ -34,25 +34,21 @@ export default function CarreraDetail({ route, navigation}) {
       <Text style={styles.baseTextTitle}>Plan de estudios</Text>
       <Text style={styles.buttonTextStyle}></Text>
       <Button
-          style={styles.buttonShortStyle}
+          style={styles.buttonStyle}
           activeOpacity={0.5}
            onPress={() => Linking.openURL(`${linkPlan}`)}
            title="Descargar"
-          >
-          <Text style={styles.buttonTextStyle}>Descargar</Text>
-          </Button>
+        />
          
       </View> : <View style={{width:'100%', alignSelf:'center', margin:'5%', flexDirection:'row'}}>
       <Text style={styles.baseTextTitle}>Plan de estudios</Text>
       <Text style={styles.buttonTextStyle}></Text>
       <Button
-          style={styles.buttonShortStyle}
+          style={styles.buttonStyle}
           activeOpacity={0.5}
            onPress={() => Linking.openURL(`${linkPlan}`)}
-           title="Ver plan en la web"
-          >
-          <Text style={styles.buttonTextStyle}>Ver plan</Text>
-          </Button>
+           title="Ver Plan"
+        />
          
       </View>}  
       <View style={{width:'100%', alignContent:'center', justifyContent:'center', marginBottom:'5%', flexDirection:'row'}}>
