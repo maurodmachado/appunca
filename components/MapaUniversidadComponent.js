@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
   },
   titleText: {
     fontSize: normalize(21),
-    fontFamily: 'titleFont',    
+    fontFamily: 'KeepCalm-Medium',    
     textAlign:"center",
     marginBottom:'2%',
   }

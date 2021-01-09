@@ -100,7 +100,7 @@ buttonTextStyle: {
   color: '#FFFFFF',
   marginLeft: '3%',
   fontSize: normalize(17),
-  fontFamily: 'appFont',  
+  fontFamily: 'GoogleSans-Regular',  
   flex:1,
   textAlign:'center'
 },
@@ -112,7 +112,7 @@ container: {
 },
 titleText: {
   fontSize: normalize(21),
-  fontFamily: 'titleFont',  
+  fontFamily: 'KeepCalm-Medium',  
   textAlign:"center",
   marginBottom:'4%',  
   marginTop:'2%',

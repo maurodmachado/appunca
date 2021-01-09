@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     marginLeft: '10%',
     fontSize: normalize(19),
-    fontFamily: 'appFont',    
+    fontFamily: 'GoogleSans-Regular',    
   },
   container: {
     backgroundColor: '#FFFFFF',
@@ -149,7 +149,7 @@ const styles = StyleSheet.create({
   footerText: {
     textAlign: 'center',
     fontSize: normalize(19),
-    fontFamily: 'appFont',    
+    fontFamily: 'GoogleSans-Regular',    
     bottom: 0,
     marginBottom: '10%',
     color: '#093869',
@@ -172,6 +172,6 @@ const styles = StyleSheet.create({
     marginTop: '5%',
     fontSize: normalize(23),
     textAlign: 'center',
-    fontFamily: 'titleFont',    
+    fontFamily: 'KeepCalm-Medium',    
   },
 });

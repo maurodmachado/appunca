@@ -82,13 +82,13 @@ export const estiloFacultades = StyleSheet.create({
       marginTop: 5,
       marginBottom: 5,
       fontSize:normalize(14),
-      fontFamily: 'titleFont',
+      fontFamily: 'KeepCalm-Medium',
     },
     textCard:{
       marginTop: 5,
       marginBottom: 5,
       fontSize:normalize(16),
-      fontFamily: 'appFont',      
+      fontFamily: 'GoogleSans-Regular',      
       textAlign:'center'
     },
     centeredView: {
@@ -101,7 +101,7 @@ export const estiloFacultades = StyleSheet.create({
     },
     textCartTitleStyle: {
     fontSize:normalize(18),
-    fontFamily: 'titleFont',    
+    fontFamily: 'KeepCalm-Medium',    
     color: "black",
     textShadowColor: 'white',
     textShadowRadius:10,
@@ -109,7 +109,7 @@ export const estiloFacultades = StyleSheet.create({
     },
     textStyle: {
     fontSize:normalize(16),
-    fontFamily: 'appFont',    
+    fontFamily: 'GoogleSans-Regular',    
     color: "white",
     textShadowColor: 'black',
     textShadowRadius:10,
@@ -117,7 +117,7 @@ export const estiloFacultades = StyleSheet.create({
     },
     textOutlineStyle: {
     fontSize:normalize(16),
-    fontFamily: 'appFont',    
+    fontFamily: 'GoogleSans-Regular',    
     color: "#0f0f0f",
     textAlign:'center'
     },
