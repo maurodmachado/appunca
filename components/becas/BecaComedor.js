@@ -1,5 +1,5 @@
 import * as React from "react";
-import { View, Text} from "react-native";
+import { ScrollView, Text} from "react-native";
 import { Card, Divider } from "react-native-elements";
 import { estiloBecas } from "../../assets/styles/estiloBecas";
 
@@ -9,7 +9,7 @@ export default function BecaComedor() {
   return (
     <> 
     
-    <View style={styles.contenedor}>
+    <ScrollView>
     
     <Card>
       <Text style={styles.titleText}>Becas de Comedor</Text>
@@ -29,7 +29,7 @@ export default function BecaComedor() {
 </Card>
       
       
-        </View>
+        </ScrollView>
 
     </>
   );

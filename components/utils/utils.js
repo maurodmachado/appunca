@@ -1,5 +1,6 @@
 import { Dimensions, PixelRatio, Platform } from "react-native";
 
+
 export function normalize(size) {
     const {
         width: SCREEN_WIDTH,
@@ -15,3 +16,4 @@ const scale = SCREEN_WIDTH / 320;
       return Math.round(PixelRatio.roundToNearestPixel(newSize)) - 2
     }
   }
+

@@ -1,18 +1,17 @@
 
 import { StyleSheet} from "react-native";
-import { normalize } from "../../components/utils/utils";
-
+import { RFValue } from "react-native-responsive-fontsize";
 
 export const estiloBase = StyleSheet.create({
   baseText: {
     marginTop: 5,
     marginBottom: 5,
-    fontSize:normalize(15),
+    fontSize:RFValue(15, 580),
     fontFamily: 'GoogleSans-Regular',
     textAlign:"center"
   },
   baseTextList: {
-    fontSize: normalize(15),
+    fontSize:RFValue(16, 580),
     fontFamily: 'GoogleSans-Regular',
     textAlign:"center",
     borderColor:'black',
@@ -24,7 +23,7 @@ export const estiloBase = StyleSheet.create({
   baseTextTitle: {
     marginTop:'1%',
     marginBottom:'1%',
-    fontSize: normalize(14),
+    fontSize:RFValue(14, 580),
     fontFamily: 'KeepCalm-Medium',
     textAlign:"center"
   },
@@ -35,6 +34,8 @@ export const estiloBase = StyleSheet.create({
     borderWidth: 1, 
     borderColor: '#0F0F0F',
     height: '10%',
+    width:'80%',
+    alignSelf:'center',
     borderRadius: 10,
     marginLeft:'25%',
     marginRight:'25%',
@@ -67,7 +68,7 @@ export const estiloBase = StyleSheet.create({
   buttonTextStyle: {
     color: '#FFFFFF',
     textAlignVertical:'center',
-    fontSize: normalize(17),
+    fontSize:RFValue(17, 580),
     justifyContent:'center',
     alignSelf:'center',
     fontFamily: 'GoogleSans-Regular',
@@ -82,7 +83,7 @@ export const estiloBase = StyleSheet.create({
   titleText: {
     marginTop: 5,
     marginBottom: 5,
-    fontSize:normalize(18),
+    fontSize:RFValue(18, 580),
     fontFamily: 'KeepCalm-Medium',
     textAlign:'center',
   },

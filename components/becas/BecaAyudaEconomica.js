@@ -1,5 +1,5 @@
 import * as React from "react";
-import { View, Text} from "react-native";
+import { ScrollView, Text} from "react-native";
 import { Card, Divider } from "react-native-elements";
 import { estiloBecas } from "../../assets/styles/estiloBecas";
 
@@ -10,7 +10,7 @@ export default function BecaAyudaEconomica() {
   return (
     <> 
     
-    <View style={styles.contenedor}>
+    <ScrollView>
     
 
     <Card>
@@ -31,7 +31,7 @@ export default function BecaAyudaEconomica() {
 </Card>
       
       
-        </View>
+        </ScrollView>
 
     </>
   );

@@ -10,13 +10,13 @@ import {
   Alert,
   Animated
 } from 'react-native';
-
+import { RFValue } from "react-native-responsive-fontsize";
 
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faRoute} from '@fortawesome/free-solid-svg-icons';
-import { normalize } from './utils/utils';
 import { Platform } from 'react-native';
 import { imagenes } from './facultades/InformacionApp';
+import { ScrollView } from 'react-native';
 
 export default function HomeComponent({navigation}) {
 
@@ -76,6 +76,7 @@ export default function HomeComponent({navigation}) {
     <>
       <View style={styles.container}>
         {Platform.OS === 'ios' && <View style={{marginTop: '10%'}}></View>}
+        
         <Text style={styles.titleText}> Conociendo la</Text>
         <Animated.View style={{...styles.imageView, opacity: fadeAnim }}
         >
@@ -105,8 +106,8 @@ export default function HomeComponent({navigation}) {
           {' '}
           www.unca.edu.ar
         </Text>
-        
       </View>
+      
     </>
   );
 }
@@ -133,8 +134,9 @@ const styles = StyleSheet.create({
   },
   buttonTextStyle: {
     color: '#FFFFFF',
-    marginLeft: '10%',
-    fontSize: normalize(19),
+    flex:1,
+    textAlign:'center',
+    fontSize: RFValue(19, 580),
     fontFamily: 'GoogleSans-Regular',    
   },
   container: {
@@ -148,17 +150,11 @@ const styles = StyleSheet.create({
   },
   footerText: {
     textAlign: 'center',
-    fontSize: normalize(19),
+    fontSize: RFValue(19, 580),
     fontFamily: 'GoogleSans-Regular',    
     bottom: 0,
     marginBottom: '10%',
     color: '#093869',
-  },
-  header: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: 'transparent',
   },
   image: {
     width: '92%',
@@ -170,7 +166,7 @@ const styles = StyleSheet.create({
   titleText: {
     color: '#0F0F0F',
     marginTop: '5%',
-    fontSize: normalize(23),
+    fontSize: RFValue(23, 580),
     textAlign: 'center',
     fontFamily: 'KeepCalm-Medium',    
   },

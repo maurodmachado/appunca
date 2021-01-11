@@ -1,18 +1,15 @@
 import * as React from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import { ScrollView, View, Text, TouchableOpacity } from "react-native";
 import { StyleSheet} from "react-native";
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faAward, faBriefcaseMedical, faGraduationCap, faRunning, faUniversity, faUtensils} from '@fortawesome/free-solid-svg-icons';
-import { normalize } from "./utils/utils";
-
+import { RFValue } from "react-native-responsive-fontsize";
 
 export default function PreguntasComponent({navigation}) {
 
   return (
     <> 
-    
-    
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
     {Platform.OS === 'ios' && <View style={{marginTop: '10%'}}></View>}
     <Text style={styles.titleText}>Preguntas Frecuentes</Text>
     <TouchableOpacity
@@ -60,22 +57,13 @@ export default function PreguntasComponent({navigation}) {
           <View style={styles.buttonIconSeparatorStyle} />
           <Text style={styles.buttonTextStyle}>Mapa de la universidad</Text>
         </TouchableOpacity>
-       
-       </View>
-
-    
+       </ScrollView>    
     </>
   );
 }
 
 const styles = StyleSheet.create({
-  baseText: {
-  fontSize: normalize(23),
-  textAlign:"center"
-},
-buttonContainer: {
-    justifyContent: "center",
-},
+
 buttonIconSeparatorStyle: {
     backgroundColor: '#1999d0',
     width: 1,
@@ -99,7 +87,7 @@ buttonStyle: {
 buttonTextStyle: {
   color: '#FFFFFF',
   marginLeft: '3%',
-  fontSize: normalize(17),
+  fontSize: RFValue(16, 580),
   fontFamily: 'GoogleSans-Regular',  
   flex:1,
   textAlign:'center'
@@ -111,7 +99,7 @@ container: {
     alignSelf:"center"
 },
 titleText: {
-  fontSize: normalize(21),
+  fontSize: RFValue(21, 580),
   fontFamily: 'KeepCalm-Medium',  
   textAlign:"center",
   marginBottom:'4%',  

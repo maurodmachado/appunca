@@ -41,7 +41,7 @@ export default function FacultadHumanidadesComponent({navigation}) {
                 icon={
                   <FontAwesomeIcon
                     icon={faArrowLeft}
-                    size={normalize(13)}
+                    size={normalize(16)}
                     color="#ffffff"
                   />
                 } 
@@ -57,7 +57,7 @@ export default function FacultadHumanidadesComponent({navigation}) {
                 icon={
                   <FontAwesomeIcon
                     icon={faArrowRight}
-                    size={normalize(13)}
+                    size={normalize(16)}
                     color="#ffffff"
                   />
                 }

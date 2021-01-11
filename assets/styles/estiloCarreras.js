@@ -2,7 +2,7 @@
 
   
 import { StyleSheet} from "react-native";
-import { normalize } from "../../components/utils/utils";
+import { RFValue } from "react-native-responsive-fontsize";
 
 export const estiloCarreras = StyleSheet.create({
     containerButton: {
@@ -13,18 +13,18 @@ export const estiloCarreras = StyleSheet.create({
     },
     titleCarrera:{
     color: "black",
-    fontSize: normalize(18),
+    fontSize:RFValue(18, 580),
     marginBottom:5,
     textAlign:'center'
     
     },
     itemTitleBlackStyle: {
     color: "black",
-    fontSize: normalize(16),
+    fontSize:RFValue(16, 580),
     },
     itemTitleWhiteStyle: {
       color: "white",
-      fontSize: normalize(16),
+      fontSize:RFValue(16, 580),
       }
       
 });

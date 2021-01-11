@@ -1,7 +1,8 @@
 import * as React from "react";
 import { View, Text, StyleSheet, Linking, Image} from "react-native";
-import { Card, normalize } from "react-native-elements";
+import { Card } from "react-native-elements";
 import { ScrollView } from "react-native-gesture-handler";
+import { RFValue } from "react-native-responsive-fontsize";
 import { imagenes } from "./facultades/InformacionApp";
 
 
@@ -40,7 +41,7 @@ const styles = StyleSheet.create({
       alignSelf:"center"
   },
   titleText: {
-    fontSize: normalize(21),
+    fontSize:RFValue(21, 580),
     fontFamily: 'KeepCalm-Medium',    
     textAlign:"center",
     marginBottom:'2%',

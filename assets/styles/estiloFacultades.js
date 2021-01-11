@@ -1,6 +1,6 @@
 
 import { StyleSheet} from "react-native";
-import { normalize } from "../../components/utils/utils";
+import { RFValue } from "react-native-responsive-fontsize";
 
 
 export const estiloFacultades = StyleSheet.create({
@@ -67,7 +67,7 @@ export const estiloFacultades = StyleSheet.create({
       borderColor:'#0F0F0F',
       flex:1, 
       margin: '1%',
-      marginBottom:10
+      marginBottom:10,
     },
     cardBodyContainer:{
       justifyContent:'center'
@@ -81,13 +81,13 @@ export const estiloFacultades = StyleSheet.create({
     textCardTitle:{
       marginTop: 5,
       marginBottom: 5,
-      fontSize:normalize(14),
+      fontSize:RFValue(14, 580),
       fontFamily: 'KeepCalm-Medium',
     },
     textCard:{
       marginTop: 5,
       marginBottom: 5,
-      fontSize:normalize(16),
+      fontSize:RFValue(16, 580),
       fontFamily: 'GoogleSans-Regular',      
       textAlign:'center'
     },
@@ -100,7 +100,7 @@ export const estiloFacultades = StyleSheet.create({
       textAlignVertical:'center'
     },
     textCartTitleStyle: {
-    fontSize:normalize(18),
+    fontSize:RFValue(17 , 580),
     fontFamily: 'KeepCalm-Medium',    
     color: "black",
     textShadowColor: 'white',
@@ -108,7 +108,7 @@ export const estiloFacultades = StyleSheet.create({
     textAlign:'center',
     },
     textStyle: {
-    fontSize:normalize(16),
+      fontSize:RFValue(16, 580),
     fontFamily: 'GoogleSans-Regular',    
     color: "white",
     textShadowColor: 'black',
@@ -116,7 +116,7 @@ export const estiloFacultades = StyleSheet.create({
     textAlign:'center'
     },
     textOutlineStyle: {
-    fontSize:normalize(16),
+      fontSize:RFValue(16, 580),
     fontFamily: 'GoogleSans-Regular',    
     color: "#0f0f0f",
     textAlign:'center'

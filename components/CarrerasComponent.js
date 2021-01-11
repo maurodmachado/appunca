@@ -1,8 +1,9 @@
 import {faAtom, faBalanceScale, faCalculator, faGlobeAmericas, faHeartbeat, faLaptop, faSearch, faTractor} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import React from 'react';
-import {View, Text, StyleSheet, TouchableOpacity} from 'react-native';
-import {normalize} from './utils/utils';
+import {ScrollView, View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import { normalize } from 'react-native-elements';
+import { RFValue } from "react-native-responsive-fontsize";
 
 export default function CarrerasComponent({navigation}) {
   const colorTecnologia = '#00CCCC';
@@ -20,9 +21,9 @@ export default function CarrerasComponent({navigation}) {
 
   return (
     <>
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
       {Platform.OS === 'ios' && <View style={{marginTop: '10%'}}></View>}
-        <View style={{flex: 80}}>
+        <View style={{flex: 80, marginTop:10}}>
           <Text style={styles.titleText}>¿Qué facultad querés recorrer?</Text>
         </View>
         {/* Facultad de Tecnologia */}
@@ -204,7 +205,7 @@ export default function CarrerasComponent({navigation}) {
             </Text>
           </TouchableOpacity>
         </View>
-      </View>
+      </ScrollView>
     </>
   );
 }
@@ -235,9 +236,8 @@ const styles = StyleSheet.create({
   buttonTextStyleBlack: {
     flex: 1,
     color: '#0F0F0F',
-    marginLeft: '2%',
-    marginRight: '2%',
-    fontSize: normalize(17),
+    margin: '2%',
+    fontSize: RFValue(17, 580),
     fontFamily: 'GoogleSans-Regular',
     textAlign: 'center',
   },
@@ -246,7 +246,7 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     marginLeft: '2%',
     marginRight: '2%',
-    fontSize: normalize(17),
+    fontSize: RFValue(17, 580),
     fontFamily: 'GoogleSans-Regular',
     textAlign: 'center',
     textShadowColor: 'black',
@@ -268,9 +268,10 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   titleText: {
-    fontSize: normalize(18),
+    flex:1,
+    fontSize: RFValue(17, 580),
     fontFamily: 'KeepCalm-Medium',    
-    textAlign: 'center',
-    paddingTop: 15,
+    textAlignVertical: 'center',
+    textAlign: 'center'
   },
 });

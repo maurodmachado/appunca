@@ -1,16 +1,17 @@
 
 import { StyleSheet} from "react-native";
+import { RFValue } from "react-native-responsive-fontsize";
 import { normalize } from "../../components/utils/utils";
 
 export const estiloBecas = StyleSheet.create({
   baseText: {
-    fontSize: normalize(15),
+    fontSize:RFValue(15, 580),
     fontFamily: 'GoogleSans-Regular',    
     textAlign:"center",
     marginBottom:'1%',
   },
   baseTextList: {
-    fontSize: normalize(15),
+    fontSize:RFValue(15, 580),
     fontFamily: 'GoogleSans-Regular',    
     textAlign:"center",
     backgroundColor:'#1999d0',
@@ -22,7 +23,7 @@ export const estiloBecas = StyleSheet.create({
   baseTextTitle: {
     marginTop:'1%',
     marginBottom:'1%',
-    fontSize: normalize(16),
+    fontSize:RFValue(16, 580),
     fontFamily: 'GoogleSans-Regular',
     textAlign:"center"
   },
@@ -52,7 +53,7 @@ export const estiloBecas = StyleSheet.create({
     alignItems: 'center'
   },
   titleText: {
-    fontSize: normalize(19),
+    fontSize:RFValue(19, 580),
     fontFamily: 'KeepCalm-Medium',    
     textAlign:"center",
     marginBottom:10,

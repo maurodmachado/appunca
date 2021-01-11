@@ -5,9 +5,8 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import React, {useEffect} from 'react';
-import {Text, View, BackHandler, Image, TouchableOpacity} from 'react-native';
+import {Text, View, ScrollView, BackHandler, Image, TouchableOpacity} from 'react-native';
 import {Card, Button} from 'react-native-elements';
-import {ScrollView} from 'react-native-gesture-handler';
 import {estiloFacultades} from '../../../assets/styles/estiloFacultades';
 import {normalize} from '../../utils/utils';
 import {facultades} from '../InformacionApp';
@@ -36,7 +35,7 @@ export default function FacultadTecnologiaComponent({navigation}) {
 
   return (
     <>
-      <View style={styles.container}>
+      <ScrollView style={styles.container}>
       {Platform.OS === 'ios' && <View style={{marginTop: '5%'}}></View>}
         <Card containerStyle={styles.cardContainer}>
           <View style={{alignItems:'center', justifyContent:'center', marginBottom:'2%'}}>
@@ -99,7 +98,7 @@ export default function FacultadTecnologiaComponent({navigation}) {
           </View>
           <ContactoFacultad facultad={facultades.facultadTecnologia} />
         </Card>
-      </View>
+      </ScrollView>
     </>
   );
 }
