@@ -78,11 +78,11 @@ export default function HomeComponent({navigation}) {
         {Platform.OS === 'ios' && <View style={{marginTop: '10%'}}></View>}
         
         <Text style={styles.titleText}> Conociendo la</Text>
-        <Animated.View style={{...styles.imageView, opacity: fadeAnim }}
+        <Animated.View style={{...styles.responsiveImage, opacity: fadeAnim }}
         >
           <Image
             source={require(imagenHome)}
-            style={styles.image}
+            style={styles.responsiveImage}
           />
         </Animated.View>
         <Animated.View style={{...styles.containerButton, transform: [{scale: springValue}] }}
@@ -170,4 +170,12 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontFamily: 'KeepCalm-Medium',    
   },
+  responsiveImage: {
+    width: '100%',
+    // Without height undefined it won't work
+    height: undefined,
+    // figure out your image aspect ratio
+    aspectRatio: 80/30,
+    resizeMode:'contain',
+  }
 });
