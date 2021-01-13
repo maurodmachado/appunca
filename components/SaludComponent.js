@@ -7,7 +7,7 @@ import { normalize } from "./utils/utils";
 
 
 export default function SaludComponent() {
-
+  const imagenSalud = '../assets/imagenes/saludInfo.jpg'
 
   return (
     <> 
@@ -19,7 +19,7 @@ export default function SaludComponent() {
  
   <Card.Divider/>
   <Image
-            source={{uri: imagenes.imagenSalud}}
+            source={require(imagenSalud)}
             style={styles.responsiveImage}></Image>
       <Text style={styles.baseText}>
         Su objetivo principal es educar para la prevención, brindando a los jóvenes la oportunidad de aprender, adquirir y desarrollar los conocimientos, las competencias, los valores que lo facultan para su autocuidado.</Text>      

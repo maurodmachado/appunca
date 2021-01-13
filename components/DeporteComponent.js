@@ -11,7 +11,7 @@ import { imagenes } from "./facultades/InformacionApp";
 
 
 export default function DeporteComponent() {
-
+const imagenDeportes = '../assets/imagenes/deportes.jpg'
 const colorBackgroundItems = '#2ECC71';
 const telefonoDeporte = '3834430657';
 const wspDeporte = '543834545986'
@@ -23,7 +23,7 @@ const wspDeporte = '543834545986'
     <Card >
     <Text style={styles.titleText}>Secretaría de Bienestar Universitario y Asuntos estudiantiles</Text>
     <Image
-            source={{uri: imagenes.imagenDeporte}}
+            source={require(imagenDeportes)}
             style={styles.responsiveImage}></Image>
       
 

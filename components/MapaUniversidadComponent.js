@@ -8,7 +8,7 @@ import { imagenes } from "./facultades/InformacionApp";
 
 export default function MapaUniversidadComponent() {
 
-
+  const imagenMapaUnca = '../assets/imagenes/mapaunca.jpg'
   return (
     <> 
     
@@ -18,7 +18,7 @@ export default function MapaUniversidadComponent() {
  
   <Card.Divider/>
   <Image
-          source={{uri: imagenes.imagenMapaUnca}}
+          source={require(imagenMapaUnca)}
           style={styles.responsiveImage}
         />
 </Card>

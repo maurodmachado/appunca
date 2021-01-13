@@ -11,8 +11,8 @@ import ContactoFacultad from '../contacto/ContactoFacultad';
 import { Platform } from 'react-native';
 
 export default function EscuelaArqueologiaComponent({navigation}) {
-  const {nombre, textFacultad, imagenFacultad} = facultades.escArqueologia;
-
+  const {nombre, textFacultad} = facultades.escArqueologia;
+  const imagenFacultad = '../../../assets/imagenes/facultades/escarqueologia.png';
   const navegarAComponente = (route) => {
     navigation.navigate(route);
   };
@@ -71,7 +71,7 @@ export default function EscuelaArqueologiaComponent({navigation}) {
           </View>
           <Card.Divider style={{backgroundColor: '#0F0F0F', marginBottom:'2%'}} />
           <Image
-            source={{uri: imagenFacultad}}
+            source={require(imagenFacultad)}
           style={styles.responsiveImage}></Image>
           <ScrollView style={{height: '10%'}}>
             <Text style={styles.textCard}>{textFacultad}</Text>

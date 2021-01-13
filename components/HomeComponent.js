@@ -16,10 +16,10 @@ import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faRoute} from '@fortawesome/free-solid-svg-icons';
 import { Platform } from 'react-native';
 import { imagenes } from './facultades/InformacionApp';
-import { ScrollView } from 'react-native';
 
 export default function HomeComponent({navigation}) {
 
+  const imagenHome = '../assets/imagenes/logo_main.png'
 
   const springValue  = useRef(new Animated.Value(1.1)).current 
   const fadeAnim  = useRef(new Animated.Value(0)).current 
@@ -81,7 +81,7 @@ export default function HomeComponent({navigation}) {
         <Animated.View style={{...styles.imageView, opacity: fadeAnim }}
         >
           <Image
-            source={{uri: imagenes.imagenHome}}
+            source={require(imagenHome)}
             style={styles.image}
           />
         </Animated.View>

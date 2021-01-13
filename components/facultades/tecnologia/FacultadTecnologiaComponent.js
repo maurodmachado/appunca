@@ -14,8 +14,8 @@ import ContactoFacultad from '../contacto/ContactoFacultad';
 import { Platform } from 'react-native';
 
 export default function FacultadTecnologiaComponent({navigation}) {
-  const {nombre, textFacultad, imagenFacultad} = facultades.facultadTecnologia;
-
+  const {nombre, textFacultad} = facultades.facultadTecnologia;
+  const imagenFacultad = '../../../assets/imagenes/facultades/tecnologia.png';
   const navegarAComponente = (route) => {
     navigation.navigate(route);
   };
@@ -35,7 +35,7 @@ export default function FacultadTecnologiaComponent({navigation}) {
 
   return (
     <>
-      <ScrollView style={styles.container}>
+      <View style={styles.container}>
       {Platform.OS === 'ios' && <View style={{marginTop: '5%'}}></View>}
         <Card containerStyle={styles.cardContainer}>
           <View style={{alignItems:'center', justifyContent:'center', marginBottom:'2%'}}>
@@ -73,7 +73,7 @@ export default function FacultadTecnologiaComponent({navigation}) {
           </View>
           <Card.Divider style={{backgroundColor: '#0F0F0F', marginBottom:'2%'}} />
           <Image
-            source={{uri: imagenFacultad}}
+            source={require(imagenFacultad)}
             style={styles.responsiveImage}></Image>
           <ScrollView style={{height: '10%'}}>
             <Text style={styles.textCard}>{textFacultad}</Text>
@@ -98,7 +98,7 @@ export default function FacultadTecnologiaComponent({navigation}) {
           </View>
           <ContactoFacultad facultad={facultades.facultadTecnologia} />
         </Card>
-      </ScrollView>
+      </View>
     </>
   );
 }

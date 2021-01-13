@@ -21,9 +21,9 @@ export default function CarrerasComponent({navigation}) {
 
   return (
     <>
-      <ScrollView style={styles.container}>
+      <ScrollView contentContainerStyle={styles.container}>
       {Platform.OS === 'ios' && <View style={{marginTop: '10%'}}></View>}
-        <View style={{flex: 80, marginTop:10}}>
+        <View style={{ marginTop:10, flex:1}}>
           <Text style={styles.titleText}>¿Qué facultad querés recorrer?</Text>
         </View>
         {/* Facultad de Tecnologia */}
@@ -211,13 +211,13 @@ export default function CarrerasComponent({navigation}) {
 }
 const styles = StyleSheet.create({
   buttonContainer: {
-    flex: 80,
+    minHeight:'10%',
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
     marginLeft: '5%',
     marginRight: '5%',
-    marginBottom: '2%',
+    marginBottom: '1%',
   },
   buttonIconSeparatorStyle: {
     backgroundColor: '#0F0F0F',
@@ -242,7 +242,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   buttonTextStyleWhite: {
-    flex: 1,
     color: '#FFFFFF',
     marginLeft: '2%',
     marginRight: '2%',

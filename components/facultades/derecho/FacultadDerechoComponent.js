@@ -15,8 +15,8 @@ import ContactoFacultad from '../contacto/ContactoFacultad';
 import { Platform } from 'react-native';
 
 export default function FacultadDerechoComponent({navigation}) {
-  const {nombre, textFacultad, imagenFacultad} = facultades.facultadDerecho;
-
+  const {nombre, textFacultad} = facultades.facultadDerecho;
+  const imagenFacultad = '../../../assets/imagenes/facultades/derecho.png';
   const navegarAComponente = (route) => {
     navigation.navigate(route);
   };
@@ -75,7 +75,7 @@ export default function FacultadDerechoComponent({navigation}) {
           </View>
           <Card.Divider style={{backgroundColor: '#0F0F0F', marginBottom:'2%'}} />
           <Image
-            source={{uri: imagenFacultad}}
+            source={require(imagenFacultad)}
             style={styles.responsiveImage}></Image>
           <ScrollView style={{height: '10%'}}>
             <Text style={styles.textCard}>{textFacultad}</Text>

@@ -1,6 +1,5 @@
-import React, { useEffect } from "react";
-import { BackHandler } from "react-native";
-import { TouchableOpacity, View, Text, Linking, ScrollView, Image} from "react-native";
+import React, { useEffect, useState } from "react";
+import { ActivityIndicator, BackHandler, TouchableOpacity, View, Text, Linking, ScrollView, Image} from "react-native";
 import { Button, Card, Divider } from "react-native-elements";
 import { estiloBase } from "../../assets/styles/estiloBase";
 import { estiloFacultades } from "../../assets/styles/estiloFacultades";
@@ -8,6 +7,8 @@ import { estiloFacultades } from "../../assets/styles/estiloFacultades";
 
 export default function CarreraDetail({ route, navigation}) {
     const {nombre, link ,linkPlan, duracion, descripcionProf, cargaHoraria, imgCarrera} = route.params.carrera;
+    
+    const [loading, setLoading] = useState(true)
     
     useEffect(() => {
       const backAction = () => {
@@ -69,9 +70,16 @@ export default function CarreraDetail({ route, navigation}) {
       
       <Text style={styles.baseText}>{descripcionProf}</Text>     
       
-      <Image
-            source={{uri: imgCarrera}}
-            style={styles.responsiveImage}></Image>
+        {loading ? <ActivityIndicator size="large" color="#1999d0" style={{aspectRatio: 135 / 60}}/> : <Image
+          source={{uri: imgCarrera}}
+          style={styles.responsiveImage}
+        />}
+        <Image
+          source={{uri: imgCarrera}}
+          accessibilityElementsHidden={true}
+          style={{display:'none'}}
+          onLoadEnd={(e) => {setLoading(false)}}
+        />
       
       <TouchableOpacity
           style={styles.buttonShortStyle}
@@ -90,4 +98,3 @@ export default function CarreraDetail({ route, navigation}) {
   );
 }
 const styles = estiloBase;
-const styleButton = estiloFacultades

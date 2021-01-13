@@ -9,7 +9,7 @@ export default function PreguntasComponent({navigation}) {
 
   return (
     <> 
-    <ScrollView style={styles.container}>
+    <View style={styles.container}>
     {Platform.OS === 'ios' && <View style={{marginTop: '10%'}}></View>}
     <Text style={styles.titleText}>Preguntas Frecuentes</Text>
     <TouchableOpacity
@@ -57,7 +57,7 @@ export default function PreguntasComponent({navigation}) {
           <View style={styles.buttonIconSeparatorStyle} />
           <Text style={styles.buttonTextStyle}>Mapa de la universidad</Text>
         </TouchableOpacity>
-       </ScrollView>    
+       </View>    
     </>
   );
 }
@@ -82,7 +82,8 @@ buttonStyle: {
     borderColor: '#0F0F0F',
     height: '14%',
     borderRadius: 5,
-    margin:'2%',
+    margin:'2%',    
+    minHeight:'10%',
 },
 buttonTextStyle: {
   color: '#FFFFFF',
@@ -102,7 +103,9 @@ titleText: {
   fontSize: RFValue(21, 580),
   fontFamily: 'KeepCalm-Medium',  
   textAlign:"center",
+  textAlignVertical:'center',
   marginBottom:'4%',  
   marginTop:'2%',
+  minHeight:'10%'
 },
 });
